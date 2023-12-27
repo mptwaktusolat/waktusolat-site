@@ -1,36 +1,33 @@
 import Image from "next/image";
 
 const featuredTestimonial = {
-  body: "This app helps me to manage my time and schedule. I can easily see my schedule and alert when will my class be. This app is very useful for me.",
+  body: "the internal design is pretty sejuk mata memandang this app can definetely upgrade where user can read quran and zikir daily so they dont have to install so many apps well done!!!  ",
   author: {
-    name: "MUHAMMAD 'IZZAT BIN MOHD KHASBI",
-    handle: "2211003",
-    imageUrl:
-      "https://italeemc.iium.edu.my/pluginfile.php/22311/user/icon/remui/f1?rev=136257",
+    name: "izzah yusra",
+    handle: "5",
+    imageUrl: "https://bucket.waktusolat.app/pp_izzah.jpg",
   },
 };
 const testimonials = [
   [
     [
       {
-        body: "The app is so interactive and modern than the current one. It is easy to use and the UI is so clean and neat. I love it!",
+        body: "Satisfied using this app. Accurate as per azan from nearby mosque and surau. Thank you developer. Keep up the good work.. May you be duly rewarded",
         author: {
-          name: "MUHAMMAD IHSAN SHAMIL",
-          handle: "2215009",
-          imageUrl:
-            "https://italeemc.iium.edu.my/pluginfile.php/22342/user/icon/remui/f1?rev=61326",
+          name: "Amiruddin Khwaja Kamaluddin",
+          handle: "5",
+          imageUrl: "https://bucket.waktusolat.app/pp_amiruddin.png",
         },
       },
       // More testimonials...
     ],
     [
       {
-        body: "Hard to believe that this app is made by students. It is so good and I hope this app will be used by the whole IIUM community.",
+        body: "Clean Fluttery goodness! Hats off to the dev. Maybe JAKIM should learn a thing or two from you.",
         author: {
-          name: "MUHAMMAD AFIQ",
-          handle: "2214015",
-          imageUrl:
-            "https://italeemc.iium.edu.my/pluginfile.php/16098/user/icon/remui/f1?rev=136515",
+          name: "Abdullah Mubarak",
+          handle: "5",
+          imageUrl: "https://bucket.waktusolat.app/pp_abdullah.jpg",
         },
       },
       // More testimonials...
@@ -39,32 +36,28 @@ const testimonials = [
   [
     [
       {
-        body: "Definitely recommending this app to my friends!",
+        body: "suara azan yg sedap dan waktu yg tepat...ok mantap",
         author: {
-          name: "MUHAMMAD NURIMAN QUDDUS",
-          handle: "2214227",
-          imageUrl:
-            "https://italeemc.iium.edu.my/pluginfile.php/22336/user/icon/remui/f1?rev=136547",
+          name: "Noor Azizi",
+          handle: "5",
+          imageUrl: "https://bucket.waktusolat.app/pp_noor_azizi.png",
         },
       },
       // More testimonials...
     ],
     [
       {
-        body: "It's finger licking good!",
+        body: "Terbaik waktu solat yg tepat",
         author: {
-          name: "FADZWAN",
-          handle: "2116337",
-          imageUrl:
-            "https://italeemc.iium.edu.my/pluginfile.php/16873/user/icon/remui/f1?rev=77362",
+          name: "Siti Aishah",
+          handle: "5",
+          imageUrl: "https://bucket.waktusolat.app/pp_s.png",
         },
       },
       // More testimonials...
     ],
   ],
 ];
-
-//https://italeemc.iium.edu.my/pluginfile.php/16873/user/icon/remui/f1?rev=77362
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -116,6 +109,8 @@ const Testimonial = () => {
               <Image
                 className="h-10 w-10 flex-none rounded-full bg-gray-50"
                 src={featuredTestimonial.author.imageUrl}
+                width={120}
+                height={120}
                 alt=""
               />
               <div className="flex-auto">
@@ -124,11 +119,6 @@ const Testimonial = () => {
                 </div>
                 <div className="text-gray-600 dark:text-gray-400">{`@${featuredTestimonial.author.handle}`}</div>
               </div>
-              <Image
-                className="h-10 w-auto flex-none"
-                src={featuredTestimonial.author.logoUrl}
-                alt=""
-              />
             </figcaption>
           </figure>
           {testimonials.map((columnGroup, columnGroupIdx) => (
@@ -160,6 +150,8 @@ const Testimonial = () => {
                         <Image
                           className="h-10 w-10 rounded-full bg-gray-50"
                           src={testimonial.author.imageUrl}
+                          width={120}
+                          height={120}
                           alt=""
                         />
                         <div>

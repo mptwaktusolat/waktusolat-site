@@ -5,6 +5,10 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: "play.google.com"
+            },
+            {
+                protocol: "https",
+                hostname: "bucket.waktusolat.app"
             }
         ]
     }
