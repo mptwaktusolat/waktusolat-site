@@ -11,6 +11,15 @@ const nextConfig = {
                 hostname: "bucket.waktusolat.app"
             }
         ]
+    },
+    redirects: async () => {
+        return [
+            {
+                source: "/get",
+                destination: "https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia",
+                permanent: true
+            }
+        ]
     }
 }
 
