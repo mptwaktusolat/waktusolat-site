@@ -17,6 +17,11 @@ const nextConfig = {
             {
                 source: "/get",
                 destination: "https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia",
+                permanent: false
+            },
+            {
+                source: "/gh",
+                destination: "https://github.com/mptwaktusolat/app_waktu_solat_malaysia",
                 permanent: true
             }
         ]
