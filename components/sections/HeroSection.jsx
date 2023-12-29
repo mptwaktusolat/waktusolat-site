@@ -64,11 +64,7 @@ const Hero = () => {
             {/* <span className="mr-2 rounded-full bg-yellow-500/10 px-3 py-2 text-sm font-semibold leading-6 text-yellow-600 dark:text-yellow-400 ring-1 ring-inset ring-indigo-500/20">
               In construction
             </span> */}
-            <Link
-              href="https://github.com/qryskalyst20/simplified-imaluum"
-              target="_blank"
-              className="inline-flex space-x-6"
-            >
+            <Link href="/changelog" className="inline-flex space-x-6">
               <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-semibold leading-6 text-cyan-600 dark:text-cyan-400 ring-1 ring-inset ring-indigo-500/20">
                 What&apos;s new
               </span>
