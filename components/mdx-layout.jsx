@@ -3,7 +3,7 @@ export default function MdxLayout({ children }) {
   return (
     <section className="relative">
       <ThemeSwitcher className="absolute top-2 right-5" />
-      {/* <svg
+      <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 dark:stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
       >
@@ -43,11 +43,8 @@ export default function MdxLayout({ children }) {
               "polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
           }}
         />
-      </div> */}
-      <div
-        className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32 bg-slate-100 dark:bg-slate-200"
-        bg-slate-200
-      >
+      </div>
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32  bg-slate-100 dark:bg-transparent">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
           <h1 className="mt-10 ml-3 flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-slate-200 sm:text-6xl">
             Changelog
