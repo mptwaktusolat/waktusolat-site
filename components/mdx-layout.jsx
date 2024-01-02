@@ -1,6 +1,6 @@
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
-export default function MdxLayout({ children }) {
+export default function MdxLayout({ children, meta }) {
   return (
     <main className="relative isolate overflow-hidden bg-slate-100 dark:bg-zinc-900">
       <ThemeSwitcher className="absolute top-2 right-5" />
@@ -45,10 +45,10 @@ export default function MdxLayout({ children }) {
           }}
         />
       </div>
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32  ">
-        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-xl flex-shrink-1 lg:mx-0 lg:max-w-xl">
           <h1 className="mt-10 ml-3 flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-slate-200 sm:text-6xl">
-            Changelog
+            {meta.title}
           </h1>
         </div>
         <div className="mx-auto mt-16 flex-none max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:flex-none xl:ml-24 text-zinc-800 dark:text-slate-200">

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (prefers-color-scheme: dark) {
+  .markdown_a {
+    color: #22d3ee;
+  
+  }
+  .markdown_a::after {
+    background-color: #22d3ee;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -48,3 +58,27 @@ li {
   display: list-item;
   word-wrap: break-word;
 }
+
+.markdown_a {
+  color: #2563eb;
+  text-decoration: none;
+  position: relative;
+
+}
+
+.markdown_a::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+
+.markdown_a:hover::after {
+  width: 100%;
+}
+

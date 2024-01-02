@@ -8,11 +8,11 @@ export default function ChangelogHeader(props) {
     <>
       <h2
         id={`${version}`}
-        className="group/item text-4xl font-bold mt-10 mb-5"
+        className="group/item text-2xl font-bold mt-10 mb-5 sm:text-4xl lg:text-4xl"
       >
         <a href={`#${version}`}>
           <div className="inline font-bold text-teal-600">#</div>
-        </a>
+        </a>{" "}
         Version {version}{" "}
         <span className="inline-block text-base opacity-50">{date}</span>
         {hijriDate && (

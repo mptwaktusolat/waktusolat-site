@@ -8,8 +8,8 @@ import ChangelogHeader from '../../components/changelog-header'
   githubSlug="2.11.0+140"
 />
 
-- Add [Android Homescreen widget](../pull/214). Finally closes issue [#9](../issues/9)
-- Fix autoscroll 'terlajak' in full prayer timetable. Issue [#213](../issues/213)
+- Add [Android Homescreen widget](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/214). Finally closes issue [#9](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/9)
+- Fix autoscroll 'terlajak' in full prayer timetable. Issue [#213](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/213)
 - Request to schedule exact alarm notification for Android 13+
 
 <ChangelogHeader
@@ -18,7 +18,7 @@ import ChangelogHeader from '../../components/changelog-header'
   githubSlug="2.10.1+137"
 />
 
-- :rewind: Revert [`PopScope` migration](https://docs.flutter.dev/release/breaking-changes/android-predictive-back#migration-guide) as it breaks the manual location selector dialog. [[Video]](https://imgur.com/a/prW2NsL)
+- Revert [`PopScope` migration](https://docs.flutter.dev/release/breaking-changes/android-predictive-back#migration-guide) as it breaks the manual location selector dialog. [[Video]](https://imgur.com/a/prW2NsL)
 
 <ChangelogHeader
   version="2.10.0"
@@ -67,7 +67,7 @@ import ChangelogHeader from '../../components/changelog-header'
   githubSlug="2.9.1+133"
 />
 
-- Possible fix to [#203](../issues/203) again. Crashlytics dashboard are full of this issue. 🤷
+- Possible fix to [#203](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/203) again. Crashlytics dashboard are full of this issue. 🤷
 - Update text not visible on button. [Screenshot](https://imgur.com/HomLSib)
 - Allow expired certificate from [mpt-server](https://mpt-server.vercel.app). This is to allow prayer data to fetched when running on older Android versions.
 - Update dependencies
@@ -84,13 +84,13 @@ import ChangelogHeader from '../../components/changelog-header'
 />
 
 
-- 🎈 Using the latest API update from [mpt-server](https://mpt-server.vercel.app/)
+- Using the latest API update from [mpt-server](https://mpt-server.vercel.app/)
   - Prayer time API now using [solat-v2](https://waktusolat.iqfareez.com/api#tag/solat-v2) endpoint
-  - **Improved accuracy** when detecting one's prayer zone - now using pre-defined zone definition instead of just calculating the nearest point of the prayer time zone to the user location. For more details, please see issue [#188](../issues/188)
-- :arrow_up: Upgrade dependencies (major ones included: [http](https://pub.dev/packages/http), [google_fonts](https://pub.dev/packages/google_fonts), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [app_settings](https://pub.dev/packages/app_settings))
-- :bug: Possibly fixed error related to notification scheduling. [#203](../issues/203)
-- :rewind: Revert adding the error message in zone_chooser dialog [5adc2cd](../commit/5adc2cdfee32f05c81643bba7eebec1b5e83b69c)
-- :technologist: [DEV]
+  - **Improved accuracy** when detecting one's prayer zone - now using pre-defined zone definition instead of just calculating the nearest point of the prayer time zone to the user location. For more details, please see issue [#188](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/188)
+- Upgrade dependencies (major ones included: [http](https://pub.dev/packages/http), [google_fonts](https://pub.dev/packages/google_fonts), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [app_settings](https://pub.dev/packages/app_settings))
+- Possibly fixed error related to notification scheduling. [#203](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/203)
+- Revert adding the error message in zone_chooser dialog [5adc2cd](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/5adc2cdfee32f05c81643bba7eebec1b5e83b69c)
+- DEV]
   - Fix some of the file names with respect to linter rule [`lowercase_with_underscores`](https://dart.dev/tools/linter-rules/file_names)
   - Bump kotlin version to the `1.8.22` (due to `app_settings` requirement)
 
@@ -102,9 +102,8 @@ import ChangelogHeader from '../../components/changelog-header'
   githubSlug="2.8.3+130"
 />
 
-- :card_file_box: Update **JAKIM location** database (Comes with zone changes and addition especially for Sarawak, etc.) [011cb86](../commit/011cb864596a8a231d7f00ce24261b714feae712)
+- :card_file_box: Update **JAKIM location** database (Comes with zone changes and addition especially for Sarawak, etc.) [011cb86](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/011cb864596a8a231d7f00ce24261b714feae712)
 
-## [Ver. `2.8.2`](../releases/tag/2.8.2%2B129) - 13 Jun 2023 (24 Zulkaedah 1444)
 
 <ChangelogHeader
   version="2.8.2"
@@ -178,8 +177,8 @@ import ChangelogHeader from '../../components/changelog-header'
   githubSlug="2.7.4+120"
 />
 
-- :bug: Fixed azan notification issue that plays Azan subuh for every prayer times. See issue [#173](../issues/173)
-- :label: Renamed app label. Malaysia Prayer Time is now **`Prayer Time`** (Waktu Solat Malaysia is now **`Waktu Solat`**). See [#174](../issues/174)
+- :bug: Fixed azan notification issue that plays Azan subuh for every prayer times. See issue [#173](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/173)
+- :label: Renamed app label. Malaysia Prayer Time is now **`Prayer Time`** (Waktu Solat Malaysia is now **`Waktu Solat`**). See [#174](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/174)
 - :put_litter_in_its_place: Removed unused widgets, add missing tooltips.
 
 <ChangelogHeader
@@ -217,7 +216,7 @@ import ChangelogHeader from '../../components/changelog-header'
   githubSlug="2.6.2-hotfix.1+111"
 />
 
-- :rewind: Revert to use [flutter_local_notification](https://pub.dev/packages/flutter_local_notifications) version 9.9.1 and [timezone](https://pub.dev/packages/timezone) version 0.8.0. This was due to the issue [#142](../issues/142)
+- :rewind: Revert to use [flutter_local_notification](https://pub.dev/packages/flutter_local_notifications) version 9.9.1 and [timezone](https://pub.dev/packages/timezone) version 0.8.0. This was due to the issue [#142](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/142)
 
 <ChangelogHeader
   version="2.6.2"
@@ -252,7 +251,11 @@ import ChangelogHeader from '../../components/changelog-header'
   - Bump `compileSdkVersion` to 33.
   - Refactor jakim zones [database](https://mpt-server.vercel.app/locations).
 
-## [Ver. `2.5.0`](../releases/tag/2.5.0%2B105) - 31 July 2022
+<ChangelogHeader
+  version="2.5.0"
+  date="31 July 2022"
+  githubSlug="2.5.0+105"
+/>
 
 - :heavy_plus_sign: Added [firebase_crashlytics ](https://pub.dev/packages/firebase_crashlytics) - to understand the crashes and hopefully be able to mitigate it.
 - :wrench: `flutterfire configure`d
@@ -266,14 +269,22 @@ import ChangelogHeader from '../../components/changelog-header'
   - Changed few file names to respect the Dart's naming convention.
   - Removed deprecated splash screen manifest. [Docs](https://docs.flutter.dev/development/ui/advanced/splash-screen#migrating-from-manifest--activity-defined-custom-splash-screens)
 
-## [Ver. `2.4.4-hotfix.1`](../releases/tag/2.4.4-hotfix.1%2B104) - 11 July 2022
+<ChangelogHeader
+  version="2.4.4-hotfix.1"
+  date="11 July 2022"
+  githubSlug="2.4.4-hotfix.1+104"
+/>
 
 - In **Feedback page**:
   - :bug: Fixed error `Converting object to an encodable object failed: Instance of 'Duration'` when user submitting feedback.
   - 🤫 Being more transparent to the user i.e. **disclosed** all data that being shared to developer **when user sending the feedback**. Includes option to hide sensitive data _eg: GPS coordinate_. [Screenshot](https://imgur.com/a/acfh1C6)
 - :technologist: [Dev] Added ability to **hide ads** for 10 minutes. Accessible from debug dialog.
 
-## [Ver. `2.4.4`](../releases/tag/2.4.4%2B103) - 1 July 2022
+<ChangelogHeader
+  version="2.4.4"
+  date="1 July 2022"
+  githubSlug="2.4.4+103"
+/>
 
 - :arrow_up: Upgrade dependencies (including major: [device_info_plus](https://pub.dev/packages/device_info_plus), [google_fonts](https://pub.dev/packages/google_fonts))
 - :sparkles: New feature: **quick actions**.
@@ -292,7 +303,11 @@ import ChangelogHeader from '../../components/changelog-header'
   - Changed few file names according to Dart convention.
   - Handled most linter warnings
 
-## [Ver. `2.4.2`](../releases/tag/2.4.2%2B101) - 27 May 2022
+<ChangelogHeader
+  version="2.4.2"
+  date="27 May 2022"
+  githubSlug="2.4.2+101"
+/>
 
 - :new: Flutter 3.0 Upgrade
   - Bumped the versions to 7.4 for **Gradle**, and 7.1.2 for the **Android Gradle plugin**.
@@ -312,12 +327,20 @@ import ChangelogHeader from '../../components/changelog-header'
   - **Feedback page**: I created a [server](https://mpt-firestore-server.herokuapp.com/) as a middleman for firebase connections.
   - **FAQ page**: Removed. Replaced with external link to the new MPT [website](https://mywaktusolat.vercel.app/).
 
-## [Ver. `2.4.0-hotfix.1`](../releases/tag/2.4.0-hoxfix.1%2B98) - 9 April 2022
+<ChangelogHeader
+  version="2.4.0-hotfix.1"
+  date="9 April 2022"
+  githubSlug="2.4.0-hotfix.1+98"
+/>
 
 - :ambulance: Fixed **`Connection reset by peer`** error. Caused by JAKIM server. [#113](../issues/103)
 - :technologist: [Dev] Use **enum** for share target function.
 
-## [Ver. `2.4.0`](../releases/tag/2.4.0%2B97) - 4 April 2022
+<ChangelogHeader
+  version="2.4.0"
+  date="4 April 2022"
+  githubSlug="2.4.0+97"
+/>
 
 - :sparkles: Added option to view **last one third of the night** in full prayer timetable. [#102](../issues/102).
 - :lipstick: System bar is now **transparent**. [Screenshot](https://imgur.com/a/RcTAd6B) _(Most apps slowly implement this so why no wont us :hand_over_mouth:)_
@@ -331,12 +354,13 @@ import ChangelogHeader from '../../components/changelog-header'
 - :technologist: [Dev] Change JAKIM model datatypes for prayer time data. Previously using list of UNIX timestamp, now Object of DateTime(s).
 - :technologist: [Dev] (Debug dialog) Replaced open in-app review with notification setting notice.
 
-## [Ver. `2.3.5-hotfix`](../releases/tag/2.3.5-hotfix%2B95) - 11 March 2022
+<ChangelogHeader version="2.3.5-hotfix" date="11 March 2022" githubSlug="2.3.5-hotfix+95" />
 
 - :bug: Fixed **notification not getting rescheduled** when changing location. [#104](../issues/104). Also fixed other notification issues [#105](../issues/105) that came with (probably) [February Update](#ver-233---24-february-2022).
 - :rewind: **What's New** dialog no longer show detailed changelog. Instead, it will only provide link to this changelog page only. [Screenshot](https://imgur.com/a/GpOCsKP)
 
-## [Ver. `2.3.5`](../releases/tag/2.3.5%2B93) - 5 March 2022
+<ChangelogHeader version="2.3.5" date="5 March 2022" githubSlug="2.3.5+93" />
+
 
 - :bug: Fixed notification failed to schedule. This is due to slight api changes that failed the date parser to convert the date correctly. [#103](../issues/103)
 - :sparkles: New **Tasbih**. It features a simple beads and a counter. Can be accessed via the pray icon at the navigation bar. [#103](../issues/37) _#RoadToRamadan_
@@ -344,7 +368,7 @@ import ChangelogHeader from '../../components/changelog-header'
 - :lipstick: **System Navigation bar** colour now follows the app theme. [#101](../issues/101)
 - :truck: [Developer debug feature] Moves notification related part from debug dialog to notification setting page. [Screenshot](https://imgur.com/a/2zQDglz)
 
-## [Ver. `2.3.3`](../releases/tag/2.3.3%2B91) - 24 February 2022
+<ChangelogHeader version="2.3.3" date="24 February 2022" githubSlug="2.3.3+91" />
 
 - :alien: [**Flutter 2.10**](https://medium.com/flutter/whats-new-in-flutter-2-10-5aafb0314b12) changes
   - Update `android:name` property in **AndroidManifest.xml**.
@@ -366,7 +390,8 @@ import ChangelogHeader from '../../components/changelog-header'
 - :wastebasket: Code cleanup, fixed imports, renamed files and classes, delete unused files, organizing files structure etc.
 - :left_right_arrow: [Comparing 2.3.0 - 2.3.3](../compare/2.3.0+89...2.3.3+91)
 
-## [Ver. `2.3.0`](../releases/tag/2.3.0%2B89) - 27 January 2022
+<ChangelogHeader version="2.3.0" date="27 January 2022" githubSlug="2.3.0+89" />
+
 
 - :globe_with_meridians: Added **Bahasa Melayu** to the app! :tada:
   - For for time installation, user will be **prompted to choose** their preferred language. _Default to their device locale (en/ms)_
@@ -385,7 +410,7 @@ import ChangelogHeader from '../../components/changelog-header'
   - Fixed grammars, wordings etc. in few places.
   - Code refactor
 
-## [Ver. `2.2.9`](../releases/tag/2.2.9%2B86) - 16 December 2021
+<ChangelogHeader version="2.2.9" date="16 December 2021" githubSlug="2.2.9+86" />
 
 - :dodo: Build with [**Flutter 2.8**](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181), which claims to have performance improvements in reduction in **startup latency** of 50% when running on a low-end Android device, and a 10% improvement on high-end devices.
 - :coffin: Remove location migration code.
@@ -484,7 +509,7 @@ import ChangelogHeader from '../../components/changelog-header'
 - Code cleanup (a lot...)
 - and (probably) more not documented.
 
-## [Ver `1.26.143`](../releases/tag/1.26.143%2B66) - 5 August 2021
+<ChangelogHeader version="1.26.143" date="5 August 2021" githubSlug="1.26.143+66" />
 
 - :heavy_plus_sign: Added [google_mobile_ads](https://pub.dev/packages/google_mobile_ads). Unobtrusive ad is now showing on the main page. Alert me if inappropriate ads is showing.
 - :heavy_plus_sign: [firebase_remote_config](https://pub.dev/packages/firebase_remote_config). Hijri offset data now fetched from the server (controlled by me so remind me if I forgot to update, allow up to 8 hours for the changes fully propagates), removed manual adjustment setting. Issue [#54](../issues/54).
@@ -523,45 +548,45 @@ import ChangelogHeader from '../../components/changelog-header'
 - Changed `SizedBox` to `Padding` widget in app icon (AboutPage) so that the loading indicator will not be clipped & overflowed.
 - Updated [Privacy Policy](../wiki/Privacy-Policy).
 
-## [Ver `1.20.127`](../releases/tag/1.20.127%2B59) - 4 July 2021
+<ChangelogHeader version="1.20.127" date="4 July 2021" githubSlug="1.20.127+59" />
 
 - Updated **Share the app** message in **Contribution page** which now includes both [Play Store link](http://bit.ly/MPTdl) and [web app link](http://waktusolat.web.app/).
-- :art: Rounded corner **app icon** in About page.
-- :art: **New theme changing animation** (Sun/Moon animation). Original code from [here](https://github.com/shubhamhackz/light_dark_toggle).
+- Rounded corner **app icon** in About page.
+- **New theme changing animation** (Sun/Moon animation). Original code from [here](https://github.com/shubhamhackz/light_dark_toggle).
 - Fix **cannot open URL** in Android 11 (API 30). Removed `canLaunch` checker and `forcewebview` parameter.
-- :adhesive_bandage: Increase **timeout** to get GPS to `12`s.
+- Increase **timeout** to get GPS to `12`s.
 - Rename title to **MY Prayer time**. Affect recent screen on Android.
 - Minor `Provider` and GetStorage `optimization`. Commit ref [af1e8f3](../commit/af1e8f343a4aa2655a3396f1322ac1d00510bbc0)
 - Showing a proper error screen when no compass sensor exists on device. No more blank grey screen. Fixes [#70](../issues/70).
 - Set default **Hijri offset** to -1. This should affect new installs only. Commit ref [6503b6e](../commit/6503b6ed0e569f3f7b4233923db4691f0f00adbe)
 - Smaller loading indicator in About Page (10px less than the icon). Commit ref [d77e4ae](../commit/d77e4ae48725ca3babb823ce84e0201105770d0c)
-- :arrow_up: Upgrade dependencies.
+- Upgrade dependencies.
 
-## [Ver `1.20.120`](../releases/tag/1.20.120%2B56) - 30 May 2021
+<ChangelogHeader version="1.20.120" date="30 May 2021" githubSlug="1.20.120+50" />
 
-- :sparkles: Introducing **Onboarding screen**. This screen is shown when user open the app for the first time to setup few settings in app. User can 1) Set **location** and 2) Set **preferred theme**. Assets are from [BAM Free 3D Illustration Kit](https://www.uistore.design/items/bam-free-3d-illustration-kit/). Package used: [introduction_screen](https://pub.dev/packages/introduction_screen). Closes [#62](../issues/62).
+- Introducing **Onboarding screen**. This screen is shown when user open the app for the first time to setup few settings in app. User can 1) Set **location** and 2) Set **preferred theme**. Assets are from [BAM Free 3D Illustration Kit](https://www.uistore.design/items/bam-free-3d-illustration-kit/). Package used: [introduction_screen](https://pub.dev/packages/introduction_screen). Closes [#62](../issues/62).
 - Removed **Retry** button when get location throw an error. Side effect of `FutureBuilder` implementation.
 - The manual location chooser will **refresh** regardless of if the previous value is same.
 - Add `10`s timeout to get location method.
 - Changes `RichText` with `Text.rich` in `ZoneChooser` for Error Widget.
-- :card_file_box: Changed my [Twitter](https://twitter.com/iqfareez) username in About page.
-- :arrow_up: Upgrade and update dependencies (incl major).
-- :truck: Refactor `ZoneChooser` class to be more modular so that it can be reusable by in Onboarding Screen.
-- :triangular_flag_on_post: [DEBUG] Add Erase all data to clear all setting. Basically, a `GetStorage().erase`. You can find it after enabling app's developer mode.
-- :truck: [CODE] Migrate from `GetX` to `Provider` for `ThemeController`.
-- :truck: [CODE] Some methods are now marked as `static` so no need to create a new instance of them.
-- :building_construction: [CODE] Changed `StreamBuilder` to `FutureBuilder` method for fetching prayer time. As a result, I be able to get rid that old **BLoC** method implemented in app. This result in creating `LocationProvider` to assist the operation.
-  :truck: Change [bitly](http://bit.ly/MPTdl) link to [FDL](https://solat.page.link/get) link in copy and share message.
-- :art: Update **MPT theme** image. [031fd12](../commit/031fd1246da42970c04d614880e0464b60b5d49a)
-- :fire: Remove extra space in ZoneChooser error dialog. [9bc1fb1](../commit/9bc1fb16a32fdb87c6bdf483457b5baab61f850f)
+- Changed my [Twitter](https://twitter.com/iqfareez) username in About page.
+- Upgrade and update dependencies (incl major).
+- Refactor `ZoneChooser` class to be more modular so that it can be reusable by in Onboarding Screen.
+- [DEBUG] Add Erase all data to clear all setting. Basically, a `GetStorage().erase`. You can find it after enabling app's developer mode.
+- [CODE] Migrate from `GetX` to `Provider` for `ThemeController`.
+- [CODE] Some methods are now marked as `static` so no need to create a new instance of them.
+- [CODE] Changed `StreamBuilder` to `FutureBuilder` method for fetching prayer time. As a result, I be able to get rid that old **BLoC** method implemented in app. This result in creating `LocationProvider` to assist the operation.
+  Change [bitly](http://bit.ly/MPTdl) link to [FDL](https://solat.page.link/get) link in copy and share message.
+- Update **MPT theme** image. [031fd12](../commit/031fd1246da42970c04d614880e0464b60b5d49a)
+- Remove extra space in ZoneChooser error dialog. [9bc1fb1](../commit/9bc1fb16a32fdb87c6bdf483457b5baab61f850f)
 - Snackbar after location has been selected is reduced to `1500`ms. [29147d2](../commit/29147d24f92af69a922c33626734c45904234bee)
-- :art: Reorder About Page list items. Also, added some `padding` to copyright information. [de6adad](../commit/de6adad77874447507f7762cc16ed421917370ac)
+- Reorder About Page list items. Also, added some `padding` to copyright information. [de6adad](../commit/de6adad77874447507f7762cc16ed421917370ac)
 - Adding back location **position** in debug dialog. Also included in Send Feedback metadata.
 - Add more **debug toast** where it is necessary.
-- :fire: Remove [get](https://pub.dev/packages/get) and [rxdart](https://pub.dev/packages/rxdart) from `pubspec.yaml` (but these packages are still used by some other dependencies)
-- :lipstick: Changed content padding values in setting some `AlertDialog`.
-- :heavy_plus_sign: [email_validator](https://pub.dev/packages/email_validator). The feedback form will not send if incorrect email format is entered. However, user still can leave the email field empty.
-- :sparkles: Added **Frequently Asked Questions (FAQs)** page. Items are fetched from cloud database (Firestore). The page can be accessed from About Page or Send Feedback page.
+- Remove [get](https://pub.dev/packages/get) and [rxdart](https://pub.dev/packages/rxdart) from `pubspec.yaml` (but these packages are still used by some other dependencies)
+- Changed content padding values in setting some `AlertDialog`.
+- [email_validator](https://pub.dev/packages/email_validator). The feedback form will not send if incorrect email format is entered. However, user still can leave the email field empty.
+- Added **Frequently Asked Questions (FAQs)** page. Items are fetched from cloud database (Firestore). The page can be accessed from About Page or Send Feedback page.
 - Add `SizedBox` widget at the bottom of setting page to give it breathable space.
 - Bring back the **copyright** information in About Page.
 - Set `addDefaultShareMenuItem` to `true` and set colour `navigationBarColor` for Chrome Custom Tabs
@@ -570,9 +595,10 @@ import ChangelogHeader from '../../components/changelog-header'
 - Added `more apps by me` link in AboutPage.dart.
 - Restructured text in AboutPage.dart; Added link to e-solat [Jakim page](https://www.e-solat.gov.my/) and [MPTi906 API](https://mpt.i906.my/api.html) website.
 
-## [Ver `1.18.98`](../releases/tag/1.18.98%2B51) - 13 April 2021
+<ChangelogHeader version="1.18.98" date="13 April 2021" githubSlug="1.18.98+51" />
 
-- :adhesive_bandage: Temporary fix the offsetted **hijri date** [#54](../issues/54), I just change the assignation for G`etStorage()` when app started. This will affect only for new installs, where `GetStorage()` object not existed yet, existing user will need to adjust the hijri date manually. Guide to change offset date can be find [here](http://bit.ly/mpthijrioffset).
+
+- Temporary fix the offsetted **hijri date** [#54](../issues/54), I just change the assignation for G`etStorage()` when app started. This will affect only for new installs, where `GetStorage()` object not existed yet, existing user will need to adjust the hijri date manually. Guide to change offset date can be find [here](http://bit.ly/mpthijrioffset).
   Change colour for some elements.
 - Hide keyboard after press send in **Send feedback** option.
 - Change response text after submit feedback.
@@ -580,7 +606,7 @@ import ChangelogHeader from '../../components/changelog-header'
 
 ## [Ver `1.18.97`](../releases/tag/1.18.98%2B51) - 28 March 2021
 
-- :dodo: **Flutter** 2.0
+- **Flutter** 2.0
 - :sparkles: Added `Scrollbar` to the location lists.
 - :heavy_plus_sign: [cloud_firestore](https://pub.dev/packages/cloud_firestore), [firebase_core](https://pub.dev/packages/firebase_core), [device_info](https://pub.dev/packages/device_info)
 - :lipstick: **Feedback page redesign**, user no longer use email as medium of sending the report. Now the data is sent via Firebase Firestore. The pro of this method is that user can remain **anonymous**, but it is recommended to **provide an email** address so that I can contact you for following up the issue.
@@ -739,7 +765,8 @@ import ChangelogHeader from '../../components/changelog-header'
 - :pencil2: Consistent in capitalization in bottomAppBar options.
 - :broom: Code clean-up
 
-## [Ver `1.3.15`](../releases/tag/1.3.15%2B10) - 29 September 2020
+<ChangelogHeader version="1.3.15" date="29 September 2020" githubSlug="1.3.15+10" />
+
 
 - :sparkles: Location can be set **based on your location** (GPS or network) - again, credit to [mpti906](https://mpt.i906.my/api.html) API.
   - :heavy_plus_sign: Added [geolocator](https://pub.dev/packages/geolocator)
@@ -748,46 +775,49 @@ import ChangelogHeader from '../../components/changelog-header'
 - :heavy_plus_sign: Added [flutter_spinkit](https://pub.dev/packages/flutter_spinkit) - nice looking loading indicators - Implemented in GetPrayertime and ZonePicker screens.
 - :man_technologist: Code reformats, location data no longer fetched from JSON assets, used class instead.
 
-## [Ver `1.2.11`](../releases/tag/1.2.11%2B9) - 21 September 2020
+<ChangelogHeader version="1.2.11" date="21 September 2020" githubSlug="1.2.11+9" />
 
-- :alien: Fixed issue [#14](../issues/14): Current API, [AzanPro](https://api.azanpro.com), is out of date from JAKIM and some location shows wrong prayer time. Changed API provider to [WaktuSolat](http://waktusolatapp.com/api/v2/) API.
-- :passport_control: Added two new permissions in manifest: `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION` (to be used later)
-- :wastebasket: Removed unused permission: `VIBRATE`
-- :pencil2: Changed toast response when copy timetable from Copied to Timetable copied.
-- :pencil2: Change material app title to `My Prayer Time` (more short), this should reflect on Recent Action (Android)
-- :pencil2: Swap `Kuala Lumpur, Putrajaya` string in location chooser.
 
-## [Ver `1.2.7`](../releases/tag/1.2.7%2B8) - 16 September 2020
+- Fixed issue [#14](../issues/14): Current API, [AzanPro](https://api.azanpro.com), is out of date from JAKIM and some location shows wrong prayer time. Changed API provider to [WaktuSolat](http://waktusolatapp.com/api/v2/) API.
+- Added two new permissions in manifest: `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION` (to be used later)
+- Removed unused permission: `VIBRATE`
+- Changed toast response when copy timetable from Copied to Timetable copied.
+- Change material app title to `My Prayer Time` (more short), this should reflect on Recent Action (Android)
+- Swap `Kuala Lumpur, Putrajaya` string in location chooser.
 
-- :heavy_plus_sign: Added [share](https://pub.dev/packages/share)
+<ChangelogHeader version="1.2.7" date="16 September 2020" githubSlug="1.2.7+8" />
+
+- Added [share](https://pub.dev/packages/share)
   - **Share** prayer timetable.
   - FAB end-docked to bottomAppBar.
 - Added **copy** the whole timetable functionality. Beside menu icon. Basically, copy and share message is the same content.
 - TextAlignment and TextStyle in About Dialog.
 
-## [Ver `1.0.6`](../releases/tag/1.0.6%2B7) - 8 September 2020
+<ChangelogHeader version="1.0.6" date="8 September 2020" githubSlug="1.0.6+7" />
 
-- :pencil2: Concatenated word `Version` with version number in About Dialog.
-- :pencil2: Removed word `BETA` on the AppBar
-- :pencil2: `Rate App` has been changed to `Rate and Review`.
-- :pencil2: Added string `Prayer time data provided by JAKIM` in AboutDialog.
+- Concatenated word `Version` with version number in About Dialog.
+- Removed word `BETA` on the AppBar
+- `Rate App` has been changed to `Rate and Review`.
+- Added string `Prayer time data provided by JAKIM` in AboutDialog.
 - Feedback screen now pop itself after send button is pressed.
 - BottomAppBar now pop itself after user tapped into Rate and review
 
-## [Ver `1.0.0`](../releases/tag/1.0.0%2B6) - 5 September 2020
+<ChangelogHeader version="1.0.0" date="5 September 2020" githubSlug="1.0.0+6" />
+- Initial release
 
-- :tada: Initial **stable** release
+<div class="bg-gray-500 h-10 w-0.5 mr-4 mb-4"></div>
 
-## 15 Jun 2020
 
-- :tada: [Initial commit](../commit/ac0e29c004f6f3a0a6bcd75bc9eeef0be6e44846)
+**5 Jun 2020**: [Initial commit](../commit/ac0e29c004f6f3a0a6bcd75bc9eeef0be6e44846) 🎉
 
 \
-_Original changelog page: https://telegra.ph/MPT-Changelogs---Malaysia-Prayer-Time-Flutter-07-20_
+_Previous changelog page: [mptwaktusolat/app_waktu_solat_malaysia/wiki/Changelog](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/wiki/Changelog)_
 
-Permanently migrate to this wiki due to content limit.
 
-export default function MDXPage({ children }) {
-  return <MdxLayout>{children}</MdxLayout>;
- 
+export default function MDXPage({ children }) {  
+  
+  return <MdxLayout meta={{
+    title: "Changelogs",
+  }} >{children}</MdxLayout>;
+
 }
