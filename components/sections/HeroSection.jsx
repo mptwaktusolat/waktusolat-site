@@ -1,6 +1,6 @@
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-// import DARKDEMOPIC from "@/public/darkdemo.png";
-// import LIGHTDEMOPIC from "@/public/lightdemo.png";
+import DARKDEMOPIC from "@/public/images/phone-dark-portrait.png";
+import LIGHTDEMOPIC from "@/public/images/phone-light-portrait.png";
 // import LOGO from "@/public/logo-landing-page.png";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
@@ -51,7 +51,7 @@ const Hero = () => {
           }}
         />
       </div>
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-24">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
           {/* <Image
             width={48}
@@ -95,20 +95,18 @@ const Hero = () => {
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            {/* <Image
+            <Image
               src={LIGHTDEMOPIC}
               alt="App screenshot"
-              width={1232}
-              height={242}
-              className="rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 dark:hidden block"
+              width={390}
+              className="drop-shadow-2xl dark:hidden block"
             />
             <Image
               src={DARKDEMOPIC}
               alt="App screenshot"
-              width={1232}
-              height={242}
-              className="rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 hidden dark:block"
-            /> */}
+              width={390}
+              className="drop-shadow-2xl hidden dark:block"
+            />
           </div>
         </div>
       </div>
