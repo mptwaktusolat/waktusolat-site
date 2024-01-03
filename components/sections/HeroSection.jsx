@@ -1,6 +1,7 @@
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import AppLogo from "@/components/app-logo";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import { SiFastapi } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
 import { AppScreenshotCard } from "../app-screenshot-card";
@@ -79,28 +80,47 @@ const Hero = () => {
             An essential apps for Muslim in Malaysia. Help you determine the
             latest prayer times, finding qibla and more.
           </p>
-          <a
-            className="hidden sm:block"
-            href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-          >
-            <Image
-              alt="Get it on Google Play"
-              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-              width={250}
-              height={100}
-            />
-          </a>
-          <a
-            className="sm:hidden block"
-            href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-          >
-            <Image
-              alt="Get it on Google Play"
-              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-              width={200}
-              height={80}
-            />
-          </a>
+          <div className="flex">
+            <a
+              className="hidden sm:block"
+              href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            >
+              <Image
+                alt="Get it on Google Play"
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                width={250}
+                height={100}
+              />
+            </a>
+            <a
+              className="sm:hidden block"
+              href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            >
+              <Image
+                alt="Get it on Google Play"
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                width={200}
+                height={80}
+              />
+            </a>
+            <Link
+              href={"https://api.waktusolat.app"}
+              className=" flex-shrink-0 inline-flex items-center justify-center px-1 group"
+            >
+              <div className="text-slate-800 dark:text-slate-100 m-3.5 flex  justify-center items-center group-hover:opacity-85">
+                <span>
+                  <SiFastapi
+                    size={38}
+                    className="group-hover:-rotate-12 transition-all "
+                  />
+                </span>
+                <span className="mx-2 font-semibold text-lg sm:text-xl">
+                  {" "}
+                  REST API
+                </span>
+              </div>
+            </Link>
+          </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
