@@ -60,14 +60,14 @@ const Hero = () => {
             {/* <span className="mr-2 rounded-full bg-yellow-500/10 px-3 py-2 text-sm font-semibold leading-6 text-yellow-600 dark:text-yellow-400 ring-1 ring-inset ring-indigo-500/20">
               In construction
             </span> */}
-            <Link href="/changelog" className="inline-flex space-x-6">
+            <Link href="/changelog" className="inline-flex space-x-6 group">
               <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-semibold leading-6 text-cyan-600 dark:text-cyan-400 ring-1 ring-inset ring-indigo-500/20">
                 What&apos;s new
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-zinc-800 dark:text-slate-200">
                 <span>Latest version: {latestVersion}</span>
                 <ChevronRightIcon
-                  className="h-5 w-5 text-zinc-500"
+                  className="h-5 w-5 text-zinc-500 dark:text-zinc-400 group-hover:translate-x-2 transition"
                   aria-hidden="true"
                 />
               </span>

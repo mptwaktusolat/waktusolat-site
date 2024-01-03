@@ -101,7 +101,7 @@ const Testimonial = () => {
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-zinc-900 dark:text-slate-300 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-          <figure className="rounded-2xl bg-slate-100 dark:bg-zinc-800 shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
+          <figure className="rounded-2xl bg-slate-100 dark:bg-zinc-800 transition shadow-lg hover:shadow-xl ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
             <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-zinc-900 dark:text-slate-300 sm:p-12 sm:text-xl sm:leading-8">
               <p>{`“${featuredTestimonial.body}”`}</p>
             </blockquote>
@@ -141,7 +141,7 @@ const Testimonial = () => {
                   {column.map((testimonial) => (
                     <figure
                       key={testimonial.author.handle}
-                      className="rounded-2xl bg-slate-100 dark:bg-zinc-800 p-6 shadow-lg ring-1 ring-gray-900/5"
+                      className="rounded-2xl bg-slate-100 dark:bg-zinc-800 p-6 transition shadow-lg hover:shadow-xl ring-1 ring-gray-900/5"
                     >
                       <blockquote className="text-zinc-900 dark:text-slate-300">
                         <p>{`“${testimonial.body}”`}</p>
