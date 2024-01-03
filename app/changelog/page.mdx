@@ -370,80 +370,80 @@ import ChangelogHeader from '../../components/changelog-header'
 
 <ChangelogHeader version="2.3.3" date="24 February 2022" githubSlug="2.3.3+91" />
 
-- :alien: [**Flutter 2.10**](https://medium.com/flutter/whats-new-in-flutter-2-10-5aafb0314b12) changes
+- [**Flutter 2.10**](https://medium.com/flutter/whats-new-in-flutter-2-10-5aafb0314b12) changes
   - Update `android:name` property in **AndroidManifest.xml**.
   - Update `jcenter()` to `mavenCentral()` in **build.gradle**.
   - Use kotlin latest version `1.6.10`.
-- :bug: Fixed the long lasting **wrong hijri** date issue [#54](../issues/54). Hijri date is now consume directly from JAKIM.
-  - :heavy_minus_sign: Removed [hijri](https://pub.dev/packages/hijri) and [firebase_remote_config](https://pub.dev/packages/firebase_remote_config).
+- Fixed the long lasting **wrong hijri** date issue [#54](../issues/54). Hijri date is now consume directly from JAKIM.
+  - Removed [hijri](https://pub.dev/packages/hijri) and [firebase_remote_config](https://pub.dev/packages/firebase_remote_config).
   - However, I'll keep the remote config maintained for a few months (for user that didn't update the app yet).
-- :new: In addition, **hijri date** column has been added to the full prayer timetable page.
-- :sparkles: Also added new **setting dialog** in full timetable page. Currently there's only an option to **hide/unhide the hijri column**. [Watch video](https://youtu.be/8GHvPJrAA0I).
-- :satellite: Added **timeout** to JAKIM api request. This is to prevent the app loading indefinitely because sometimes JAKIM server didn't return any response in case of error.
-- :arrow_up: **Upgrade** depdendencies
-  - Including two major version upgrade: [flutter_web_browser](https://pub.dev/packages/flutter_web_browser/changelog#0170) & [introduction_screen](https://pub.dev/packages/introduction_screen/changelog#300)
-- :globe_with_meridians: **Fix missing translation** in Update Checker page.
-- :lipstick: **Improve UI** & text formatting in Update Checker page. [Screenshots](https://imgur.com/a/lwsU4dK).
-- :wheelchair: Added **semantics** in introduction_screen and in ZoneChooser. [#97](../issues/97)
-- :children_crossing: **Prevent ads** from showing when error is occured when fetching prayer times - Hope it will improve the user experience.
-- :page_facing_up: Added [Google Fonts ](https://fonts.google.com/) license. [#91](../issues/91).
-- :wastebasket: Code cleanup, fixed imports, renamed files and classes, delete unused files, organizing files structure etc.
-- :left_right_arrow: [Comparing 2.3.0 - 2.3.3](../compare/2.3.0+89...2.3.3+91)
+- In addition, **hijri date** column has been added to the full prayer timetable page.
+- Also added new **setting dialog** in full timetable page. Currently there's only an option to **hide/unhide the hijri column**. [Watch video](https://youtu.be/8GHvPJrAA0I).
+- Added **timeout** to JAKIM api request. This is to prevent the app loading indefinitely because sometimes JAKIM server didn't return any response in case of error.
+- **Upgrade** depdendencies
+  - Including two major version[flutter_web_browser](https://pub.dev/packages/flutter_web_browser/changelog#0170) & [introduction_screen](https://pub.dev/packages/introduction_screen/changelog#300)
+- **Fix missing translation** in Update Checker page.
+- **Improve UI** & text formatting in Update Checker page. [Screenshots](https://imgur.com/a/lwsU4dK).
+- Added **semantics** in introduction_screen and in ZoneChooser. [#97](../issues/97)
+- **Prevent ads** from showing when error is occured when fetching prayer times - Hope it will improve the user experience.
+- Added [Google Fonts ](https://fonts.google.com/) license. [#91](../issues/91).
+- Code cleanup, fixed imports, renamed files and classes, delete unused files, organizing files structure etc.
+- [Comparing 2.3.0 - 2.3.3](../compare/2.3.0+89...2.3.3+91)
 
 <ChangelogHeader version="2.3.0" date="27 January 2022" githubSlug="2.3.0+89" />
 
 
-- :globe_with_meridians: Added **Bahasa Melayu** to the app! :tada:
+- Added **Bahasa Melayu** to the app! :tada:
   - For for time installation, user will be **prompted to choose** their preferred language. _Default to their device locale (en/ms)_
   - For others, language can be changed in **Setting** page.
   - Revert the changes made in [#45](../issues/45). Naming convention are now based on language.
-- :alembic: For every app updates installed, the app will show a **What's New** dialog.
+- For every app updates installed, the app will show a **What's New** dialog.
   - _for eg:_ this update will prompt user to select language.
-- :heavy_plus_sign: Added [flutter_markdown](https://pub.dev/packages/flutter_markdown) to easily format rich text without messing around with TextSpan(s)
-- :fireworks: Change `2021` reference to `2022`. _Eg: legalese, app name etc._
-- :bento: Added/rearrange few assets in onboarding screeen.
-  - New source to yoink some icons :sunglasses:: [**3d assets**](https://3dicons.co/).
-- :adhesive_bandage: Added <kbd>Dismiss</kbd> button to hide the notification issue prompt permanently (in app body).
-- :monocle_face: Add `zone`, `app locale` & `device locale` to **Send Feedback** metadata. https://imgur.com/a/huPiGeK
-- :wheelchair: Initial implementation of **Semantics**. [#97](../issues/97)
-- :technologist: Other changes
+- Added [flutter_markdown](https://pub.dev/packages/flutter_markdown) to easily format rich text without messing around with TextSpan(s)
+- Change `2021` reference to `2022`.legalese, app name etc._
+- Added/rearrange few assets in onboarding screeen.
+  - New source to yoink some icons :sunglasse[**3d assets**](https://3dicons.co/).
+- Added <kbd>Dismiss</kbd> button to hide the notification issue prompt permanently (in app body).
+- Add `zone`, `app locale` & `device locale` to **Send Feedback** metadata. https://imgur.com/a/huPiGeK
+- Initial implementation of **Semantics**. [#97](../issues/97)
+- Other changes
   - Fixed grammars, wordings etc. in few places.
   - Code refactor
 
 <ChangelogHeader version="2.2.9" date="16 December 2021" githubSlug="2.2.9+86" />
 
-- :dodo: Build with [**Flutter 2.8**](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181), which claims to have performance improvements in reduction in **startup latency** of 50% when running on a low-end Android device, and a 10% improvement on high-end devices.
-- :coffin: Remove location migration code.
-- :new: Added **updates available** page. https://imgur.com/a/2FXDNYL
-- :arrow_up: Upgrade dependencies including few major. Commit ref [`215d46a`](../commit/215d46ab34ce63bb5b4f4fb4f2460ccfc09e6949)
-- :technologist: Code related changes
+- Build with [**Flutter 2.8**](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181), which claims to have performance improvements in reduction in **startup latency** of 50% when running on a low-end Android device, and a 10% improvement on high-end devices.
+- Remove location migration code.
+- Added **updates available** page. https://imgur.com/a/2FXDNYL
+- Upgrade dependencies including few major. Commit ref [`215d46a`](../commit/215d46ab34ce63bb5b4f4fb4f2460ccfc09e6949)
+- Code related changes
   - Change `describeEnum` to `byName` method in Theme Setting. (New in Dart 2.15). Commit ref [`7db2ffd`](../commit/7db2ffdec6b5532d1a7c2a355f8961c157a7f24a)
   - Organize imports. Commit ref [`693830e`](../commit/693830e41443153af901ef1c57944e9936997691)
 
-## [Ver. `2.2.8-hotfix.1`](../releases/tag/2.2.8%2B84) - 23 November 2021
+<ChangelogHeader version="2.2.8-hotfix.1" date="23 November 2021" githubSlug="2.2.8-hotfix.1+85" />
 
-- :arrow_up: Upgrade [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) to version **9.1.4**. Mainly to address a fix to `java.util.concurrent.RejectedExecutionException` crashes which impacted previous release. More info of this issue can be found [here](https://github.com/MaikuB/flutter_local_notifications/issues/1397).
-- :heavy_minus_sign: Remove [auto_size_text](https://pub.dev/packages/auto_size_text).
-- :arrow_up: Upgrade other dependencies.
+- Upgrade [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) to version **9.1.4**. Mainly to address a fix to `java.util.concurrent.RejectedExecutionException` crashes which impacted previous release. More info of this issue can be found [here](https://github.com/MaikuB/flutter_local_notifications/issues/1397).
+- Remove [auto_size_text](https://pub.dev/packages/auto_size_text).
+- Upgrade other dependencies.
 
-## [Ver. `2.2.8`](../releases/tag/2.2.8%2B84) - 21 November 2021
+<ChangelogHeader version="2.2.8" date="21 November 2021" githubSlug="2.2.8+84" />
 
-- :arrow_up: Migrated [share](https://pub.dev/packages/share) to [share_plus](https://pub.dev/packages/share_plus).
-- :bug: Fixed **empty text** in Zone Chooser - When `locality` is empty, use `name` instead. [#67](../issues/67)
-- :wastebasket: Removed `kStoredLocationLocality` key (no longer needed).
-- :bell: Re-enable **Salam Jumaat** wish in notification. [#81](../issues/81)
-- :fire: Remove the word `NEW` on notification type options.
-- :construction: Added **warning/disclaimer/consent page** before using qibla compass. _Inspired by JAKIM app._
-- :bento: Changed calibrate compass image asset.
-- :lipstick: **Beautify** qibla calibrate dialog.
-- :arrow_up: Upgraded 4 major dependencies & 47 other dependencies.
-- :building_construction: Drop support for [**Android 4.4**](https://developer.android.com/studio/releases/platforms#4.4) and below. Changed `compileSdkVersion` to 31 & `minSdkVersion` to 20 in **build.gradle** file.
-- :recycle: Implements Flutter **best practice** including fix relative imports, Widget class, unused parameters and more.
-- :pencil2: Added name and value to debug notification.
+- Migrated [share](https://pub.dev/packages/share) to [share_plus](https://pub.dev/packages/share_plus).
+- Fixed **empty text** in Zone Chooser - When `locality` is empty, use `name` instead. [#67](../issues/67)
+- Removed `kStoredLocationLocality` key (no longer needed).
+- Re-enable **Salam Jumaat** wish in notification. [#81](../issues/81)
+- Remove the word `NEW` on notification type options.
+- Added **warning/disclaimer/consent page** before using qibla compass. _Inspired by JAKIM app._
+- Changed calibrate compass image asset.
+- **Beautify** qibla calibrate dialog.
+- Upgraded 4 major dependencies & 47 other dependencies.
+- Drop support for [**Android 4.4**](https://developer.android.com/studio/releases/platforms#4.4) and below. Changed `compileSdkVersion` to 31 & `minSdkVersion` to 20 in **build.gradle** file.
+- Implements Flutter **best practice** including fix relative imports, Widget class, unused parameters and more.
+- Added name and value to debug notification.
 
-## [Ver. `2.2.5`](../releases/tag/2.2.5%2B81) - 11 October 2021
+<ChangelogHeader version="2.2.5" date="11 October 2021" githubSlug="2.2.5+81" />
 
-- :arrow_up: Migrated [device_info](https://pub.dev/packages/device_info) and [package_info](https://pub.dev/packages/package_info) to **plus** version; [device_info_plus](https://pub.dev/packages/device_info_plus) and [package_info_plus](https://pub.dev/packages/package_info_plus) respectively.
+- Migrated [device_info](https://pub.dev/packages/device_info) and [package_info](https://pub.dev/packages/package_info) to **plus** version; [device_info_plus](https://pub.dev/packages/device_info_plus) and [package_info_plus](https://pub.dev/packages/package_info_plus) respectively.
 - :new: **Subtle red indicator** will be shown if latest version of the app is available.
   - Location: **Menu** button on bottom navigation bar.
   - Android ≤ 23 will no longer supported in the upcoming version.
@@ -452,77 +452,77 @@ import ChangelogHeader from '../../components/changelog-header'
 - :scissors: Simplify devlog instagram URL
 - :lipstick: Minor UI changes divider in About Page.
 
-## [Ver. `2.2.4-hotfix`](../releases/tag/2.2.4-hotfix%2B80) - 1 October 2021
+<ChangelogHeader version="2.2.4-hotfix" date="1 October 2021" githubSlug="2.2.4-hotfix+80" />
 
-- :bug: Fix `FormatException: Trying to read MMM from 01 Okt-2021 05:43:00 at position 3`. Date format from JAKIM is **not standard** so the app can't parse it. Issue [#86](../issues/86).
-- :pencil2: Update changelog link in About Page.
+- Fix Trying to read MMM from 01 Okt-2021 05:43:00 at position 3`. Date format from JAKIM is **not standard** so the app can't parse it. Issue [#86](../issues/86).
+- Update changelog link in About Page.
 
-## [Ver. `2.2.3`](../releases/tag/2.2.3%2B79) - 28 September 2021
+<ChangelogHeader version="2.2.3" date="28 September 2021" githubSlug="2.2.3+79" />
 
-- :sweat*smile: Fixed time from API is being **wrongly parsed** as 12-Hour system (supposedly 24-Hour system), causing wrong time shown for some zones *(eg: Zohor time in Sabah)\_. Issue [#85](../issues/85). Thank you, anonymous user for alerting me about this issue. (Yes, this is repeated issue similar to [this](#ver-11389-hotfix---19-february-2021) update back then :man_facepalming:)
-- :lipstick: Minor UI change manual location chooser - cleaner header textstyle.
-- :alembic: Temporary disable `Salam Jumaat` wish (`summary`) in notification. Issue [#81](../issues/81).
+- :sweatFixed time from API is being **wrongly parsed** as 12-Hour system (supposedly 24-Hour system), causing wrong time shown for some zones *Zohor time in Sabah)\_. Issue [#85](../issues/85). Thank you, anonymous user for alerting me about this issue. (Yes, this is repeated issue similar to [this](#ver-11389-hotfix---19-february-2021) update back then :man_facepalming:)
+- Minor UI change manual location chooser - cleaner header textstyle.
+- Temporary disable `Salam Jumaat` wish (`summary`) in notification. Issue [#81](../issues/81).
 
-## [Ver `2.2.2`](../releases/tag/2.2.2%2B78) - 22 September 2021
+<ChangelogHeader version="2.2.2" date="22 September 2021" githubSlug="2.2.2+78" />
 
-- :pencil2: Some improvement in **prayer time timetable**:
-  - Fixed a **typo**: ~~Imsak~~ Syuruk. [#80](../issues/80).
+- Some improvement in **prayer time timetable**:
+  - Fixed a **typ~~Imsak~~ Syuruk. [#80](../issues/80).
   - Added **other prayer times** (Imsak & Dhuha)
   - Smaller gaps in between Column, so user wont have to scroll to far.
   - Added tooltip to some column headers.
-- :alien: **API Migration** from mpti906 to JAKIM e-solat API. Fixed [#83](../issues/81). A part of [#82](../pull/82). [Why?](../pull/82#issuecomment-927835374)
-- :building_construction: Added [backup API](https://mpt-backup-api.herokuapp.com/) if Jakim's server is down.
-- :art: Using [grouped_list](https://pub.dev/packages/grouped_list) in manual location chooser. List is now grouped by their negeri, with a minor UI change for better indication that the zone is currently selected.
-- :truck: Changed the way how app is saving zone to device. Previously saving location using their index (`int`), but it will face problem if later JAKIM want to change their zone (add/remove). So now it will save the Jakim Code (`String`) itself. Your saved data will be migrated automatically.
-- :lipstick: Fix overflow Inkwell in About dialog buttons.
-- :building_construction: Make **azan notification** as **default**.
-- :pencil2: Removed reference to [mpti906](https://mpt.i906.my/) in About Dialog.
-- :arrow_up: Upgrade some dependencies
-- :coffin: Other code cleanups, incl. purging unused reference, code & constants.
+- **API Migration** from mpti906 to JAKIM e-solat API. Fixed [#83](../issues/81). A part of [#82](../pull/82). [Why?](../pull/82#issuecomment-927835374)
+- Added [backup API](https://mpt-backup-api.herokuapp.com/) if Jakim's server is down.
+- Using [grouped_list](https://pub.dev/packages/grouped_list) in manual location chooser. List is now grouped by their negeri, with a minor UI change for better indication that the zone is currently selected.
+- Changed the way how app is saving zone to device. Previously saving location using their index (`int`), but it will face problem if later JAKIM want to change their zone (add/remove). So now it will save the Jakim Code (`String`) itself. Your saved data will be migrated automatically.
+- Fix overflow Inkwell in About dialog buttons.
+- Make **azan notification** as **default**.
+- Removed reference to [mpti906](https://mpt.i906.my/) in About Dialog.
+- Upgrade some dependencies
+- Other code cleanups, incl. purging unused reference, code & constants.
 
-## [Ver `2.1.0`](../releases/tag/2.1.0%2B72) - 2 September 2021
+<ChangelogHeader version="2.1.0" date="2 September 2021" githubSlug="2.1.0+72" />
 
-- :bug: Fix wrong zone for some **Sarawak** district - Fix wrong mapping from JAKIM code to mpti906 location code that resulting in fetching the wrong prayer time. Affected user may need to change to other location and change back to your actual location to clear up the cache. (Thanks to some users for reporting this issue)
-- 🚑 Fixed **jankiness issue** when scroll with inline banner ads. Replaces the official `google_mobile_ads` package with [@atrope](https://github.com/atrope)'s [fork](https://github.com/SuaMusica/googleads-mobile-flutter).
-- ♿ Adjust link text colour contrast to **improve readability** in About page.
-- :arrow_up: Upgrade 19+ dependencies.
+- Fix wrong zone for some **Sarawak** district - Fix wrong mapping from JAKIM code to mpti906 location code that resulting in fetching the wrong prayer time. Affected user may need to change to other location and change back to your actual location to clear up the cache. (Thanks to some users for reporting this issue)
+- Fixed **jankiness issue** when scroll with inline banner ads. Replaces the official `google_mobile_ads` package with [@atrope](https://github.com/atrope)'s [fork](https://github.com/SuaMusica/googleads-mobile-flutter).
+- Adjust link text colour contrast to **improve readability** in About page.
+- Upgrade 19+ dependencies.
 
-## [Ver `2.0.0`](../releases/tag/2.0.0%2B71) - 31 August 2021
+<ChangelogHeader version="2.0.0" date="31 August 2021" githubSlug="2.0.0+71" />
 
 - 🚛 Migrate Flutter project to [**null safety**](https://dart.dev/null-safety).
-- :sparkles: Added **azan notification**. Now there are two types of notification, default sound and azan. Existing user will be asked if they want to try. Source: https://soundcloud.com/alafasy/sets/athan. Closed [#39](../issues/39):
+- Added **azan notification**. Now there are two types of notification, default sound and azan. Existing user will be asked if they want to try. Source: https://soundcloud.com/alafasy/sets/athan. Closed [#39](../issues/39):
   - Both types will use **different notification channel**. This is required to [satisfy](https://developer.android.com/training/notify-user/channels) requirement of Android 8.0+ and to maintain backward compatibility. (Syuruk will use same default notification channel regardless of the notification type)
   - Added option to **select preferred notification** in onboarding page.
   - Added option to change preferred notification type in **Notification Settings** page. (Required app restart to apply changes)
   - Prompt existing user to change to azan notification.
-- :fire: Remove **skip** button to skip page in Onboarding screen. (User can still swipe right)
+- Remove **skip** button to skip page in Onboarding screen. (User can still swipe right)
 - Added summary text in notification for **Syuruk** and **Zohor** (for Jumaat).
 - Timestamp in notification is now showing the actual prayer time. (Not the time when the notification fired, because sometimes it get delayed). Closes [#71](../issues/71)
-- :heavy_plus_sign: Added [flutter_restart](https://pub.dev/packages/flutter_restart) - To easily restart the app natively.
+- Added [flutter_restart](https://pub.dev/packages/flutter_restart) - To easily restart the app natively.
 - Update [**Privacy Policy**](../wiki/Privacy-Policy).
 - Resizes image assets (smaller).
-- :zap: Reduce **snackbar** time and simplify text (for Location Chooser).
-- :fire: Remove old **hijri offset** setting.
+- Reduce **snackbar** time and simplify text (for Location Chooser).
+- Remove old **hijri offset** setting.
 - Added some Padding to loading & error animation (in GetPrayerTime).
-- :heavy_minus_sign: Remove unused [isolate_handler](https://pub.dev/packages/isolate_handler). Realized that I never use the implementation before. :clown_face:
-- :arrow_up: Major version dependencies upgrade: [provider](https://pub.dev/packages/provider): `^5.0.0 -> ^6.0.0` and [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications): `^6.0.0 -> ^8.1.1+1`
+- Remove unused [isolate_handler](https://pub.dev/packages/isolate_handler). Realized that I never use the implementation before. :clown_face:
+- Major version dependencies upgrade: [provider](https://pub.dev/packages/provider): `^5.0.0 -> ^6.0.0` and [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications): `^6.0.0 -> ^8.1.1+1`
 - Code cleanup (a lot...)
 - and (probably) more not documented.
 
 <ChangelogHeader version="1.26.143" date="5 August 2021" githubSlug="1.26.143+66" />
 
-- :heavy_plus_sign: Added [google_mobile_ads](https://pub.dev/packages/google_mobile_ads). Unobtrusive ad is now showing on the main page. Alert me if inappropriate ads is showing.
-- :heavy_plus_sign: [firebase_remote_config](https://pub.dev/packages/firebase_remote_config). Hijri offset data now fetched from the server (controlled by me so remind me if I forgot to update, allow up to 8 hours for the changes fully propagates), removed manual adjustment setting. Issue [#54](../issues/54).
-- :heavy_plus_sign: [in_app_review](https://pub.dev/packages/in_app_review). In App Review window will show after app launch count is equal to 10. Hoping to receive positive or constructive criticism after this.
-- :heavy_plus_sign: [flutter_lints](https://pub.dev/packages/flutter_lints). Applied coding best practices followed with code cleanup, and refactoring.
-- :sparkles: New **Monthly Prayer Table**, featuring beautiful [IIUM SHAS Mosque](https://i2.wp.com/news.iium.edu.my/wp-content/uploads/2017/06/10982272836_29abebc100_b.jpg?ssl=1) :mosque::heart:. [#55](../issues/55)
+- Added [google_mobile_ads](https://pub.dev/packages/google_mobile_ads). Unobtrusive ad is now showing on the main page. Alert me if inappropriate ads is showing.
+- [firebase_remote_config](https://pub.dev/packages/firebase_remote_config). Hijri offset data now fetched from the server (controlled by me so remind me if I forgot to update, allow up to 8 hours for the changes fully propagates), removed manual adjustment setting. Issue [#54](../issues/54).
+- [in_app_review](https://pub.dev/packages/in_app_review). In App Review window will show after app launch count is equal to 10. Hoping to receive positive or constructive criticism after this.
+- [flutter_lints](https://pub.dev/packages/flutter_lints). Applied coding best practices followed with code cleanup, and refactoring.
+- New **Monthly Prayer Table**, featuring beautiful [IIUM SHAS Mosque](https://i2.wp.com/news.iium.edu.my/wp-content/uploads/2017/06/10982272836_29abebc100_b.jpg?ssl=1) :mosque::heart:. [#55](../issues/55)
 - Added **offline cache support**. By default, if criteria are met (same location, same month & same year), prayer data will load data from storage (if available) instead fetching from the API.
-- :zap: MPTI906 new dart **model**. (https://jsontodart.zariman.dev is quite nice tool)
-- :zap: Better error messages for `ZoneChooser` and `GetPrayerTime`.
-- :goal_net: Throw error when detected location is **not in Malaysia**. Commit ref [b500e4c](../commit/b500e4c9ef15db4c69f2fef6a0e25f4a0ede5e49). Also fixed `invalid argument(s)` error.
-- :art: Added some icons in `ZoneChooser` error dialog.
+- MPTI906 new dart **model**. (https://jsontodart.zariman.dev is quite nice tool)
+- Better error messages for `ZoneChooser` and `GetPrayerTime`.
+- Throw error when detected location is **not in Malaysia**. Commit ref [b500e4c](../commit/b500e4c9ef15db4c69f2fef6a0e25f4a0ede5e49). Also fixed `invalid argument(s)` error.
+- Added some icons in `ZoneChooser` error dialog.
 - Added button to open system location setting when failed to get location. Commit ref [8a80e5f](../commit/8a80e5f75be32ade13b2763ed5e99dd1327f9d86).
-- :lipstick: Solat Card UI improvement:
+- Solat Card UI improvement:
   - More **subtle shadow** under solat card.
   - Will **not stretch** with the screen. Now constraints to fixed width. (I admit it still looks teribble when in landscape mode)
 - Copy & Share changes:
@@ -534,10 +534,10 @@ import ChangelogHeader from '../../components/changelog-header'
 - Changed **datatype** `String` to `GeoPoint` in Feedback page for `Position` field value.
 - Limit URL string text by one line in FAQs page.
 - **Prompt user to provide email** (so that I could reply) in **Feedback page** if the message sounded like a question. _(Nah not an AI, just checking if the text contains question mark `?`)_
-- :lipstick: Main header part (that one houses date and location button, below the appbar) now **adapts** to its children. Means no longer overflow date/location widget.
-- :adhesive_bandage: Fix wrong coloured button in no compass error.
-- :arrow_up: Upgrade dependencies.
-- :arrow_up: Upgrade **Gradle** version to 4.1.0.
+- Main header part (that one houses date and location button, below the appbar) now **adapts** to its children. Means no longer overflow date/location widget.
+- Fix wrong coloured button in no compass error.
+- Upgrade dependencies.
+- Upgrade **Gradle** version to 4.1.0.
   Changed `minSdkVersion` to `19`. Drop supports Android lower than version 4.4 (KitKat).
 - 🆕 [CODE] improvements.
   - Make `LocationDatabase` static.
@@ -597,30 +597,30 @@ import ChangelogHeader from '../../components/changelog-header'
 
 <ChangelogHeader version="1.18.98" date="13 April 2021" githubSlug="1.18.98+51" />
 
-
 - Temporary fix the offsetted **hijri date** [#54](../issues/54), I just change the assignation for G`etStorage()` when app started. This will affect only for new installs, where `GetStorage()` object not existed yet, existing user will need to adjust the hijri date manually. Guide to change offset date can be find [here](http://bit.ly/mpthijrioffset).
   Change colour for some elements.
 - Hide keyboard after press send in **Send feedback** option.
 - Change response text after submit feedback.
 - **Share/Copy** timetable now respect the offset-ed hijri day.
 
-## [Ver `1.18.97`](../releases/tag/1.18.98%2B51) - 28 March 2021
+<ChangelogHeader version="1.18.97" date="28 March 2021" githubSlug="1.18.97+51" />
 
 - **Flutter** 2.0
-- :sparkles: Added `Scrollbar` to the location lists.
-- :heavy_plus_sign: [cloud_firestore](https://pub.dev/packages/cloud_firestore), [firebase_core](https://pub.dev/packages/firebase_core), [device_info](https://pub.dev/packages/device_info)
-- :lipstick: **Feedback page redesign**, user no longer use email as medium of sending the report. Now the data is sent via Firebase Firestore. The pro of this method is that user can remain **anonymous**, but it is recommended to **provide an email** address so that I can contact you for following up the issue.
-- :art: Redesign a little bit in AboutPage.dart including changing font in version text, bring down the copyright legalese.
-- :arrow_up: Upgrade most dependencies to **null safety** versions.
-- :question: Fix attempt for the [#56](../issues/56). Not sure about the issue tbh.
-- :bug: Fixed **offset Hijri date** on both web and Android (Issue [#59](../issues/59)) - Ability to adjust the offset by +-2 days.
-- :wrench: Enabled `multidex` (Android)
-- :fire: Code cleanup & minor UI fix.
+- Added `Scrollbar` to the location lists.
+- [cloud_firestore](https://pub.dev/packages/cloud_firestore), [firebase_core](https://pub.dev/packages/firebase_core), [device_info](https://pub.dev/packages/device_info)
+- **Feedback page redesign**, user no longer use email as medium of sending the report. Now the data is sent via Firebase Firestore. The pro of this method is that user can remain **anonymous**, but it is recommended to **provide an email** address so that I can contact you for following up the issue.
+- Redesign a little bit in AboutPage.dart including changing font in version text, bring down the copyright legalese.
+- Upgrade most dependencies to **null safety** versions.
+- Fix attempt for the [#56](../issues/56). Not sure about the issue tbh.
+- Fixed **offset Hijri date** on both web and Android (Issue [#59](../issues/59)) - Ability to adjust the offset by +-2 days.
+- Enabled `multidex` (Android)
+- Code cleanup & minor UI fix.
 
-## [Ver `1.15.94`](../releases/tag/1.15.93%2B46) - 28 February 2021
+<ChangelogHeader version="1.15.94" date="28 September 2021" githubSlug="1.15.93+46" />
 
-- :sparkles: Introduced **Share to WhatsApp** option. The texts will be formatted beautifully (**bold**, _italic_ etc.) Default setting can be changed in Setting page. So, there are three options of sharing now. **1- Ask, 2- Plain Text, 3-WhatsApp**.
-- :sparkles: **Adjustable prayer time text** sizes. Defaulted to size **14**. Minimum is **12** and can go up to **22**. Issue [#8](../issues/8).
+
+- Introduced **Share to WhatsApp** option. The texts will be formatted beautifully (**bold**, _italic_ etc.) Default setting can be changed in Setting page. So, there are three options of sharing now. **1- Ask, 2- Plain Text, 3-WhatsApp**.
+- **Adjustable prayer time text** sizes. Defaulted to size **14**. Minimum is **12** and can go up to **22**. Issue [#8](../issues/8).
 - Add `http://` to links so other apps _(e.g.: WhatsApp/Telegram)_ can generate a link preview.
 - Upgraded 8 dependencies! Including [flutter_svg](https://pub.dev/packages/flutter_svg) that caused the release to be delayed [(dnfield/flutter_svg#479)](https://github.com/dnfield/flutter_svg/issues/479)
 - Fix `CircularProgressIndicator` weird size in About page.
@@ -634,8 +634,8 @@ import ChangelogHeader from '../../components/changelog-header'
 
 ## [Ver `1.13.91-hotfix2`](../releases/tag/1.13.91-hotfix2%2B43) - 19 February 2021
 
-- :globe_with_meridians: Custom fork [hijri](https://github.com/iqfareez/hijri_date) packages to make it more Malaysian friendly ([Huh?](../releases/tag/1.13.91-hotfix2%2B43#:~:text=so%20that%20tak%20guna%20sgt%20istilah%20mcm%20arabic%20tu)). Thanks to Aqil Mohd for the idea.
-- :rewind: Reverted to the **good old** [**mpti906**](https://mpt.i906.my/api/prayer/sgr-1) API (yes again hahaha), no longer use [JAKIM](https://www.e-solat.gov.my/index.php?r=esolatApi/takwimsolat&period=month&zone=SGR01) API because very often downtime and affected the user experience. Thanks to Aqil Mohd again.
+- Custom fork [hijri](https://github.com/iqfareez/hijri_date) packages to make it more Malaysian friendly ([Huh?](../releases/tag/1.13.91-hotfix2%2B43#:~:text=so%20that%20tak%20guna%20sgt%20istilah%20mcm%20arabic%20tu)). Thanks to Aqil Mohd for the idea.
+- Reverted to the **good old** [**mpti906**](https://mpt.i906.my/api/prayer/sgr-1) API (yes again hahaha), no longer use [JAKIM](https://www.e-solat.gov.my/index.php?r=esolatApi/takwimsolat&period=month&zone=SGR01) API because very often downtime and affected the user experience. Thanks to Aqil Mohd again.
 - Notification threshold until rescheduled reduced to **two days** (Previously three days).
 
 ## [Ver `1.13.89-hotfix`](../releases/tag/1.13.89-hotfix%2B42) - 19 February 2021
@@ -645,8 +645,8 @@ import ChangelogHeader from '../../components/changelog-header'
 
 ## [Ver `1.13.87`](../releases/tag/1.13.87%2B41) - 17 February 2021
 
-- :heavy_plus_sign: Added [geocoding](https://pub.dev/packages/geocoding).
-- :round_pushpin: Prayer time zone is now **detected in app**. This should fix the issue [#28](../issues/28) where some location is wrongly detected.
+- Added [geocoding](https://pub.dev/packages/geocoding).
+- Prayer time zone is now **detected in app**. This should fix the issue [#28](../issues/28) where some location is wrongly detected.
   - Caveat: Geocoding plugin uses **Google Play Service API**, so, devices like Huawei may not be supported.
   - Previously, user location is sent to `mpti906` API for getting JAKIM code. _(Introduced in ver. [`1.3.15`](#ver-1315---29-september-2020))_
   - Honorable mention to Mr. Aizal Manan who contribute ideas in fixing this issue.
