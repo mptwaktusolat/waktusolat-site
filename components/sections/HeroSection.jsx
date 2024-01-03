@@ -1,6 +1,5 @@
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-
-// import LOGO from "@/public/logo-landing-page.png";
+import AppLogo from "@/components/app-logo";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,13 +54,7 @@ const Hero = () => {
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-24">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
-          {/* <Image
-            width={48}
-            height={48}
-            className="object-contain"
-            src={LOGO}
-            alt="Your Company"
-          /> */}
+          <AppLogo />
           <div className="mt-24 sm:mt-32 lg:mt-16">
             {/* <span className="mr-2 rounded-full bg-yellow-500/10 px-3 py-2 text-sm font-semibold leading-6 text-yellow-600 dark:text-yellow-400 ring-1 ring-inset ring-indigo-500/20">
               In construction
