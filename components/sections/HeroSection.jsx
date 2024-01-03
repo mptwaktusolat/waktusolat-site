@@ -5,8 +5,10 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
 import { AppScreenshotCard } from "../app-screenshot-card";
+import { AppScreenshotCardScroll } from "../app-screenshot-card-scroll";
 
 const Hero = () => {
+  const latestVersion = "2.11.0";
   return (
     <section className="relative">
       <ThemeSwitcher className="absolute top-2 right-5" />
@@ -69,7 +71,7 @@ const Hero = () => {
                 What&apos;s new
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-zinc-800 dark:text-slate-200">
-                <span>Just shipped v2.0</span>
+                <span>Latest version: {latestVersion}</span>
                 <ChevronRightIcon
                   className="h-5 w-5 text-zinc-500"
                   aria-hidden="true"
@@ -84,7 +86,10 @@ const Hero = () => {
             An essential apps for Muslim in Malaysia. Help you determine the
             latest prayer times, finding qibla and more.
           </p>
-          <a href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+          <a
+            className="hidden sm:block"
+            href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          >
             <Image
               alt="Get it on Google Play"
               src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
@@ -92,10 +97,27 @@ const Hero = () => {
               height={100}
             />
           </a>
+          <a
+            className="sm:hidden block"
+            href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          >
+            <Image
+              alt="Get it on Google Play"
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              width={200}
+              height={80}
+            />
+          </a>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <AppScreenshotCard />
+            <div className="hidden sm:block">
+              <AppScreenshotCard />
+            </div>
+            {/* On mobile devices, hover effect may not be visible, hence use scroll effect instead */}
+            <div className="sm:hidden block">
+              <AppScreenshotCardScroll />
+            </div>
           </div>
         </div>
       </div>
