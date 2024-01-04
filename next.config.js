@@ -19,9 +19,9 @@ const nextConfig = {
     redirects: async () => {
         return [
             {
-                source: "/get",
+                source: "/play",
                 destination: "https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia",
-                permanent: false
+                permanent: true
             },
             {
                 source: "/gh",

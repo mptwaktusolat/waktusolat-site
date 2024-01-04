@@ -4,10 +4,17 @@ import Hero from '@/components/sections/HeroSection'
 import Feature from '@/components/sections/FeatureSection'
 import Testimonial from '@/components/sections/TestimonialSection'
 import Footer from '@/components/sections/Footer'
+import initTranslations from '../i18n';
+import TranslationsProvider from '@/components/TranslationsProvider';
 
-export default function Home() {
+const i18nNamespaces = ['hero'];
+
+export default async function Home({ params: { locale } }) {
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
   return (
-    <>
+    <TranslationsProvider namespaces={i18nNamespaces}
+      locale={locale}
+      resources={resources}>
       <main className="relative isolate overflow-hidden bg-slate-100 dark:bg-zinc-900">
         <ScrollUp />
         <Hero />
@@ -15,6 +22,6 @@ export default function Home() {
         <Testimonial />
       </main>
       <Footer />
-    </>
+    </TranslationsProvider>
   )
 }

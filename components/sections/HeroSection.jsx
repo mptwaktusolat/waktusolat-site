@@ -1,3 +1,4 @@
+"use client";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import AppLogo from "@/components/app-logo";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
@@ -6,12 +7,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { AppScreenshotCard } from "../app-screenshot-card";
 import { AppScreenshotCardScroll } from "../app-screenshot-card-scroll";
+import { useTranslation } from "react-i18next";
+import LanguageChanger from "@/components/LanguageChanger";
 
 const Hero = () => {
   const latestVersion = "2.11.0";
+  const { t } = useTranslation();
   return (
     <section className="relative">
       <ThemeSwitcher className="absolute top-2 right-5" />
+      <LanguageChanger className="absolute top-2 right-20" />
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 dark:stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -62,10 +67,12 @@ const Hero = () => {
             </span> */}
             <Link href="/changelog" className="inline-flex space-x-6 group">
               <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-semibold leading-6 text-cyan-600 dark:text-cyan-400 ring-1 ring-inset ring-indigo-500/20">
-                What&apos;s new
+                {t("whatsNew")}
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-zinc-800 dark:text-slate-200">
-                <span>Latest version: {latestVersion}</span>
+                <span>
+                  {t("latestVersion")}: {latestVersion}
+                </span>
                 <ChevronRightIcon
                   className="h-5 w-5 text-zinc-500 dark:text-zinc-400 group-hover:translate-x-2 transition"
                   aria-hidden="true"
@@ -74,11 +81,10 @@ const Hero = () => {
             </Link>
           </div>
           <h1 className="mt-10 ml-3 text-4xl font-bold tracking-tight text-zinc-800 dark:text-slate-200 sm:text-6xl">
-            Malaysia Prayer Time
+            {t("appName")}
           </h1>
           <p className="mt-3 ml-3 text-lg leading-8 text-zinc-800 dark:text-slate-200">
-            An essential apps for Muslim in Malaysia. Help you determine the
-            latest prayer times, finding qibla and more.
+            {t("description")}
           </p>
           <div className="flex">
             <a

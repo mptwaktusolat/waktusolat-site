@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { IoIosStar } from "react-icons/io";
 
 const featuredTestimonial = {
   body: "the internal design is pretty sejuk mata memandang this app can definetely upgrade where user can read quran and zikir daily so they dont have to install so many apps well done!!!  ",
   author: {
     name: "izzah yusra",
-    handle: "5",
+    rating: 5,
     imageUrl: "https://bucket.waktusolat.app/pp_izzah.jpg",
   },
 };
@@ -15,7 +16,7 @@ const testimonials = [
         body: "Satisfied using this app. Accurate as per azan from nearby mosque and surau. Thank you developer. Keep up the good work.. May you be duly rewarded",
         author: {
           name: "Amiruddin Khwaja Kamaluddin",
-          handle: "5",
+          rating: 5,
           imageUrl: "https://bucket.waktusolat.app/pp_amiruddin.png",
         },
       },
@@ -26,7 +27,7 @@ const testimonials = [
         body: "Clean Fluttery goodness! Hats off to the dev. Maybe JAKIM should learn a thing or two from you.",
         author: {
           name: "Abdullah Mubarak",
-          handle: "5",
+          rating: 5,
           imageUrl: "https://bucket.waktusolat.app/pp_abdullah.jpg",
         },
       },
@@ -39,7 +40,7 @@ const testimonials = [
         body: "suara azan yg sedap dan waktu yg tepat...ok mantap",
         author: {
           name: "Noor Azizi",
-          handle: "5",
+          rating: 5,
           imageUrl: "https://bucket.waktusolat.app/pp_noor_azizi.png",
         },
       },
@@ -50,7 +51,7 @@ const testimonials = [
         body: "Terbaik waktu solat yg tepat",
         author: {
           name: "Siti Aishah",
-          handle: "5",
+          rating: 5,
           imageUrl: "https://bucket.waktusolat.app/pp_s.png",
         },
       },
@@ -117,7 +118,18 @@ const Testimonial = () => {
                 <div className="font-semibold">
                   {featuredTestimonial.author.name}
                 </div>
-                <div className="text-gray-600 dark:text-gray-400">{`@${featuredTestimonial.author.handle}`}</div>
+                <div className="text-gray-600 dark:text-gray-400">
+                  {Array(featuredTestimonial.author.rating)
+                    .fill()
+                    .map(function (v, i) {
+                      return (
+                        <IoIosStar
+                          key={i}
+                          className="inline-block w-4 h-4 text-cyan-400"
+                        />
+                      );
+                    })}
+                </div>
               </div>
             </figcaption>
           </figure>
@@ -140,7 +152,7 @@ const Testimonial = () => {
                 >
                   {column.map((testimonial) => (
                     <figure
-                      key={testimonial.author.handle}
+                      key={testimonial.author.name}
                       className="rounded-2xl bg-slate-100 dark:bg-zinc-800 p-6 transition shadow-lg hover:shadow-xl ring-1 ring-gray-900/5"
                     >
                       <blockquote className="text-zinc-900 dark:text-slate-300">
@@ -158,7 +170,18 @@ const Testimonial = () => {
                           <div className="font-semibold">
                             {testimonial.author.name}
                           </div>
-                          <div className="text-gray-600 dark:text-gray-400">{`@${testimonial.author.handle}`}</div>
+                          <div className="text-gray-600 dark:text-gray-400">
+                            {Array(testimonial.author.rating)
+                              .fill()
+                              .map(function (v, i) {
+                                return (
+                                  <IoIosStar
+                                    key={i}
+                                    className="inline-block w-4 h-4 text-cyan-400"
+                                  />
+                                );
+                              })}
+                          </div>
                         </div>
                       </figcaption>
                     </figure>

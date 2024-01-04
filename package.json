@@ -14,10 +14,14 @@
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
     "@types/mdx": "^2.0.10",
+    "i18next": "^23.7.15",
+    "i18next-resources-to-backend": "^1.2.0",
     "next": "14.0.4",
+    "next-i18n-router": "^5.1.0",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-i18next": "^14.0.0",
     "react-icons": "^4.12.0"
   },
   "devDependencies": {
