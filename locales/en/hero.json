@@ -2,5 +2,8 @@
   "appName": "Malaysia Prayer Time",
   "description": "An essential apps for Muslim in Malaysia. Help you determine the latest prayer times, finding qibla and more.",
   "whatsNew": "What's New",
-  "latestVersion": "Latest Version"
+  "latestVersion": "Latest Version",
+  "screenshotLight": "/public/images/phone-light-portrait.png",
+  "screenshotDark": "/public/images/phone-dark-portrait.png",
+  "lang": "en"
 }

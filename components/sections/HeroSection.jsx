@@ -82,13 +82,14 @@ const Hero = () => {
           </div>
           <h1 className="mt-10 ml-3 text-4xl font-bold tracking-tight text-zinc-800 dark:text-slate-200 sm:text-6xl">
             {t("appName")}
+            {t.language}
           </h1>
           <p className="mt-3 ml-3 text-lg leading-8 text-zinc-800 dark:text-slate-200">
             {t("description")}
           </p>
           <div className="flex">
             <a
-              className="hidden sm:block"
+              className="hidden sm:block hover:opacity-85"
               href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
             >
               <Image
@@ -109,7 +110,7 @@ const Hero = () => {
                 height={80}
               />
             </a>
-            <Link
+            <a
               href={"https://api.waktusolat.app"}
               className=" flex-shrink-0 inline-flex items-center justify-center px-1 group"
             >
@@ -125,18 +126,17 @@ const Hero = () => {
                   REST API
                 </span>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <div className="hidden sm:block">
-              <AppScreenshotCard />
-            </div>
+            <AppScreenshotCard className="hidden sm:block" lang={t("lang")} />
             {/* On mobile devices, hover effect may not be visible, hence use scroll effect instead */}
-            <div className="sm:hidden block">
-              <AppScreenshotCardScroll />
-            </div>
+            <AppScreenshotCardScroll
+              className="sm:hidden block"
+              lang={t("lang")}
+            />
           </div>
         </div>
       </div>

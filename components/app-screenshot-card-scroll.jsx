@@ -4,8 +4,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import DARKDEMOPIC from "@/public/images/phone-dark-portrait.png";
 import LIGHTDEMOPIC from "@/public/images/phone-light-portrait.png";
+import DARKDEMOPICMS from "@/public/images/phone-dark-ms-portrait.png";
+import LIGHTDEMOPICMS from "@/public/images/phone-light-ms-portrait.png";
 
-export function AppScreenshotCardScroll() {
+export function AppScreenshotCardScroll({ lang = "en", className = "" }) {
   let ref = useRef(null);
   let [style, setStyle] = useState({
     transform: "rotateX(50deg)",
@@ -49,19 +51,19 @@ export function AppScreenshotCardScroll() {
 
   return (
     <div
-      className="z-10 mb-8 scale-100 transition-all duration-200 ease-out hover:z-50 xl:mb-0 xl:hover:scale-[1.15]"
+      className={`z-10 mb-8 scale-100 transition-all duration-200 ease-out hover:z-50 xl:mb-0 xl:hover:scale-[1.15] ${className}`}
       ref={ref}
       style={{ perspective: "600px" }}
     >
       <div style={style} className="transition-all duration-200 ease-out">
         <Image
-          src={LIGHTDEMOPIC}
+          src={lang != "en" ? LIGHTDEMOPICMS : LIGHTDEMOPIC}
           alt="App screenshot"
           width={330}
           className="drop-shadow-2xl dark:hidden block"
         />
         <Image
-          src={DARKDEMOPIC}
+          src={lang != "en" ? DARKDEMOPICMS : DARKDEMOPIC}
           alt="App screenshot"
           width={330}
           className="drop-shadow-2xl hidden dark:block"
