@@ -46,7 +46,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2023 <a href="https://iqfareez.com">Muhammad Fareez</a>. All
+          &copy; 2024 <a href="https://iqfareez.com">Muhammad Fareez</a>. All
           rights reserved.
         </p>
       </div>
