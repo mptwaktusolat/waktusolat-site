@@ -2,13 +2,32 @@ import MdxLayout from '@/components/mdx-layout'
 import ChangelogHeader from '@/components/changelog-header'
 
 <ChangelogHeader
+  version="2.11.1"
+  date="4 January 2024"
+  hijriDate="22 J.Akhir 1445"
+  githubSlug="2.11.1+141"
+/>
+
+Due to the [Jan 1 Incident](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/216) issue, some changes are made to improve stability of the app.
+
+
+- Fix **Homescreen widget** error view that never triggered.
+- Skip storing cache if the API response can't be parsed by the equivalent model
+- Change the **cache key** for API response, because some users still have the error
+
+Other house chores:
+- Update dependencies
+- Update website, link & references
+
+
+<ChangelogHeader
   version="2.11.0"
   date="27 December 2023"
-  hijriDate="14 Jamadilakhir 1445"
+  hijriDate="14 J.Akhir 1445"
   githubSlug="2.11.0+140"
 />
 
-- Add [Android Homescreen widget](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/214). Finally closes issue [#9](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/9)
+- Add [**Android Homescreen widget**](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/214). Finally closes issue [#9](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/9)
 - Fix autoscroll 'terlajak' in full prayer timetable. Issue [#213](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/213)
 - Request to schedule exact alarm notification for Android 13+
 
@@ -26,7 +45,7 @@ import ChangelogHeader from '@/components/changelog-header'
   githubSlug="2.10.0+136"
 />
 
-- Added feature to download/save/print monthly prayer times timetable. [[Demo]](https://imgur.com/O8lOXkn)
+- Added feature to **download/save/print** monthly prayer times timetable. [[Demo]](https://imgur.com/O8lOXkn)
 - Upgrade dependencies
 - Bump Android `minSdkVersion` to 21 (Due to `fluttertoast` plugin)
 - Fix visual bug that cause the header in full timetable page not reacting on scroll.

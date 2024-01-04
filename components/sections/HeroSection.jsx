@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import LanguageChanger from "@/components/LanguageChanger";
 
 const Hero = () => {
-  const latestVersion = "2.11.0";
+  const latestVersion = "2.11.1";
   const { t } = useTranslation();
   return (
     <section className="relative">
