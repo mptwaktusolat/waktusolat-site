@@ -22,6 +22,8 @@ export const ThemeSwitcher = ({ className = "" }) => {
     <button
       type="button"
       title="Toggle theme"
+      data-tooltip-id="my-tooltip"
+      data-tooltip-content={`Toggle theme. Current: ${theme}`}
       className={`w-fit p-2 rounded-md hover:scale-110 active:scale-100 duration-200 text-zinc-900 dark:text-slate-200 text-2xl font-bold ${className}`}
       onClick={() => {
         if (theme === "light") {

@@ -9,12 +9,14 @@ import { AppScreenshotCard } from "../app-screenshot-card";
 import { AppScreenshotCardScroll } from "../app-screenshot-card-scroll";
 import { useTranslation } from "react-i18next";
 import LanguageChanger from "@/components/LanguageChanger";
+import { Tooltip } from "react-tooltip";
 
 const Hero = () => {
   const latestVersion = "2.11.1";
   const { t } = useTranslation();
   return (
     <section className="relative">
+      <Tooltip id="my-tooltip" place="bottom-end" />
       <ThemeSwitcher className="absolute top-2 right-5" />
       <LanguageChanger className="absolute top-2 right-20" />
       <svg
