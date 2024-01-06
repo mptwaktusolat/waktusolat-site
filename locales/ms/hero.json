@@ -5,5 +5,6 @@
   "latestVersion": "Versi Terkini",
   "screenshotLight": "/public/images/phone-light-ms-portrait.png",
   "screenshotDark": "/public/images/phone-dark-ms-portrait.png",
+  "sorryNoIos": "Maaf, aplikasi ini belum tersedia untuk iOS",
   "lang": "ms"
 }

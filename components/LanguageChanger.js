@@ -43,7 +43,7 @@ export default function LanguageChanger({ className = "" }) {
             title='Toggle language: Current: ${currentLocale}'
             data-tooltip-id="my-tooltip"
             data-tooltip-content={`Toggle language: Current: ${currentLocale}`}
-            className={`w-fit p-2 rounded-md hover:scale-110 active:scale-100 duration-200 text-zinc-900 dark:text-slate-200 text-2xl font-bold ${className}`}
+            className={`p-2 rounded-md hover:scale-110 active:scale-100 duration-200 text-zinc-900 dark:text-slate-200 text-2xl font-bold h-6 w-6 ${className}`}
             onClick={handleChange}
         >
             <GrLanguage />

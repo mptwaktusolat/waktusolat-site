@@ -61,7 +61,7 @@ const Hero = () => {
         />
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl">
+        <div className="mx-auto max-w-2xl flex-shrink-0">
           <AppLogo />
           <div className="mt-24 sm:mt-32 lg:mt-16">
             {/* <span className="mr-2 rounded-full bg-yellow-500/10 px-3 py-2 text-sm font-semibold leading-6 text-yellow-600 dark:text-yellow-400 ring-1 ring-inset ring-indigo-500/20">
@@ -84,9 +84,8 @@ const Hero = () => {
           </div>
           <h1 className="mt-10 ml-3 text-4xl font-bold tracking-tight text-zinc-800 dark:text-slate-200 sm:text-6xl">
             {t("appName")}
-            {t.language}
           </h1>
-          <p className="mt-3 ml-3 text-lg leading-8 text-zinc-800 dark:text-slate-200">
+          <p className="my-4 ml-3 text-lg leading-8 text-zinc-800 dark:text-slate-200">
             {t("description")}
           </p>
           <div className="flex">
@@ -130,8 +129,11 @@ const Hero = () => {
               </div>
             </a>
           </div>
+          <p className="mt-3 ml-3 text-sm leading-8 text-zinc-600 dark:text-slate-500">
+            *{t("sorryNoIos")}
+          </p>
         </div>
-        <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+        <div className="mx-auto mt-16 flex max-w-xl sm:mt-24 lg:ml-10 lg:mr-1 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <AppScreenshotCard className="hidden sm:block" lang={t("lang")} />
             {/* On mobile devices, hover effect may not be visible, hence use scroll effect instead */}
