@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import { IoIosStar } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 const featuredTestimonial = {
   body: "the internal design is pretty sejuk mata memandang this app can definetely upgrade where user can read quran and zikir daily so they dont have to install so many apps well done!!!  ",
@@ -65,6 +67,8 @@ function classNames(...classes) {
 }
 
 const Testimonial = () => {
+  const { t } = useTranslation("reviews");
+
   return (
     <div className="relative isolate bg-slate-100 dark:bg-zinc-900 pb-32 pt-24 sm:pt-32">
       <div
@@ -94,11 +98,10 @@ const Testimonial = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-xl sm:text-center">
           <h2 className="text-lg font-semibold leading-8 tracking-tight dark:text-cyan-500 text-cyan-600">
-            Reviews
+            {t("reviewTitle")}
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-zinc-900 dark:text-slate-300 sm:text-4xl">
-            Listens from the users <br />
-            <i>around Malaysia</i>
+            {t("reviewSubtitle")}
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-zinc-900 dark:text-slate-300 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
@@ -191,6 +194,9 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
+        <p className="mt-10 text-sm leading-8 text-zinc-600 dark:text-slate-500 text-center">
+          *{t("reviewSource")}
+        </p>
       </div>
     </div>
   );
