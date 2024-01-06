@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { JSX, SVGProps } from "react";
+import { Tooltip } from "react-tooltip";
 
 const navigation = {
   social: [
@@ -31,6 +33,8 @@ const navigation = {
 const Footer = () => {
   return (
     <footer className="bg-slate-100 dark:bg-zinc-900">
+      <Tooltip id="footer-tooltip" />
+
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 lg:px-8">
         <div className="mt-10 flex justify-center space-x-10">
           {navigation.social.map((item) => (
@@ -46,8 +50,16 @@ const Footer = () => {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2024 <a href="https://iqfareez.com">Muhammad Fareez</a>. All
-          rights reserved.
+          &copy; 2024{" "}
+          <a
+            data-tooltip-id="footer-tooltip"
+            data-tooltip-content="👀"
+            data-tooltip-delay-show={800}
+            href="https://iqfareez.com"
+          >
+            Muhammad Fareez
+          </a>
+          . All rights reserved.
         </p>
       </div>
     </footer>
