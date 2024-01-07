@@ -7,7 +7,7 @@ import Footer from '@/components/sections/Footer'
 import initTranslations from '../i18n';
 import TranslationsProvider from '@/components/TranslationsProvider';
 
-const i18nNamespaces = ['hero', 'reviews'];
+const i18nNamespaces = ['hero', 'reviews', 'features'];
 
 export default async function Home({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, i18nNamespaces);

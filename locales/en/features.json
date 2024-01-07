@@ -1,0 +1,23 @@
+{
+  "featureTitle": "Everything you need",
+  "featureBody": "Hurry to the prayer. Hurry to success",
+  "featureDescription": "Feature packed while keeping the design clean and minimal",
+  "features": [
+    {
+      "name": "Sleek Design.",
+      "description": "Designed from the the ground up to be simple and pleasing to the eye."
+    },
+    {
+      "name": "Reliable.",
+      "description": "Data is taken from the official local authority"
+    },
+    {
+      "name": "We are open source.",
+      "description": "Found a bug or want to contribute to the project? Visit our GitHub!"
+    },
+    {
+      "name": "Continuous support.",
+      "description": "We are always working on improving the app and adding new features."
+    }
+  ]
+}

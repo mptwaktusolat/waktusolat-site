@@ -1,0 +1,23 @@
+{
+  "featureTitle": "Segala yang anda perlukan",
+  "featureBody": "Marilah menunaikan solat, Marilah merebut kemenangan",
+  "featureDescription": "Penuh dengan ciri-ciri sambil mengekalkan reka bentuk yang moden dan minimal",
+  "features": [
+    {
+      "name": "Reka Bentuk Moden.",
+      "description": "Direka dari asasnya untuk menjadi ringkas dan menyenangkan mata."
+    },
+    {
+      "name": "Boleh Dipercayai.",
+      "description": "Data diambil dari pihak berkuasa tempatan rasmi."
+    },
+    {
+      "name": "Kami adalah sumber terbuka.",
+      "description": "Jumpa bug atau ingin menyumbang kepada projek? Layari GitHub kami!"
+    },
+    {
+      "name": "Sokongan Berterusan.",
+      "description": "Kami sentiasa berusaha untuk memperbaiki aplikasi dan menambah ciri-ciri baru."
+    }
+  ]
+}
