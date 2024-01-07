@@ -10,7 +10,6 @@ import ChangelogHeader from '@/components/changelog-header'
 
 Due to the [Jan 1 Incident](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/216) issue, some changes are made to improve stability of the app.
 
-
 - Fix **Homescreen widget** error view that never triggered.
 - Skip storing cache if the API response can't be parsed by the equivalent model
 - Change the **cache key** for API response, because some users still have the error
@@ -18,7 +17,6 @@ Due to the [Jan 1 Incident](https://github.com/mptwaktusolat/app_waktu_solat_mal
 Other house chores:
 - Update dependencies
 - Update website, link & references
-
 
 <ChangelogHeader
   version="2.11.0"
@@ -63,7 +61,6 @@ Other house chores:
 - [DEV]
   - Fix lints rule
 
-
 <ChangelogHeader
   version="2.9.2"
   date="27 August 2023"
@@ -77,7 +74,6 @@ Other house chores:
 - Added nice, subtle and welcoming **entry animation** for the prayer time list. [[See Tweet]](https://twitter.com/iqfareez/status/1695646043210445294?s=20)
 - [DEV]
   - Code cleaning and refactoring
-
 
 <ChangelogHeader
   version="2.9.1"
@@ -102,7 +98,6 @@ Other house chores:
   githubSlug="2.9.0+132"
 />
 
-
 - Using the latest API update from [mpt-server](https://mpt-server.vercel.app/)
   - Prayer time API now using [solat-v2](https://waktusolat.iqfareez.com/api#tag/solat-v2) endpoint
   - **Improved accuracy** when detecting one's prayer zone - now using pre-defined zone definition instead of just calculating the nearest point of the prayer time zone to the user location. For more details, please see issue [#188](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/188)
@@ -122,7 +117,6 @@ Other house chores:
 />
 
 - :card_file_box: Update **JAKIM location** database (Comes with zone changes and addition especially for Sarawak, etc.) [011cb86](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/011cb864596a8a231d7f00ce24261b714feae712)
-
 
 <ChangelogHeader
   version="2.8.2"
@@ -157,7 +151,6 @@ Other house chores:
   hijriDate="1 Syawal 1444"
   githubSlug="`2.8.0+126"
 />
-
 
 - :art: Revamped design to **Material You** (or Material 3). Feel more rounded corners, improved designs and clean UIs.
 - :art: The app themes now matched the phone's theme colours (usually derived from the wallpaper) for supported phones only.
@@ -380,7 +373,6 @@ Other house chores:
 
 <ChangelogHeader version="2.3.5" date="5 March 2022" githubSlug="2.3.5+93" />
 
-
 - :bug: Fixed notification failed to schedule. This is due to slight api changes that failed the date parser to convert the date correctly. [#103](../issues/103)
 - :sparkles: New **Tasbih**. It features a simple beads and a counter. Can be accessed via the pray icon at the navigation bar. [#103](../issues/37) _#RoadToRamadan_
 - :speech_balloon: Minor tweak in the date format on the homepage. [Screenshot](https://imgur.com/a/NKIGIpB)
@@ -410,7 +402,6 @@ Other house chores:
 - [Comparing 2.3.0 - 2.3.3](../compare/2.3.0+89...2.3.3+91)
 
 <ChangelogHeader version="2.3.0" date="27 January 2022" githubSlug="2.3.0+89" />
-
 
 - Added **Bahasa Melayu** to the app! :tada:
   - For for time installation, user will be **prompted to choose** their preferred language. _Default to their device locale (en/ms)_
@@ -637,7 +628,6 @@ Other house chores:
 
 <ChangelogHeader version="1.15.94" date="28 September 2021" githubSlug="1.15.93+46" />
 
-
 - Introduced **Share to WhatsApp** option. The texts will be formatted beautifully (**bold**, _italic_ etc.) Default setting can be changed in Setting page. So, there are three options of sharing now. **1- Ask, 2- Plain Text, 3-WhatsApp**.
 - **Adjustable prayer time text** sizes. Defaulted to size **14**. Minimum is **12** and can go up to **22**. Issue [#8](../issues/8).
 - Add `http://` to links so other apps _(e.g.: WhatsApp/Telegram)_ can generate a link preview.
@@ -652,17 +642,18 @@ Other house chores:
 - Others (may) not documented.
 
 ## [Ver `1.13.91-hotfix2`](../releases/tag/1.13.91-hotfix2%2B43) - 19 February 2021
+<ChangelogHeader version="1.13.91-hotfix2" date="19 February 2021" githubSlug="1.13.91-hotfix2+43" />
 
 - Custom fork [hijri](https://github.com/iqfareez/hijri_date) packages to make it more Malaysian friendly ([Huh?](../releases/tag/1.13.91-hotfix2%2B43#:~:text=so%20that%20tak%20guna%20sgt%20istilah%20mcm%20arabic%20tu)). Thanks to Aqil Mohd for the idea.
 - Reverted to the **good old** [**mpti906**](https://mpt.i906.my/api/prayer/sgr-1) API (yes again hahaha), no longer use [JAKIM](https://www.e-solat.gov.my/index.php?r=esolatApi/takwimsolat&period=month&zone=SGR01) API because very often downtime and affected the user experience. Thanks to Aqil Mohd again.
 - Notification threshold until rescheduled reduced to **two days** (Previously three days).
 
-## [Ver `1.13.89-hotfix`](../releases/tag/1.13.89-hotfix%2B42) - 19 February 2021
+<ChangelogHeader version="1.13.89-hotfix" date="19 February 2021" githubSlug="1.13.89-hotfix+42" />
 
 - Fixed **time conversion** conflict when converting 12:00 to epoch, and later affected UI view. It supposed to be converted to 12pm but it was converted to 12am (hshshhs :joy:). Closes [#49](../issues/49). Thanks to [butitik](https://github.com/butitik).
 - Change notification **naming convention** to Malay to make it consistent with the UI, however channel name not (yet) effected. Related to [#45](../issues/45). Thanks to Aqil Mohd.
 
-## [Ver `1.13.87`](../releases/tag/1.13.87%2B41) - 17 February 2021
+<ChangelogHeader version="1.13.87" date="17 February 2021" githubSlug="1.13.87+41" />
 
 - Added [geocoding](https://pub.dev/packages/geocoding).
 - Prayer time zone is now **detected in app**. This should fix the issue [#28](../issues/28) where some location is wrongly detected.
@@ -839,4 +830,9 @@ export default function MDXPage({ children }) {
     title: "Changelogs",
   }} >{children}</MdxLayout>;
 
+}
+
+export const metadata = {
+  title: 'Changelog',
+  description: 'List of releases',
 }

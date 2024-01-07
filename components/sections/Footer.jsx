@@ -16,7 +16,7 @@ const navigation = {
     },
     {
       name: "GitHub",
-      href: "https://github.com/iqfareez",
+      href: "https://github.com/mptwaktusolat/app_waktu_solat_malaysia",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -49,6 +49,9 @@ const Footer = () => {
             </Link>
           ))}
         </div>
+        {/* <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+          Privacy Policy &middot; Map &middot; API &middot; Help
+        </p> */}
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
           &copy; 2024{" "}
           <a

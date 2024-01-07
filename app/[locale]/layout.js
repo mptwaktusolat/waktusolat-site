@@ -7,8 +7,17 @@ import { dir } from 'i18next';
 const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
 
 export const metadata = {
-  title: 'Malaysia Prayer Time Site',
-  description: 'Download the app from Google Play Store',
+  title: {
+    template: '%s | App Waktu Solat Malaysia | Malaysia Prayer Time App',
+    default: 'App Waktu Solat Malaysia | Malaysia Prayer Time App',
+  },
+  description: 'An essential apps for Muslim in Malaysia. Help you determine the latest prayer times, find qibla and more. Download now from Google Play Store',
+  alternates: {
+    canonical: 'https://waktusolat.app',
+    languages: {
+      'en-US': 'https://waktusolat.app/en',
+    },
+  },
 }
 
 export function generateStaticParams() {
