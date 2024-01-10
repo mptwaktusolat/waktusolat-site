@@ -718,12 +718,12 @@ Other house chores:
 - Added more entries to secret debug dialog.
 - Also added two new entries to `feedback` page email template.
 
-## [Ver `1.10.51-hotfix`](../releases/tag/1.10.51-hotfix) - 18 November
+<ChangelogHeader version="1.10.51-hotfix" date="18 November 2020" githubSlug="1.10.51-hotfix" />
 
 - :pencil2: Fixed issue where **Labuan** (`WLY 02`) maps to wrong location code. Issue [#26](../issues/26). Commit ref [1d2414c](../commit/1d2414ca82bec20d397897bbd7253373a9016ee4)
 - `Show other prayer time` ListTile's is now tappable. Switch can be triggered by tapping on ListTile. Commit ref [058a3f3](../commit/058a3f35564302a6ebf91261ec528102c46d2970)
 
-## [Ver `1.10.49`](../releases/tag/1.10.49%2B22) - 12 November
+<ChangelogHeader version="1.10.49" date="12 November 2020" githubSlug="1.10.49+22" />
 
 - :new: Added **Imsak**, **Syuruk** and **Dhuha** time - _(Imsak is 10 min before Fajr, Dhuha is 28 min after syuruk)_. Users need to enable them manually in setting).
 - :lock: Security improvement. API call now using **`https`** protocol. Thanks to https://mpt.i906.my/ API. Besides, the app no longer use `android:usesCleartextTraffic="true"` flag in Android Manifest.
@@ -735,8 +735,7 @@ Other house chores:
 - :arrow_up: Update some dependencies.
 - :wastebasket: Code clean-up _(Delete unused file from the older API implementation etc.)_
 
-
-## [Ver `1.1.40`](../releases/tag/1.1.40%2B19) - 20 October 2020
+<ChangelogHeader version="1.1.40" date="20 October 2020" githubSlug="1.1.40+19" />
 
 (yes, typo version number🌚)
 
@@ -746,7 +745,7 @@ Other house chores:
 - :new: Dedicated **Settings** page.
 - :new: New **About Page**.
 
-## [Ver `1.6.32-hotfix`](../releases/tag/1.6.32-hotfix%2B15) - 11 October 2020
+<ChangelogHeader version="1.6.32-hotfix" date="1 October 2020" githubSlug="1.6.32-hotfix+15" />
 
 - MPT is now **open sourced** :tada:. It is licensed under [GPL-3.0](../blob/master/LICENSE).
 - :wheelchair: Fixed some text are not readable during light/dark mode. Refer issue [#18](../issues/18)
@@ -754,7 +753,7 @@ Other house chores:
 - :page_facing_up: **Privacy Policy** and **Release Notes** now open in app WebView.
 - :lipstick: Theme page shortcut in bottomAppBar.
 
-## [Ver `1.5.29`](../releases/tag/1.5.29%2B14) - 8 October 2020
+<ChangelogHeader version="1.5.29" date="18 October 2020" githubSlug="1.5.29+14" />
 
 - :last_quarter_moon: Added **dark mode**. Thanks to this [article](https://medium.com/swlh/flutter-dynamic-themes-in-3-lines-c3b375f292e3).
 - :bug: Refix the issue where user can't copy / share on the first run after installation. [#17](../issues/17)
@@ -777,7 +776,6 @@ Other house chores:
 
 <ChangelogHeader version="1.3.15" date="29 September 2020" githubSlug="1.3.15+10" />
 
-
 - :sparkles: Location can be set **based on your location** (GPS or network) - again, credit to [mpti906](https://mpt.i906.my/api.html) API.
   - :heavy_plus_sign: Added [geolocator](https://pub.dev/packages/geolocator)
   - You need to **accept the permission** when prompted. If it fails to get gps location, it will fall back to manual selection.
@@ -786,7 +784,6 @@ Other house chores:
 - :man_technologist: Code reformats, location data no longer fetched from JSON assets, used class instead.
 
 <ChangelogHeader version="1.2.11" date="21 September 2020" githubSlug="1.2.11+9" />
-
 
 - Fixed issue [#14](../issues/14): Current API, [AzanPro](https://api.azanpro.com), is out of date from JAKIM and some location shows wrong prayer time. Changed API provider to [WaktuSolat](http://waktusolatapp.com/api/v2/) API.
 - Added two new permissions in manifest: `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION` (to be used later)
@@ -827,12 +824,12 @@ _Previous changelog page: [mptwaktusolat/app_waktu_solat_malaysia/wiki/Changelog
 export default function MDXPage({ children }) {  
   
   return <MdxLayout meta={{
-    title: "Changelogs",
+    title: "Changelog",
   }} >{children}</MdxLayout>;
 
 }
 
 export const metadata = {
   title: 'Changelog',
-  description: 'List of releases',
+  description: 'List of releases of new app updates. Contains bug fixes and overall app improvements.',
 }

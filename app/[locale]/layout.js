@@ -7,7 +7,7 @@ import { dir } from 'i18next';
 const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL || 'https://waktusolat.app'),
   title: {
     template: '%s | App Waktu Solat Malaysia | Malaysia Prayer Time App',
     default: 'App Waktu Solat Malaysia | Malaysia Prayer Time App',
