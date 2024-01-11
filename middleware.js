@@ -7,5 +7,5 @@ export function middleware(request) {
 
 // applies this middleware only to files in the app directory
 export const config = {
-    matcher: '/((?!api|static|.*\\..*|_next).*)'
+    matcher: '/((?!api|static|.*\\..*|_next|_vercel).*)'
 };

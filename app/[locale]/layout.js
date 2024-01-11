@@ -3,6 +3,7 @@ import '@/app/globals.css'
 import { ThemeProvider } from "@/context/ThemeProvider";
 import i18nConfig from '@/i18nConfig';
 import { dir } from 'i18next';
+import { Analytics } from '@vercel/analytics/react';
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children, params: { locale } }) {
       <body className={poppins.className}>
         <ThemeProvider attribute="class" enableSystem>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
