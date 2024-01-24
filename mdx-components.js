@@ -11,6 +11,7 @@ export function useMDXComponents(components) {
         h2: (props) => <h2 {...props} className="text-3xl font-bold mt-6 mb-2 text-blue" />,
         p: (props) => <p {...props} className="mt-2 mb-6" />,
         a: (props) => <a {...props} className="markdown_a dark:text-cyan-400" />,
+        code: (props) => <code {...props} className="text-fuchsia-600 dark:text-fuchsia-400 p-0.5 bg-fuchsia-100/70 dark:bg-fuchsia-900/30 rounded-sm" />,
         ...components,
     }
 }
