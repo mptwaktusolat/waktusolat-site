@@ -5,7 +5,7 @@ import i18nConfig from '@/i18nConfig';
 import { dir } from 'i18next';
 import { Analytics } from '@vercel/analytics/react';
 
-const poppins = Poppins({ subsets: ["latin"], weight: "400", display: "swap" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL || 'https://waktusolat.app'),

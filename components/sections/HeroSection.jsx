@@ -12,7 +12,7 @@ import LanguageChanger from "@/components/LanguageChanger";
 import { Tooltip } from "react-tooltip";
 
 const Hero = () => {
-  const latestVersion = "2.11.1";
+  const latestVersion = "2.11.3";
   const { t } = useTranslation();
   return (
     <section className="relative">
@@ -82,7 +82,7 @@ const Hero = () => {
               </span>
             </Link>
           </div>
-          <h1 className="mt-10 ml-3 text-4xl font-bold tracking-tight text-zinc-800 dark:text-slate-200 sm:text-6xl">
+          <h1 className="mt-10 ml-3 text-4xl font-medium tracking-tight text-zinc-800 dark:text-slate-200 sm:text-6xl">
             {t("appName")}
           </h1>
           <p className="my-4 ml-3 text-lg leading-8 text-zinc-800 dark:text-slate-200">
@@ -122,7 +122,7 @@ const Hero = () => {
                     className="group-hover:-rotate-12 transition-all "
                   />
                 </span>
-                <span className="mx-2 font-semibold text-lg sm:text-xl">
+                <span className="mx-2 font-medium text-lg sm:text-xl">
                   {" "}
                   REST API
                 </span>
