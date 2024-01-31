@@ -13,6 +13,7 @@ export function useMDXComponents(components) {
         a: (props) => <a {...props} className="markdown_a dark:text-cyan-400" />,
         strong: (props) => <strong {...props} className="font-bold" />,
         code: (props) => <code {...props} className="text-fuchsia-600 dark:text-fuchsia-400 p-0.5 bg-fuchsia-100/70 dark:bg-fuchsia-900/30 rounded-sm" />,
+        blockquote: (props) => <blockquote {...props} className="border-l-4 border-slate-400 dark:border-zinc-400 bg-slate-200 dark:bg-zinc-800 p-2 pl-4 my-4" />,
         ...components,
     }
 }

@@ -104,13 +104,13 @@ Other chores:
   githubSlug="2.9.0+132"
 />
 
-- Using the latest API update from [mpt-server](https://mpt-server.vercel.app/)
-  - Prayer time API now using [solat-v2](https://waktusolat.iqfareez.com/api#tag/solat-v2) endpoint
-  - **Improved accuracy** when detecting one's prayer zone - now using pre-defined zone definition instead of just calculating the nearest point of the prayer time zone to the user location. For more details, please see issue [#188](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/188)
+- Using the latest API update from [mpt-server](http://api.waktusolat.app)
+  - Prayer time API now using [solat-v2](https://api.waktusolat.app/docs#tag/solat-v2/get/v2/solat/%7Bzone%7D) endpoint
+  - **Improved accuracy** when detecting prayer zone - now using pre-defined zone definition instead of just calculating the nearest point of the prayer time zone to the user location. For more details, please see issue [#188](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/188)
 - Upgrade dependencies (major ones included: [http](https://pub.dev/packages/http), [google_fonts](https://pub.dev/packages/google_fonts), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [app_settings](https://pub.dev/packages/app_settings))
 - Possibly fixed error related to notification scheduling. [#203](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/203)
 - Revert adding the error message in zone_chooser dialog [5adc2cd](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/5adc2cdfee32f05c81643bba7eebec1b5e83b69c)
-- DEV]
+- DEV:
   - Fix some of the file names with respect to linter rule [`lowercase_with_underscores`](https://dart.dev/tools/linter-rules/file_names)
   - Bump kotlin version to the `1.8.22` (due to `app_settings` requirement)
 
@@ -221,10 +221,9 @@ Other chores:
   githubSlug="2.7.1+115"
 />
 
-- Upgrade dependencies
-  Major: [package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [geolocator](https://pub.dev/packages/geolocator), [firebase_core](https://pub.dev/packages/firebase_core), [firebase_analytics](https://pub.dev/packages/firebase_analytics), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) & [firebase_crashlytics](https://pub.dev/packages/firebase_crashlytics)
-  - According to [fln's changelog](https://pub.dev/packages/flutter_local_notifications/changelog):
-    > `zonedSchedule()`'s implementation has switched to using [desugaring](https://developer.android.com/studio/releases/gradle-plugin#j8-library-desugaring) instead of the [ThreeTen Android Backport library](https://github.com/JakeWharton/ThreeTenABP).
+- Upgrade dependencies (major): [package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [geolocator](https://pub.dev/packages/geolocator), [firebase_core](https://pub.dev/packages/firebase_core), [firebase_analytics](https://pub.dev/packages/firebase_analytics), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) & [firebase_crashlytics](https://pub.dev/packages/firebase_crashlytics)
+  - According to `Flutter Local Notifications`'s [changelog](https://pub.dev/packages/flutter_local_notifications/changelog#1000):
+    > `zonedSchedule()`'s implementation has switched to using [desugaring](https://developer.android.com/studio/releases/gradle-plugin#j8-library-desugaring) instead of the [ThreeTen Android Backport library](https://github.com/JakeWharton/ThreeTenABP)...
 
 <ChangelogHeader
   version="2.6.2-hotfix.1"
