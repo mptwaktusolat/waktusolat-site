@@ -144,8 +144,7 @@ Other chores:
 - Current **active prayer time is now highlighted** in the prayer time list. _For example, if the current time is 2:12 PM, the Zohor prayer time will be highlighted in the prayer time list._
 - Fixed text not visible when dark mode is on.
 - Upgrade to [Flutter 3.10](https://docs.flutter.dev/release/release-notes/release-notes-3.10.0) 💙
-- Update dependencies.
-  -[package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [google_mobile_ads](https://pub.dev/packages/google_mobile_ads)
+- Update dependencies: [package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [google_mobile_ads](https://pub.dev/packages/google_mobile_ads)
 - DEV:
   - Reports platforms error to Crashlytics [a78f508](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/a78f5086bdb74b97c496e530f1c71f1b342bd954)
   - Fix some lint errors [203cb8d](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/203cb8dba1019aeb8c3d3755912fe127b48c1882)
@@ -157,7 +156,7 @@ Other chores:
   githubSlug="`2.8.0+126"
 />
 
-- Revamped design to **Material You** (or Material 3). Feel more rounded corners, improved designs and clean UIs.
+- Revamped design to [**Material You**](https://source.android.com/docs/core/display/material) (or Material 3). Feel more rounded corners, improved designs and clean UIs.
 - The app themes now matched the phone's theme colours (usually derived from the wallpaper) for supported phones only.
 - Increase **default text size** for prayer time text to `16`.
 - **Relocate the Ads widget** to the to the top. So that the location of floating action button and snackbar are restored.
@@ -260,7 +259,7 @@ Other chores:
 - In full prayer timetable, the background image will show a [mosque](https://waktusolat.iqfareez.com/mosques) according to user's current zone. [[Screenshot]](https://imgur.com/ghzaxUe)
 - Display detected geocoding as `subLocality` as it is appear to be more specific to the location. For example, app show `Pusat Bandar Wangsa Maju` instead of generic `Kuala Lumpur`. [[Screenshot]](https://imgur.com/3yhZmcJ)
 - Add **shake** widget on onboarding screen for Autostart adomnition (not all phones) to alert the users to enable it. [[Video]](https://imgur.com/qDhsRcU)
-- [MPT-Server](http://mpt-server.vercel.app/) api will now used as primary API to prayer time data, backed up with JAKIM API.
+- [MPT-Server](http://api.waktusolat.app) API will now used as primary API to prayer time data, backed up with JAKIM API.
 - Add keybaord autofill hints in email field in feedback page. [[Screenshot]](https://imgur.com/yGJEcwV)
 - [DEV]
   - Upgraded to **Flutter 3.3**.
@@ -360,15 +359,15 @@ Other chores:
 />
 
 - Added option to view **last one third of the night** in full prayer timetable. [#102](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/102).
-- System bar is now **transparent**. [Screenshot](https://imgur.com/a/RcTAd6B) _(Most apps slowly implement this so why no wont us :hand_over_mouth:)_
+- System bar is now **transparent**. [Screenshot](https://imgur.com/a/RcTAd6B) _(joining the latest design trends)_
 - Correct the un-uniform **tasbih icon colour** at the bottom app bar.
 - **Fix missing translation** for prayer timetable settings.
 - Give route name to `Navigator.push()` for **Analytics** purposes.
 - **Upgrade** dependencies
   - [share_plus](https://pub.dev/packages/share_plus), [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter) and [geolocator](https://pub.dev/packages/geolocator)
 - Added [firebase_analytics](https://pub.dev/packages/firebase_analytics).
-- Remove references to hijri offset.
-- [Dev] Change JAKIM model datatypes for prayer time data. Previously using list of UNIX timestamp, now Object of DateTime(s).
+- Remove references to hijri offset - no longer needed since the data from JAKIM is considered the most accurate
+- [Dev] Change JAKIM model datatypes for prayer time data. Previously using list of UNIX timestamp, now Object of [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)(s).
 - [Dev] (Debug dialog) Replaced open in-app review with notification setting notice.
 
 <ChangelogHeader version="2.3.5-hotfix" date="11 March 2022" githubSlug="2.3.5-hotfix+95" />
@@ -408,18 +407,18 @@ Other chores:
 
 <ChangelogHeader version="2.3.0" date="27 January 2022" githubSlug="2.3.0+89" />
 
-- Added **Bahasa Melayu** to the app! :tada:
+- Added **Bahasa Melayu** to the app! 🇲🇾
   - For for time installation, user will be **prompted to choose** their preferred language. _Default to their device locale (en/ms)_
   - For others, language can be changed in **Setting** page.
   - Revert the changes made in [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). Naming convention are now based on language.
 - For every app updates installed, the app will show a **What's New** dialog.
-  - _for eg:_ this update will prompt user to select language.
+  - For example: In this update, the app will prompt user to select language.
 - Added [flutter_markdown](https://pub.dev/packages/flutter_markdown) to easily format rich text without messing around with TextSpan(s)
-- Change `2021` reference to `2022`.legalese, app name etc._
+- Changed `2021` reference to `2022` in legalese, app name etc.
 - Added/rearrange few assets in onboarding screeen.
-  - New source to yoink some icons :sunglasse[**3d assets**](https://3dicons.co/).
+  - New source to yoink some icons [**3d assets**](https://3dicons.co/) 😎
 - Added <kbd>Dismiss</kbd> button to hide the notification issue prompt permanently (in app body).
-- Add `zone`, `app locale` & `device locale` to **Send Feedback** metadata. https://imgur.com/a/huPiGeK
+- Add `zone`, `app locale` & `device locale` to **Send Feedback** metadata. [Screenshot](https://imgur.com/a/huPiGeK)
 - Initial implementation of **Semantics**. [#97](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/97)
 - Other changes
   - Fixed grammars, wordings etc. in few places.
