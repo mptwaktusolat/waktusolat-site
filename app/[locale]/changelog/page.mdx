@@ -292,7 +292,7 @@ Other chores:
 
 - In **Feedback page**:
   - Fixed error `Converting object to an encodable object failed: Instance of 'Duration'` when user submitting feedback.
-  - 🤫 Being more transparent to the user i.e. **disclosed** all data that being shared to developer **when user sending the feedback**. Includes option to hide sensitive data _eg: GPS coordinate_. [Screenshot](https://imgur.com/a/acfh1C6)
+  - Being more transparent to the user i.e. **disclosed** all data that being shared to developer **when user sending the feedback**. Includes option to hide sensitive data _eg: GPS coordinate_. [Screenshot](https://imgur.com/a/acfh1C6)
 - [Dev] Added ability to **hide ads** for 10 minutes. Accessible from debug dialog.
 
 <ChangelogHeader
@@ -479,7 +479,7 @@ Other chores:
 <ChangelogHeader version="2.2.2" date="22 September 2021" githubSlug="2.2.2+78" />
 
 - Some improvement in **prayer time timetable**:
-  - Fixed a **typ~~Imsak~~ Syuruk. [#80](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/80).
+  - Fixed a typo <s>Imsak</s> Syuruk. [#80](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/80).
   - Added **other prayer times** (Imsak & Dhuha)
   - Smaller gaps in between Column, so user wont have to scroll to far.
   - Added tooltip to some column headers.
@@ -503,7 +503,7 @@ Other chores:
 <ChangelogHeader version="2.0.0" date="31 August 2021" githubSlug="2.0.0+71" />
 
 - 🚛 Migrate Flutter project to [**null safety**](https://dart.dev/null-safety).
-- Added **azan notification**. Now there are two types of notification, default sound and azan. Existing user will be asked if they want to try. Source: https://soundcloud.com/alafasy/sets/athan. Closed [#39](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/39):
+- Added **azan notification**. Now there are two types of notification, default sound and azan. Existing user will be asked if they want to try. Source: [Athan Alafasy - SoundCloud](https://soundcloud.com/alafasy/sets/athan). Closed [#39](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/39):
   - Both types will use **different notification channel**. This is required to [satisfy](https://developer.android.com/training/notify-user/channels) requirement of Android 8.0+ and to maintain backward compatibility. (Syuruk will use same default notification channel regardless of the notification type)
   - Added option to **select preferred notification** in onboarding page.
   - Added option to change preferred notification type in **Notification Settings** page. (Required app restart to apply changes)
@@ -530,7 +530,7 @@ Other chores:
 - [flutter_lints](https://pub.dev/packages/flutter_lints). Applied coding best practices followed with code cleanup, and refactoring.
 - New **Monthly Prayer Table**, featuring beautiful [IIUM SHAS Mosque](https://i2.wp.com/news.iium.edu.my/wp-content/uploads/2017/06/10982272836_29abebc100_b.jpg?ssl=1) :mosque::heart:. [#55](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/55)
 - Added **offline cache support**. By default, if criteria are met (same location, same month & same year), prayer data will load data from storage (if available) instead fetching from the API.
-- MPTI906 new dart **model**. (https://jsontodart.zariman.dev is quite nice tool)
+- MPTI906 new dart **model**. ([https://jsontodart.zariman.dev](https://jsontodart.zariman.dev) is quite nice tool)
 - Better error messages for `ZoneChooser` and `GetPrayerTime`.
 - Throw error when detected location is **not in Malaysia**. Commit ref [b500e4c](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/b500e4c9ef15db4c69f2fef6a0e25f4a0ede5e49). Also fixed `invalid argument(s)` error.
 - Added some icons in `ZoneChooser` error dialog.
