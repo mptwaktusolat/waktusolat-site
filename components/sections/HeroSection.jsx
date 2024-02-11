@@ -12,7 +12,7 @@ import LanguageChanger from "@/components/LanguageChanger";
 import { Tooltip } from "react-tooltip";
 
 const Hero = () => {
-  const latestVersion = "2.11.3";
+  const latestVersion = "2.12.0";
   const { t } = useTranslation();
   return (
     <section className="relative">

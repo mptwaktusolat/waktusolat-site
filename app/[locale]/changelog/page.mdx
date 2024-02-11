@@ -1,6 +1,15 @@
 import MdxLayout from '@/components/mdx-layout'
 import ChangelogHeader from '@/components/changelog-header'
 
+<ChangelogHeader version="2.12.0" date="11 February 2024" hijriDate="1 Syaa'ban 1445" githubSlug="2.12.0+144" />
+
+-  Homescreen widget now follows [**dynamic color**](https://developer.android.com/develop/ui/views/appwidgets/enhance#dynamic-colors). Closed [#222](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/222)
+   ![mpt new dynamic widget](https://bucket.waktusolat.app/new-mpt-widget-dynamic.png)  
+-  Fixes issue where prayer data won't show in homescreen widget when new month comes. Fixed [#224](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/224)
+-  Minor adjustment to horizontal homescreen widget layout. Maybe fixes [#218](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/218)
+-  Refactor code to adapt [new way](https://kazlauskas.dev/blog/flutter-app-lifecycle-listener-overview/#is-there-a-difference) of listening for app lifecycle events 
+- Upgrade pub dependencies 
+
 <ChangelogHeader version="2.11.3" date="15 January 2024" hijriDate="3 Rejab 1445" githubSlug="2.11.3+143" />
 
 - Fix bug on **homescreen widget** where it shows the incorrect prayer time data. Issue [#219](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/219). Thanks to MPT user who reported this issue.
