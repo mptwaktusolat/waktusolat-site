@@ -1,6 +1,11 @@
 import MdxLayout from '@/components/mdx-layout'
 import ChangelogHeader from '@/components/changelog-header'
 
+<ChangelogHeader version="2.12.2" date="19 February 2024" hijriDate="9 Syaa'ban 1445" githubSlug="2.12.2+145" />
+
+- Fix app **crashes on launch** on **Android 14+** devices if the homescreen widget was added. The crashed are caused because the app are trying
+to schedule the widget update using [`setExact`](https://developer.android.com/reference/android/app/AlarmManager#setExact(int,%20long,%20android.app.PendingIntent)) alarm when the required [permission](https://developer.android.com/develop/background-work/services/alarms/schedule#using-schedule-exact-permission) is not granted by the user. Issue [#228](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/228)
+
 <ChangelogHeader version="2.12.1" date="13 February 2024" hijriDate="3 Syaa'ban 1445" githubSlug="2.12.1+144" />
 
 - Fix issue where some widget layout would shift due to missing `layout_weight` property.
