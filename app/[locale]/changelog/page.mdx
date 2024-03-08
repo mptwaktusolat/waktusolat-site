@@ -492,7 +492,7 @@ Other chores:
 
 <ChangelogHeader version="2.2.3" date="28 September 2021" githubSlug="2.2.3+79" />
 
-- Fixed time from API is being **wrongly parsed** as 12-Hour system (supposedly 24-Hour system), causing wrong time shown for some zones *Zohor time in Sabah)\_. Issue [#85](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/85). Thank you, anonymous user for alerting me about this issue. (Yes, this is repeated issue similar to [this](#ver-11389-hotfix---19-february-2021) update back then :man_facepalming:)
+- Fixed time from API is being **wrongly parsed** as 12-Hour system (supposedly 24-Hour system), causing wrong time shown for some zones (especially Zohor time in Sabah). Issue [#85](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/85). Thank you, anonymous user for alerting me about this issue. (Yes, this is repeated issue similar to [this](#1.13.91-hotfix2) update back then 🤦‍♂️)
 - Minor UI change manual location chooser - cleaner header textstyle.
 - Temporary disable `Salam Jumaat` wish (`summary`) in notification. Issue [#81](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/81).
 
@@ -537,7 +537,7 @@ Other chores:
 - Reduce **snackbar** time and simplify text (for Location Chooser).
 - Remove old **hijri offset** setting.
 - Added some Padding to loading & error animation (in GetPrayerTime).
-- Remove unused [isolate_handler](https://pub.dev/packages/isolate_handler). Realized that I never use the implementation before. :clown_face:
+- Remove unused [isolate_handler](https://pub.dev/packages/isolate_handler). Realized that I never use the implementation before.
 - Major version dependencies upgrade: [provider](https://pub.dev/packages/provider): `^5.0.0 -> ^6.0.0` and [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications): `^6.0.0 -> ^8.1.1+1`
 - Code cleanup (a lot...)
 - and (probably) more not documented.
@@ -672,7 +672,7 @@ Other chores:
 
 <ChangelogHeader version="1.13.89-hotfix" date="19 February 2021" githubSlug="1.13.89-hotfix+42" />
 
-- Fixed **time conversion** conflict when converting 12:00 to epoch, and later affected UI view. It supposed to be converted to 12pm but it was converted to 12am (hshshhs :joy:). Closes [#49](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/49). Thanks to [butitik](https://github.com/butitik).
+- Fixed **time conversion** conflict when converting 12:00 to epoch, and later affected UI view. It supposed to be converted to 12pm but it was converted to 12am (hshshhs 😆). Closes [#49](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/49). Thanks to [butitik](https://github.com/butitik).
 - Change notification **naming convention** to Malay to make it consistent with the UI, however channel name not (yet) effected. Related to [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). Thanks to Aqil Mohd.
 
 <ChangelogHeader version="1.13.87" date="17 February 2021" githubSlug="1.13.87+41" />
@@ -694,13 +694,13 @@ Other chores:
 <ChangelogHeader version="1.12.76-stable" date="27 January 2021" githubSlug="2.2.8+36" />
 
 - **Fixed app not responding** issue. No automatic notification scheduling when open app or changing theme. It will reschedule back after 3 days on app reopening. Issue [#31](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/31) solved.
-- Other notification improvements :bell::
+- Other notification improvements 🔔
   - **Expandable** when needed, ability to reveal more location text without clipping. Issue [#34](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/34) solved.
-  - Notification gets its own **dedicated settings** :gear:. Including troubleshooting option if needed
+  - Notification gets its own **dedicated settings** ⚙️. Including troubleshooting option if needed
     - Added ability to **limit the notification scheduling**. By default, the app will schedule notification until the end of the month. This process is sacrificing performance. UI will feel slow and unresponsive. So, this option is to set the max number of notifications the app can schedule is up to **7 days**. Commit reference: [df47ffa](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/df47ffaa9b358016b0cbdd65f8163ac84224e379)
     - Added force update notification kForceUpdateNotif in troubleshooting section. In case the user didn't receive any notification in app.
-- **Secret debug** setting/dialog changes :shushing_face::
-  - Added **developer mode** :man*technologist:. Long press logo (2 times) on AboutPage to turn it on. (Inspired by \_Telegram* and _Android_)
+- **Secret debug** setting/dialog changes
+  - Added **developer mode**. Long press logo (2 times) on AboutPage to turn it on. (Inspired by *Telegram on Android* app)
   - Added option to toggle **Verbose debug mode** on/off. Important information will be shown in toast messages.
   - Added few more fields including last notification get scheduled in DateTime format.
   - When developer mode is already enabled, dialog will shown in the first long press.
