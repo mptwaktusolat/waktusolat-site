@@ -57,6 +57,14 @@ const testimonials = [
           imageUrl: "https://bucket.waktusolat.app/pp_s.png",
         },
       },
+      {
+        body: "Best apps for people who are looking for straight forward solat time. Not fussy like some of app that load unnecessary thing every time you on it",
+        author: {
+          name: "Mohd Rizal",
+          rating: 5,
+          imageUrl: "https://bucket.waktusolat.app/pp_rizal.jpg",
+        },
+      },
       // More testimonials...
     ],
   ],
