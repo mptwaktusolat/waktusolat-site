@@ -1,12 +1,18 @@
 import MdxLayout from '@/components/mdx-layout'
 import ChangelogHeader from '@/components/changelog-header'
 
-<ChangelogHeader version="2.12.2" date="19 February 2024" hijriDate="9 Syaa'ban 1445" githubSlug="2.12.2+145" />
+<ChangelogHeader version="2.12.3" date="1 April 2024" hijriDate="21 Ramadan 1445" githubSlug="2.12.3+147" />
+
+- Enhance UX for azan notification, particularly on **Android 13+** since they require granting [runtime notification permission](https://source.android.com/docs/core/display/notification-perm). 
+This includes display permission dialog before actually asking the permission so that user aware why they need to grant that permission. Also, the app now checks on the app 
+startup the permission status, it will prompt the user to grant the permission ([like this](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/assets/60868965/da956dd8-beda-4aa8-8b2f-d6112e708dec)). PR [#230](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/230).
+
+<ChangelogHeader version="2.12.2" date="19 February 2024" hijriDate="9 Syaa'ban 1445" githubSlug="2.12.2+146" />
 
 - Fix app **crashes on launch** on **Android 14+** devices if the homescreen widget was added. The crashed are caused because the app are trying
 to schedule the widget update using [`setExact`](https://developer.android.com/reference/android/app/AlarmManager#setExact(int,%20long,%20android.app.PendingIntent)) alarm when the required [permission](https://developer.android.com/develop/background-work/services/alarms/schedule#using-schedule-exact-permission) is not granted by the user. Issue [#228](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/228)
 
-<ChangelogHeader version="2.12.1" date="13 February 2024" hijriDate="3 Syaa'ban 1445" githubSlug="2.12.1+144" />
+<ChangelogHeader version="2.12.1" date="13 February 2024" hijriDate="3 Syaa'ban 1445" githubSlug="2.12.1+145" />
 
 - Fix issue where some widget layout would shift due to missing `layout_weight` property.
 - Add Bahasa Melayu translation in homescreen widget.
@@ -843,8 +849,8 @@ Other chores:
 _Previous changelog page: [mptwaktusolat/app_waktu_solat_malaysia/wiki/Changelog](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/wiki/Changelog)_
 
 
-export default function MDXPage({ children }) {  
-  
+export default function MDXPage({ children }) {
+
   return <MdxLayout meta={{
     title: "Changelog",
   }} >{children}</MdxLayout>;
