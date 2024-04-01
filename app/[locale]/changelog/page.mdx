@@ -6,6 +6,9 @@ import ChangelogHeader from '@/components/changelog-header'
 - Enhance UX for azan notification, particularly on **Android 13+** since they require granting [runtime notification permission](https://source.android.com/docs/core/display/notification-perm). 
 This includes display permission dialog before actually asking the permission so that user aware why they need to grant that permission. Also, the app now checks on the app 
 startup the permission status, it will prompt the user to grant the permission ([like this](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/assets/60868965/da956dd8-beda-4aa8-8b2f-d6112e708dec)). PR [#230](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/230).
+- **This part is a bit technical**, in this update I'm also changing the method to schedule notification/azan to [alarmClock](https://developer.android.com/reference/android/app/AlarmManager#setAlarmClock(android.app.AlarmManager.AlarmClockInfo,%20android.app.PendingIntent)) *(previously using [setExactAndAllowWhileIdle](https://developer.android.com/reference/android/app/AlarmManager#setExactAndAllowWhileIdle(int,%20long,%20android.app.PendingIntent)))*. This is an attempt to fix various issue 
+regarding the notificaion/azan such as it [did not goes off](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/115), delayed etc. This implementation may be temporary.
+
 
 <ChangelogHeader version="2.12.2" date="19 February 2024" hijriDate="9 Syaa'ban 1445" githubSlug="2.12.2+146" />
 
