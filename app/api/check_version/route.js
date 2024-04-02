@@ -11,13 +11,13 @@ export async function GET() {
     const data = await response.json();
     const tag = data.tag_name;
 
-    const versionNumber = tag.split('+')[0];
-    const buildNumber = tag.split('+')[1];
+    const version = tag.split('+')[0];
+    const buildNumber = parseInt(tag.split('+')[1]);
 
     return NextResponse.json({
         tag: tag,
         releaseTitle: data.name,
-        versionNumber: versionNumber,
+        version: version,
         buildNumber: buildNumber,
         publishedAt: data.published_at,
     });
