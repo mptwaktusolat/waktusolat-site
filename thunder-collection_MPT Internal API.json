@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "MPT Internal API",
+    "dateExported": "2024-04-02T17:45:12.057Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4cbbf0b1-aa7d-4f96-9a43-a5c0d0b97be8",
+            "colId": "cf6381df-695a-48ad-a44e-ba1d86f8490a",
+            "containerId": "",
+            "name": "check_version",
+            "url": "http://localhost:3000/api/check_version",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-02T17:43:33.912Z",
+            "modified": "2024-04-02T17:43:33.912Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

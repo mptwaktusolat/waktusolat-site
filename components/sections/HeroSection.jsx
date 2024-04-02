@@ -10,9 +10,17 @@ import { AppScreenshotCardScroll } from "../app-screenshot-card-scroll";
 import { useTranslation } from "react-i18next";
 import LanguageChanger from "@/components/LanguageChanger";
 import { Tooltip } from "react-tooltip";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const latestVersion = "2.12.3";
+  const [latestVersion, setLatestVersion] = useState("");
+
+  useEffect(() => {
+    fetch("api/check_version")
+      .then((response) => response.json())
+      .then((data) => setLatestVersion(data.versionNumber));
+  }, []);
+
   const { t } = useTranslation();
   return (
     <section className="relative">
