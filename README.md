@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Serve Waktu Solat landing page and internal MPT app APIs.
+
 Frontpage taken from https://github.com/nrmnqdds/simplified-imaluum
 
 ## Getting Started
