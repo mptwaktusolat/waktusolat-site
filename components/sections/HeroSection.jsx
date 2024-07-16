@@ -18,7 +18,7 @@ const Hero = () => {
   useEffect(() => {
     fetch("api/check_version")
       .then((response) => response.json())
-      .then((data) => setLatestVersion(data.versionNumber));
+      .then((data) => setLatestVersion(`v${data.version}`));
   }, []);
 
   const { t } = useTranslation();
