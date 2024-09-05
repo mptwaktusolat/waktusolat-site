@@ -2,13 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Serve Waktu Solat landing page and internal MPT app APIs.
 
-Frontpage taken from https://github.com/nrmnqdds/simplified-imaluum (with his permission)
+Frontpage taken from https://github.com/nrmnqdds/simplified-imaluum. Credit: [@nrmnqdds](https://x.com/nrmnqdds)
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
 ```
 
