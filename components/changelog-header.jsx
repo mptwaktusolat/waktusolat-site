@@ -25,7 +25,7 @@ export default function ChangelogHeader(props) {
           className="inline-flex space-x-6 invisible group-hover/item:visible"
         >
           <span className="inline-flex items-baseline px-3 py-1 text-xs font-semibold leading-6 text-cyan-600 dark:text-cyan-400">
-            <span>Open in GitHub </span>
+            <span>GitHub </span>
             <span>&nbsp;&nbsp;</span>
             <span>
               <FaExternalLinkAlt />
