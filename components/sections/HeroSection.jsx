@@ -111,6 +111,8 @@ const Hero = () => {
             <a
               className="sm:hidden block"
               href="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia&utm_source=waktusolat-site&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+              data-umami-event="outbound-link-click"
+              data-umami-event-url="https://play.google.com/store/apps/details?id=live.iqfareez.waktusolatmalaysia"
             >
               <Image
                 alt="Get it on Google Play"
@@ -122,6 +124,8 @@ const Hero = () => {
             <a
               href={"https://api.waktusolat.app"}
               className=" flex-shrink-0 inline-flex items-center justify-center px-1 group"
+              data-umami-event="outbound-link-click"
+              data-umami-event-url="https://api.waktusolat.app"
             >
               <div className="text-slate-800 dark:text-slate-100 m-3.5 flex  justify-center items-center group-hover:opacity-85">
                 <span>

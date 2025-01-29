@@ -3,7 +3,7 @@ import '@/app/globals.css'
 import { ThemeProvider } from "@/context/ThemeProvider";
 import i18nConfig from '@/i18nConfig';
 import { dir } from 'i18next';
-import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script'
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
@@ -32,7 +32,12 @@ export default function RootLayout({ children, params: { locale } }) {
       <body className={poppins.className}>
         <ThemeProvider attribute="class" enableSystem>
           {children}
-          <Analytics />
+          {/* Umami Analytics Script */}
+          <Script
+            src="https://umami.iqfareez.com/script.js"
+            data-website-id="4834a0c6-b55f-4c72-9f5e-68d7b299ceea"
+            strategy="afterInteractive"
+          />
         </ThemeProvider>
       </body>
     </html>

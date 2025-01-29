@@ -43,6 +43,8 @@ const Footer = () => {
               href={item.href}
               target="_blank"
               className="text-gray-400 hover:text-gray-500"
+              data-umami-event="outbound-link-click"
+              data-umami-event-url={item.href}
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -59,6 +61,8 @@ const Footer = () => {
             data-tooltip-content="👀"
             data-tooltip-delay-show={800}
             href="https://iqfareez.com"
+            data-umami-event="outbound-link-click"
+            data-umami-event-url="https://iqfareez.com"
           >
             Muhammad Fareez
           </a>

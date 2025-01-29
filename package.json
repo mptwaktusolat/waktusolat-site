@@ -14,7 +14,6 @@
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
     "@types/mdx": "^2.0.10",
-    "@vercel/analytics": "^1.1.1",
     "i18next": "^23.7.15",
     "i18next-resources-to-backend": "^1.2.0",
     "next": "14.0.4",
