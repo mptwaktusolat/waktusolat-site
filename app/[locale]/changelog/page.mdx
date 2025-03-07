@@ -5,69 +5,68 @@ import ChangelogHeader from '@/components/changelog-header'
 
 - Enabled **additional times** (Syuruk, Imsak & Dhuha) by default.
 
-   I received frequent feedback asking 
-to display the Syuruk/Imsak/Dhuha times. The app alread supports that and can be enabled in the settings. But perhaps
-some users don't how to to change the settings. Hence, we make it on by default. Users can still change this setting
+   I received frequent feedback requesting 
+to display the Syuruk/Imsak/Dhuha times. The app already supports this feature and can be enabled in the settings. However, it seems
+some users don't know how to change the settings. Hence, we've made it on by default. Users can still change this setting
 in the settings page. Related to issue [#171](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/171)
-- Add **grid view** layout on tablets & phone landscape. Related issue [#175](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/175)
+- Added **grid view** layout on tablets & phone landscape. Related issue [#175](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/175)
 - Updated localizations for better language support
 - Fixed issue with GitHub URL on Feedback Page
 - Upgraded dependencies for improved performance and stability
 
 <ChangelogHeader version="2.12.6" date="11 October 2024" githubSlug="2.12.6+151" hijriDate="8 Rabi'ulakhir 1446"/>
 
-- Add timezone checker (A banner will appear if device timezone is not same as Malaysia's)
+- Added timezone checker (A banner will appear if device timezone is not the same as Malaysia's)
 ![Screenshot](https://bucket.waktusolat.app/timezone-banner-cropped.png)
-- (About page) Change Share button location to side of the app logo - Removed Contributions Page
-- (Full Timetable page) Fix appbar appearane to increase visibility of background image & text.
-- Upgrade dependencies
+- (About page) Changed Share button location to side of the app logo - Removed Contributions Page
+- (Full Timetable page) Fixed appbar appearance to increase visibility of background image & text
+- Upgraded dependencies
 
 
 <ChangelogHeader version="2.12.5" date="1 September 2024" githubSlug="2.12.5+150" />
 
-- Fixes issue where **homescreen widget** failed to update in September due to incorrect locale setting. See [#244](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/244)
-- Add **onboarding coachmarks** for first installs (or first open after the update)
-- Upgrade dependencies
+- Fixed issue where **homescreen widget** failed to update in September due to incorrect locale setting. See [#244](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/244)
+- Added **onboarding coachmarks** for first installs (or first open after the update)
+- Upgraded dependencies
 
 <ChangelogHeader version="2.12.4" date="17 July 2024" hijriDate="10 Muharram 1446" githubSlug="2.12.4+149" />
 
-- Update Android project folder - Updated `targetSdkVersion` to 34 and others.
-- Update dependencies
+- Updated Android project folder - Updated `targetSdkVersion` to 34 and others
+- Updated dependencies
 
 <ChangelogHeader version="2.12.3" date="1 April 2024" hijriDate="21 Ramadan 1445" githubSlug="2.12.3+147" />
 
-- Enhance UX for azan notification, particularly on **Android 13+** since they require granting [runtime notification permission](https://source.android.com/docs/core/display/notification-perm). 
-This includes display permission dialog before actually asking the permission so that user aware why they need to grant that permission. Also, the app now checks on the app 
-startup the permission status, it will prompt the user to grant the permission ([like this](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/assets/60868965/da956dd8-beda-4aa8-8b2f-d6112e708dec)). PR [#230](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/230).
-- **This part is a bit technical**, in this update I'm also changing the method to schedule notification/azan to [alarmClock](https://developer.android.com/reference/android/app/AlarmManager#setAlarmClock(android.app.AlarmManager.AlarmClockInfo,%20android.app.PendingIntent)) *(previously using [setExactAndAllowWhileIdle](https://developer.android.com/reference/android/app/AlarmManager#setExactAndAllowWhileIdle(int,%20long,%20android.app.PendingIntent)))*. This is an attempt to fix various issue 
-regarding the notificaion/azan such as it [did not goes off](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/115), delayed etc. This implementation may be temporary.
-
+- Enhanced UX for azan notification, particularly on **Android 13+** since they require granting [runtime notification permission](https://source.android.com/docs/core/display/notification-perm). 
+This includes displaying permission dialog before actually asking the permission so that users are aware why they need to grant that permission. Also, the app now checks the permission status on 
+startup, and will prompt the user to grant the permission if needed ([like this](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/assets/60868965/da956dd8-beda-4aa8-8b2f-d6112e708dec)). PR [#230](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/230).
+- **This part is a bit technical**, in this update I'm also changing the method to schedule notification/azan to [alarmClock](https://developer.android.com/reference/android/app/AlarmManager#setAlarmClock(android.app.AlarmManager.AlarmClockInfo,%20android.app.PendingIntent)) *(previously using [setExactAndAllowWhileIdle](https://developer.android.com/reference/android/app/AlarmManager#setExactAndAllowWhileIdle(int,%20long,%20android.app.PendingIntent)))*. This is an attempt to fix various issues 
+regarding the notification/azan such as it [not going off](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/115), being delayed, etc. This implementation may be temporary.
 
 <ChangelogHeader version="2.12.2" date="19 February 2024" hijriDate="9 Syaa'ban 1445" githubSlug="2.12.2+146" />
 
-- Fix app **crashes on launch** on **Android 14+** devices if the homescreen widget was added. The crashed are caused because the app are trying
+- Fixed app **crashes on launch** on **Android 14+** devices if the homescreen widget was added. The crashes are caused because the app is trying
 to schedule the widget update using [`setExact`](https://developer.android.com/reference/android/app/AlarmManager#setExact(int,%20long,%20android.app.PendingIntent)) alarm when the required [permission](https://developer.android.com/develop/background-work/services/alarms/schedule#using-schedule-exact-permission) is not granted by the user. Issue [#228](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/228)
 
 <ChangelogHeader version="2.12.1" date="13 February 2024" hijriDate="3 Syaa'ban 1445" githubSlug="2.12.1+145" />
 
-- Fix issue where some widget layout would shift due to missing `layout_weight` property.
-- Add Bahasa Melayu translation in homescreen widget.
-- Prevent crashes in some situation when checking for updates.
+- Fixed issue where some widget layout would shift due to missing `layout_weight` property.
+- Added Bahasa Melayu translation in homescreen widget.
+- Prevented crashes in some situations when checking for updates.
 
 <ChangelogHeader version="2.12.0" date="11 February 2024" hijriDate="1 Syaa'ban 1445" githubSlug="2.12.0+144" />
 
 -  Homescreen widget now follows [**dynamic color**](https://developer.android.com/develop/ui/views/appwidgets/enhance#dynamic-colors). Closed [#222](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/222)
    ![mpt new dynamic widget](https://bucket.waktusolat.app/new-mpt-widget-dynamic.png)  
--  Fixes issue where prayer data won't show in homescreen widget when new month comes. Fixed [#224](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/224)
+-  Fixed issue where prayer data wouldn't show in homescreen widget when new month comes. Fixed [#224](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/224)
 -  Minor adjustment to horizontal homescreen widget layout. Maybe fixes [#218](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/218)
--  Refactor code to adapt [new way](https://kazlauskas.dev/blog/flutter-app-lifecycle-listener-overview/#is-there-a-difference) of listening for app lifecycle events 
-- Upgrade pub dependencies 
+-  Refactored code to adapt [new way](https://kazlauskas.dev/blog/flutter-app-lifecycle-listener-overview/#is-there-a-difference) of listening for app lifecycle events 
+- Upgraded pub dependencies 
 
 <ChangelogHeader version="2.11.3" date="15 January 2024" hijriDate="3 Rejab 1445" githubSlug="2.11.3+143" />
 
-- Fix bug on **homescreen widget** where it shows the incorrect prayer time data. Issue [#219](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/219). Thanks to MPT user who reported this issue.
-- Make Send button in feedback page larger, easier to find. [13ed004](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/13ed00421a508b19c1450664e27d86a73ad24ef8)
-- Update dependencies
+- Fixed bug on **homescreen widget** where it shows the incorrect prayer time data. Issue [#219](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/219). Thanks to MPT user who reported this issue.
+- Made Send button in feedback page larger, easier to find. [13ed004](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/13ed00421a508b19c1450664e27d86a73ad24ef8)
+- Updated dependencies
 
 <ChangelogHeader
   version="2.11.1"
@@ -76,15 +75,15 @@ to schedule the widget update using [`setExact`](https://developer.android.com/r
   githubSlug="2.11.1+141"
 />
 
-Due to the [Jan 1 Incident](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/216) issue, some changes are made to improve stability of the app.
+Due to the [Jan 1 Incident](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/216) issue, some changes are made to improve the stability of the app.
 
-- Fix **Homescreen widget** error view that never triggered.
-- Skip storing cache if the API response can't be parsed by the equivalent model
-- Change the **cache key** for API response, because some users still have the error
+- Fixed **Homescreen widget** error view that never triggered.
+- Skipped storing cache if the API response can't be parsed by the equivalent model
+- Changed the **cache key** for API response, because some users still have the error
 
 Other chores:
-- Update dependencies
-- Update website, link & references
+- Updated dependencies
+- Updated website, link & references
 
 <ChangelogHeader
   version="2.11.0"
@@ -93,9 +92,9 @@ Other chores:
   githubSlug="2.11.0+140"
 />
 
-- Add [**Android Homescreen widget**](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/214). Finally closes issue [#9](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/9)
-- Fix autoscroll 'terlajak' in full prayer timetable. Issue [#213](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/213)
-- Request to schedule exact alarm notification for Android 13+
+- Added [**Android Homescreen widget**](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/214). Finally closes issue [#9](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/9)
+- Fixed autoscroll 'terlajak' in full prayer timetable. Issue [#213](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/213)
+- Requested to schedule exact alarm notification for Android 13+
 
 <ChangelogHeader
   version="2.10.1"
@@ -103,7 +102,7 @@ Other chores:
   githubSlug="2.10.1+137"
 />
 
-- Revert [`PopScope` migration](https://docs.flutter.dev/release/breaking-changes/android-predictive-back#migration-guide) as it breaks the manual location selector dialog. [[Video]](https://imgur.com/a/prW2NsL)
+- Reverted [`PopScope` migration](https://docs.flutter.dev/release/breaking-changes/android-predictive-back#migration-guide) as it breaks the manual location selector dialog. [[Video]](https://imgur.com/a/prW2NsL)
 
 <ChangelogHeader
   version="2.10.0"
@@ -112,11 +111,11 @@ Other chores:
 />
 
 - Added feature to **download/save/print** monthly prayer times timetable. [[Demo]](https://imgur.com/O8lOXkn)
-- Upgrade dependencies
-- Bump Android `minSdkVersion` to 21 (Due to `fluttertoast` plugin)
-- Fix visual bug that cause the header in full timetable page not reacting on scroll.
+- Upgraded dependencies
+- Bumped Android `minSdkVersion` to 21 (Due to `fluttertoast` plugin)
+- Fixed visual bug that caused the header in full timetable page not reacting on scroll.
 - [DEV]
-  - Fix lints etc.
+  - Fixed lints etc.
 
 <ChangelogHeader
   version="2.9.3"
@@ -124,10 +123,10 @@ Other chores:
   githubSlug="2.9.3+135"
 />
 
-- Add missing **Malay translations** in manual zone selector page
-- Upgrade dependencies (including multiple major version packages)
+- Added missing **Malay translations** in manual zone selector page
+- Upgraded dependencies (including multiple major version packages)
 - [DEV]
-  - Fix lints rule
+  - Fixed lints rule
 
 <ChangelogHeader
   version="2.9.2"
@@ -136,8 +135,8 @@ Other chores:
   githubSlug="2.9.2+134"
 />
 
-- Added **monochrome icons** variant. For device with support of theme icons (Android 13+), the app icon will match the system wallpapers. [[Screenshots]](https://imgur.com/a/0o1CEcL)
-- Update dependencies (and upgraded to latest Flutter stable 3.13.x)
+- Added **monochrome icons** variant. For devices with support of theme icons (Android 13+), the app icon will match the system wallpapers. [[Screenshots]](https://imgur.com/a/0o1CEcL)
+- Updated dependencies (and upgraded to latest Flutter stable 3.13.x)
 - **Autoscroll to current day** row in full timetable page. [[See Tweet]](https://twitter.com/iqfareez/status/1694489825674682702?s=20)
 - Added nice, subtle and welcoming **entry animation** for the prayer time list. [[See Tweet]](https://twitter.com/iqfareez/status/1695646043210445294?s=20)
 - [DEV]
@@ -150,10 +149,10 @@ Other chores:
   githubSlug="2.9.1+133"
 />
 
-- Possible fix to [#203](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/203) again. Crashlytics dashboard are full of this issue. 🤷
-- Update text not visible on button. [Screenshot](https://imgur.com/HomLSib)
-- Allow expired certificate from [mpt-server](https://mpt-server.vercel.app). This is to allow prayer data to fetched when running on older Android versions.
-- Update dependencies
+- Possible fix to [#203](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/203) again. Crashlytics dashboard is full of this issue. 🤷
+- Updated text not visible on button. [Screenshot](https://imgur.com/HomLSib)
+- Allowed expired certificate from [mpt-server](https://mpt-server.vercel.app). This is to allow prayer data to be fetched when running on older Android versions.
+- Updated dependencies
 - Opted in to use [badges](https://pub.dev/packages/badges) package instead of custom widget [Screenshots](https://imgur.com/a/rdEiEJ6)
 - [DEV]
   - Renamed files to follow Dart naming conventions 1699404 c32e3ff ba95b70
@@ -169,12 +168,12 @@ Other chores:
 - Using the latest API update from [mpt-server](http://api.waktusolat.app)
   - Prayer time API now using [solat-v2](https://api.waktusolat.app/docs#tag/solat-v2/get/v2/solat/%7Bzone%7D) endpoint
   - **Improved accuracy** when detecting prayer zone - now using pre-defined zone definition instead of just calculating the nearest point of the prayer time zone to the user location. For more details, please see issue [#188](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/188)
-- Upgrade dependencies (major ones included: [http](https://pub.dev/packages/http), [google_fonts](https://pub.dev/packages/google_fonts), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [app_settings](https://pub.dev/packages/app_settings))
+- Upgraded dependencies (major ones included: [http](https://pub.dev/packages/http), [google_fonts](https://pub.dev/packages/google_fonts), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [app_settings](https://pub.dev/packages/app_settings))
 - Possibly fixed error related to notification scheduling. [#203](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/203)
-- Revert adding the error message in zone_chooser dialog [5adc2cd](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/5adc2cdfee32f05c81643bba7eebec1b5e83b69c)
+- Reverted adding the error message in zone_chooser dialog [5adc2cd](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/5adc2cdfee32f05c81643bba7eebec1b5e83b69c)
 - DEV:
-  - Fix some of the file names with respect to linter rule [`lowercase_with_underscores`](https://dart.dev/tools/linter-rules/file_names)
-  - Bump kotlin version to the `1.8.22` (due to `app_settings` requirement)
+  - Fixed some of the file names with respect to linter rule [`lowercase_with_underscores`](https://dart.dev/tools/linter-rules/file_names)
+  - Bumped kotlin version to the `1.8.22` (due to `app_settings` requirement)
 
 <ChangelogHeader
   version="2.8.3"
@@ -183,13 +182,13 @@ Other chores:
   githubSlug="2.8.3+130"
 />
 
-- Update **JAKIM location** database (Comes with zone changes and addition especially for Sarawak, etc.) [011cb86](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/011cb864596a8a231d7f00ce24261b714feae712)
+- Updated **JAKIM location** database (Comes with zone changes and addition especially for Sarawak, etc.) [011cb86](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/011cb864596a8a231d7f00ce24261b714feae712)
 
 <ChangelogHeader
   version="2.8.2"
   date="13 Jun 2023"
   hijriDate="24 Zulkaedah 1444"
-  githubSlug="`2.8.2+129"
+  githubSlug="2.8.2+129"
 />
 
 - Fixed notification bug where it fails to schedule some prayer notification due to notification ID collision. See [#201](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/201)
@@ -198,35 +197,35 @@ Other chores:
   version="2.8.1"
   date="19 May 2023"
   hijriDate="28 Syawal 1444"
-  githubSlug="`2.8.1+128"
+  githubSlug="2.8.1+128"
 />
 
 - New and **refreshed zone selection** UI. [#196](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/196)
   - Fixed zone not sorted correctly. [#187](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/187)
 - Current **active prayer time is now highlighted** in the prayer time list. _For example, if the current time is 2:12 PM, the Zohor prayer time will be highlighted in the prayer time list._
 - Fixed text not visible when dark mode is on.
-- Upgrade to [Flutter 3.10](https://docs.flutter.dev/release/release-notes/release-notes-3.10.0) 💙
-- Update dependencies: [package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [google_mobile_ads](https://pub.dev/packages/google_mobile_ads)
+- Upgraded to [Flutter 3.10](https://docs.flutter.dev/release/release-notes/release-notes-3.10.0) 💙
+- Updated dependencies: [package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [google_mobile_ads](https://pub.dev/packages/google_mobile_ads)
 - DEV:
   - Reports platforms error to Crashlytics [a78f508](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/a78f5086bdb74b97c496e530f1c71f1b342bd954)
-  - Fix some lint errors [203cb8d](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/203cb8dba1019aeb8c3d3755912fe127b48c1882)
+  - Fixed some lint errors [203cb8d](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/203cb8dba1019aeb8c3d3755912fe127b48c1882)
 
 <ChangelogHeader
   version="2.8.0"
   date="22 April 2023"
   hijriDate="1 Syawal 1444"
-  githubSlug="`2.8.0+126"
+  githubSlug="2.8.0+126"
 />
 
 - Revamped design to [**Material You**](https://source.android.com/docs/core/display/material) (or Material 3). Feel more rounded corners, improved designs and clean UIs.
 - The app themes now matched the phone's theme colours (usually derived from the wallpaper) for supported phones only.
-- Increase **default text size** for prayer time text to `16`.
-- **Relocate the Ads widget** to the to the top. So that the location of floating action button and snackbar are restored.
-- Update copyright year to `2023` _Yeah, I know it's pretty late.._
-- Request **notification permission** on onboarding screen (for **Android 13+** only). Previously, the app notification would be requested on the second app launches, so user wouldn't received the scheduled notification after the first launch.
-  - Bump `targetSdkVersion` to 33
-- Upgrade dependencies
-- Skip Autostart banner for **Samsung devices** because it was found unnnecessary. User couldn't even change the app settings.
+- Increased **default text size** for prayer time text to `16`.
+- **Relocated the Ads widget** to the top. So that the location of floating action button and snackbar are restored.
+- Updated copyright year to `2023` _Yeah, I know it's pretty late.._
+- Requested **notification permission** on onboarding screen (for **Android 13+** only). Previously, the app notification would be requested on the second app launches, so user wouldn't receive the scheduled notification after the first launch.
+  - Bumped `targetSdkVersion` to 33
+- Upgraded dependencies
+- Skipped Autostart banner for **Samsung devices** because it was found unnecessary. User couldn't even change the app settings.
 
 <ChangelogHeader
   version="2.7.6"
@@ -236,7 +235,7 @@ Other chores:
 />
 
 - Fixed Google Play Policy issue. See [#180](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/180). Yes, again (╯°□°）╯︵ ┻━┻
-- Upgrade dependencies
+- Upgraded dependencies
 
 <ChangelogHeader
   version="2.7.5"
@@ -245,8 +244,8 @@ Other chores:
   githubSlug="2.7.5+121"
 />
 
-- Fix Google Play Policy issue. See [#180](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/180).
-- Upgrade dependencies
+- Fixed Google Play Policy issue. See [#180](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/180).
+- Upgraded dependencies
 
 <ChangelogHeader
   version="2.7.4"
@@ -255,9 +254,9 @@ Other chores:
   githubSlug="2.7.4+120"
 />
 
-- Fixed azan notification issue that plays Azan subuh for every prayer times. See issue [#173](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/173)
+- Fixed azan notification issue that plays Azan subuh for every prayer time. See issue [#173](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/173)
 - Renamed app label. Malaysia Prayer Time is now **`Prayer Time`** (Waktu Solat Malaysia is now **`Waktu Solat`**). See [#174](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/174)
-- Removed unused widgets, add missing tooltips.
+- Removed unused widgets, added missing tooltips.
 
 <ChangelogHeader
   version="2.7.3"
@@ -266,13 +265,13 @@ Other chores:
 />
 
 - Added new notification option: **Short Azan**. This notification will only play the first "Allahu Akbar x2" of the azan. Maqam [Lamy](https://soundcloud.com/alafasy/lamy2005?in=alafasy/sets/athan&si=a1d4eccfcf5d4ffcaef14287ed7f8bc4&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing) by Mishary Rashid Al-Afasy [#158](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/158)
-- Added **azan preview** in notification settings. User can now quickly fire notification to hear how they sounds like.
-- Minor **UI tweak** when asking user to restart app after modify the notification setting. [[Screenshot]](https://imgur.com/cruEqLG)
-- Upgrade to [**Flutter 3.7**](https://docs.flutter.dev/development/tools/sdk/release-notes/release-notes-3.7.0)
-- Upgrade dependencies (major: [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [google_fonts](https://pub.dev/packages/google_fonts), [flutter_svg](https://pub.dev/packages/flutter_svg))
+- Added **azan preview** in notification settings. User can now quickly fire notification to hear how they sound like.
+- Minor **UI tweak** when asking user to restart app after modifying the notification setting. [[Screenshot]](https://imgur.com/cruEqLG)
+- Upgraded to [**Flutter 3.7**](https://docs.flutter.dev/development/tools/sdk/release-notes/release-notes-3.7.0)
+- Upgraded dependencies (major: [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications), [google_fonts](https://pub.dev/packages/google_fonts), [flutter_svg](https://pub.dev/packages/flutter_svg))
 - Updated **location** based on new JAKIM's location. Added `NGS03` and replaced `KTN03` to `KTN02`. [#164](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/164)
-- Update copyright year (2023)
-- Make banner ads no longer inside a scroll view. This is to comply to the Google's policy. But, the share button is no longer can be docked on the bottom navigation bar :( [#168](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/168). [[Screenshot]](https://imgur.com/5p8AS3i)
+- Updated copyright year (2023)
+- Made banner ads no longer inside a scroll view. This is to comply with Google's policy. But, the share button is no longer can be docked on the bottom navigation bar :( [#168](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/168). [[Screenshot]](https://imgur.com/5p8AS3i)
 - DEV:
   - Renamed some filenames to follow Dart naming convention
   - etc.
@@ -283,7 +282,7 @@ Other chores:
   githubSlug="2.7.1+115"
 />
 
-- Upgrade dependencies (major): [package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [geolocator](https://pub.dev/packages/geolocator), [firebase_core](https://pub.dev/packages/firebase_core), [firebase_analytics](https://pub.dev/packages/firebase_analytics), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) & [firebase_crashlytics](https://pub.dev/packages/firebase_crashlytics)
+- Upgraded dependencies (major): [package_info_plus](https://pub.dev/packages/package_info_plus), [device_info_plus](https://pub.dev/packages/device_info_plus), [share_plus](https://pub.dev/packages/share_plus), [geolocator](https://pub.dev/packages/geolocator), [firebase_core](https://pub.dev/packages/firebase_core), [firebase_analytics](https://pub.dev/packages/firebase_analytics), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) & [firebase_crashlytics](https://pub.dev/packages/firebase_crashlytics)
   - According to `Flutter Local Notifications`'s [changelog](https://pub.dev/packages/flutter_local_notifications/changelog#1000):
     > `zonedSchedule()`'s implementation has switched to using [desugaring](https://developer.android.com/studio/releases/gradle-plugin#j8-library-desugaring) instead of the [ThreeTen Android Backport library](https://github.com/JakeWharton/ThreeTenABP)...
 
@@ -293,7 +292,7 @@ Other chores:
   githubSlug="2.6.2-hotfix.1+111"
 />
 
-- Revert to use [flutter_local_notification](https://pub.dev/packages/flutter_local_notifications) version 9.9.1 and [timezone](https://pub.dev/packages/timezone) version 0.8.0. This was due to the issue [#142](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/142)
+- Reverted to use [flutter_local_notification](https://pub.dev/packages/flutter_local_notifications) version 9.9.1 and [timezone](https://pub.dev/packages/timezone) version 0.8.0. This was due to the issue [#142](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/142)
 
 <ChangelogHeader
   version="2.6.2"
@@ -301,15 +300,15 @@ Other chores:
   githubSlug="2.6.2+110"
 />
 
-- Upgrade dependencies
+- Upgraded dependencies
 - **Android 12** support. Bumped `targetSdkVersion` to 31.
 - In feedback page, the **letter will auto capitalize** first letter (like WhatsApp etc.)
 - Using [MPT-Server](https://mpt-server.vercel.app/)'s API to **get image mosque**
 - Open link when tapping on copyright information
 - DEV
-  - Rename some folders to follow Dart naming convention
-  - Start write some tests
-  - Refactor some class
+  - Renamed some folders to follow Dart naming convention
+  - Started writing some tests
+  - Refactored some classes
 
 <ChangelogHeader
   version="2.6.0"
@@ -318,15 +317,15 @@ Other chores:
 />
 
 - In full prayer timetable, the background image will show a [mosque](https://waktusolat.iqfareez.com/mosques) according to user's current zone. [[Screenshot]](https://imgur.com/ghzaxUe)
-- Display detected geocoding as `subLocality` as it is appear to be more specific to the location. For example, app show `Pusat Bandar Wangsa Maju` instead of generic `Kuala Lumpur`. [[Screenshot]](https://imgur.com/3yhZmcJ)
-- Add **shake** widget on onboarding screen for Autostart adomnition (not all phones) to alert the users to enable it. [[Video]](https://imgur.com/qDhsRcU)
-- [MPT-Server](http://api.waktusolat.app) API will now used as primary API to prayer time data, backed up with JAKIM API.
-- Add keybaord autofill hints in email field in feedback page. [[Screenshot]](https://imgur.com/yGJEcwV)
+- Display detected geocoding as `subLocality` as it appears to be more specific to the location. For example, the app shows `Pusat Bandar Wangsa Maju` instead of generic `Kuala Lumpur`. [[Screenshot]](https://imgur.com/3yhZmcJ)
+- Added **shake** widget on onboarding screen for Autostart admonition (not all phones) to alert the users to enable it. [[Video]](https://imgur.com/qDhsRcU)
+- [MPT-Server](http://api.waktusolat.app) API will now be used as primary API to prayer time data, backed up with JAKIM API.
+- Added keyboard autofill hints in email field in feedback page. [[Screenshot]](https://imgur.com/yGJEcwV)
 - [DEV]
   - Upgraded to **Flutter 3.3**.
-  - Upgrade dependencies (major: [geolocator](https://pub.dev/packages/geolocator), [quick_actions](https://pub.dev/packages/quick_actions))
-  - Bump `compileSdkVersion` to 33.
-  - Refactor jakim zones [database](https://mpt-server.vercel.app/locations).
+  - Upgraded dependencies (major: [geolocator](https://pub.dev/packages/geolocator), [quick_actions](https://pub.dev/packages/quick_actions))
+  - Bumped `compileSdkVersion` to 33.
+  - Refactored jakim zones [database](https://mpt-server.vercel.app/locations).
 
 <ChangelogHeader
   version="2.5.0"
@@ -338,10 +337,10 @@ Other chores:
 - `flutterfire configure`d
 - In update available page, the phrase `Released 0 days ago` is changed to `Released today`.
 - Updated **short links.**
-- Change word `Frequently Asked Question` to `Documentation`. _Since it's no longer points to a faq page in previous releases ago._ [Screenshot](https://imgur.com/6uV0Gyz.png)
-- Provide **a better error message** when getting user's zone is few place where the negeri couldn't be detected. From my triage, it happen when I put the user on the water (sea). [#130](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/130)
+- Changed word `Frequently Asked Question` to `Documentation`. _Since it's no longer points to a faq page in previous releases ago._ [Screenshot](https://imgur.com/6uV0Gyz.png)
+- Provided **a better error message** when getting user's zone is few places where the negeri couldn't be detected. From my triage, it happens when I put the user on the water (sea). [#130](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/130)
 - Fixed **incorrect tooltip text** on menu button. [Screenshot](https://i.imgur.com/3GNbFhV.png)
-- Upgrade dependencies (Including major: [google_mobile_ads](https://pub.dev/packages/google_mobile_ads))
+- Upgraded dependencies (Including major: [google_mobile_ads](https://pub.dev/packages/google_mobile_ads))
 - [**DEV**]
   - Changed few file names to respect the Dart's naming convention.
   - Removed deprecated splash screen manifest. [Docs](https://docs.flutter.dev/development/ui/advanced/splash-screen#migrating-from-manifest--activity-defined-custom-splash-screens)
@@ -363,7 +362,7 @@ Other chores:
   githubSlug="2.4.4+103"
 />
 
-- Upgrade dependencies (including major: [device_info_plus](https://pub.dev/packages/device_info_plus), [google_fonts](https://pub.dev/packages/google_fonts))
+- Upgraded dependencies (including major: [device_info_plus](https://pub.dev/packages/device_info_plus), [google_fonts](https://pub.dev/packages/google_fonts))
 - New feature: **quick actions**.
   - **Quickly open** Qibla compass/Timetable/Tasbih pages from your home screen/launcher icon. [Screenshot](https://imgur.com/gtGuoDT)
   - Added [quick_actions](https://pub.dev/packages/quick_actions) dependency.
@@ -388,18 +387,18 @@ Other chores:
 
 - Flutter 3.0 Upgrade
   - Bumped the versions to 7.4 for **Gradle**, and 7.1.2 for the **Android Gradle plugin**.
-- Fix some typo(s) in app.
+- Fixed some typo(s) in app.
 - Fixed **unformatted time** when copy individual prayer time. Issue [#117](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/117)
-- 'Fixes' certificates issues from JAKIM e-solat portal. Issue [#123](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/123)
+- 'Fixed' certificates issues from JAKIM e-solat portal. Issue [#123](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/123)
 - Made URL open accordingly.In-app browser/External applications
-- Upgrade dependencies
+- Upgraded dependencies
 - Major upgrade [grouped_list](https://pub.dev/packages/grouped_list) dependencies.
 - Fixed blurry & jagged **tasbih logo** on the bottom app bar ([Screenshots](https://imgur.com/a/bUCY6c6))
-- Fix **missing center titles** in some screens.
+- Fixed **missing center titles** in some screens.
 - UI cleanup in qibla page. ([Screenshot](https://imgur.com/a/lBQxNtQ))
 - Added [auto_start_flutter](https://pub.dev/packages/auto_start_flutter). To detect if the app support Autostart, and prompt the user to disable the setting. This should cover various notification issues such as [#89](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/89), [#106](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/106), [#108](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/108) etc.
   - Add prompt to enable Autostart in onboarding screen ([Screenshot](https://imgur.com/po9W0Se))
-  - Display status if device have no autostart setting in notification troubleshoot page. ([Screenshot](https://imgur.com/TW2GhdD))
+  - Display status if device has no autostart setting in notification troubleshoot page. ([Screenshot](https://imgur.com/TW2GhdD))
 - Removed [cloud_firestore](https://pub.dev/packages/cloud_firestore) dependency.
   - **Feedback pagI created a [server](https://mpt-firestore-server.herokuapp.com/) as a middleman for firebase connections.
   - **FAQ pagRemoved. Replaced with external link to the new MPT [website](https://mywaktusolat.vercel.app/).
@@ -422,19 +421,19 @@ Other chores:
 - Added option to view **last one third of the night** in full prayer timetable. [#102](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/102).
 - System bar is now **transparent**. [Screenshot](https://imgur.com/a/RcTAd6B) _(joining the latest design trends)_
 - Correct the un-uniform **tasbih icon colour** at the bottom app bar.
-- **Fix missing translation** for prayer timetable settings.
-- Give route name to `Navigator.push()` for **Analytics** purposes.
-- **Upgrade** dependencies
+- **Fixed missing translation** for prayer timetable settings.
+- Gave route name to `Navigator.push()` for **Analytics** purposes.
+- **Upgraded** dependencies
   - [share_plus](https://pub.dev/packages/share_plus), [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter) and [geolocator](https://pub.dev/packages/geolocator)
 - Added [firebase_analytics](https://pub.dev/packages/firebase_analytics).
-- Remove references to hijri offset - no longer needed since the data from JAKIM is considered the most accurate
-- [Dev] Change JAKIM model datatypes for prayer time data. Previously using list of UNIX timestamp, now Object of [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)(s).
+- Removed references to hijri offset - no longer needed since the data from JAKIM is considered the most accurate
+- [Dev] Changed JAKIM model datatypes for prayer time data. Previously using list of UNIX timestamp, now Object of [DateTime](https://api.flutter.dev/flutter/dart-core/DateTime-class.html)(s).
 - [Dev] (Debug dialog) Replaced open in-app review with notification setting notice.
 
 <ChangelogHeader version="2.3.5-hotfix" date="11 March 2022" githubSlug="2.3.5-hotfix+95" />
 
 - Fixed **notification not getting rescheduled** when changing location. [#104](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/104). Also fixed other notification issues [#105](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/105) that came with (probably) [February Update](#ver-233---24-february-2022).
-- **What's New** dialog no longer show detailed changelog. Instead, it will only provide link to this changelog page only. [Screenshot](https://imgur.com/a/GpOCsKP)
+- **What's New** dialog no longer shows detailed changelog. Instead, it will only provide link to this changelog page only. [Screenshot](https://imgur.com/a/GpOCsKP)
 
 <ChangelogHeader version="2.3.5" date="5 March 2022" githubSlug="2.3.5+93" />
 
@@ -450,18 +449,18 @@ Other chores:
   - Update `android:name` property in **AndroidManifest.xml**.
   - Update `jcenter()` to `mavenCentral()` in **build.gradle**.
   - Use kotlin latest version `1.6.10`.
-- Fixed the long lasting **wrong hijri** date issue [#54](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/54). Hijri date is now consume directly from JAKIM.
+- Fixed the long lasting **wrong hijri** date issue [#54](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/54). Hijri date is now consumed directly from JAKIM.
   - Removed [hijri](https://pub.dev/packages/hijri) and [firebase_remote_config](https://pub.dev/packages/firebase_remote_config).
   - However, I'll keep the remote config maintained for a few months (for user that didn't update the app yet).
 - In addition, **hijri date** column has been added to the full prayer timetable page.
 - Also added new **setting dialog** in full timetable page. Currently there's only an option to **hide/unhide the hijri column**. [Watch video](https://youtu.be/8GHvPJrAA0I).
 - Added **timeout** to JAKIM api request. This is to prevent the app loading indefinitely because sometimes JAKIM server didn't return any response in case of error.
-- **Upgrade** depdendencies
+- **Upgraded** depdendencies
   - Including two major version[flutter_web_browser](https://pub.dev/packages/flutter_web_browser/changelog#0170) & [introduction_screen](https://pub.dev/packages/introduction_screen/changelog#300)
-- **Fix missing translation** in Update Checker page.
-- **Improve UI** & text formatting in Update Checker page. [Screenshots](https://imgur.com/a/lwsU4dK).
+- **Fixed missing translation** in Update Checker page.
+- **Improved UI** & text formatting in Update Checker page. [Screenshots](https://imgur.com/a/lwsU4dK).
 - Added **semantics** in introduction_screen and in ZoneChooser. [#97](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/97)
-- **Prevent ads** from showing when error is occured when fetching prayer times - Hope it will improve the user experience.
+- **Prevented ads** from showing when error is occured when fetching prayer times - Hope it will improve the user experience.
 - Added [Google Fonts ](https://fonts.google.com/) license. [#91](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/91).
 - Code cleanup, fixed imports, renamed files and classes, delete unused files, organizing files structure etc.
 - [Comparing 2.3.0 - 2.3.3](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/compare/2.3.0+89https://github.com/mptwaktusolat/app_waktu_solat_malaysia.2.3.3+91)
@@ -471,12 +470,12 @@ Other chores:
 - Added **Bahasa Melayu** to the app! 🇲🇾
   - For for time installation, user will be **prompted to choose** their preferred language. _Default to their device locale (en/ms)_
   - For others, language can be changed in **Setting** page.
-  - Revert the changes made in [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). Naming convention are now based on language.
+  - Reverted the changes made in [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). Naming convention are now based on language.
 - For every app updates installed, the app will show a **What's New** dialog.
   - For example: In this update, the app will prompt user to select language.
 - Added [flutter_markdown](https://pub.dev/packages/flutter_markdown) to easily format rich text without messing around with TextSpan(s)
 - Changed `2021` reference to `2022` in legalese, app name etc.
-- Added/rearrange few assets in onboarding screeen.
+- Added/rearranged few assets in onboarding screen.
   - New source to yoink some icons [**3d assets**](https://3dicons.co/) 😎
 - Added <kbd>Dismiss</kbd> button to hide the notification issue prompt permanently (in app body).
 - Add `zone`, `app locale` & `device locale` to **Send Feedback** metadata. [Screenshot](https://imgur.com/a/huPiGeK)
@@ -487,33 +486,33 @@ Other chores:
 
 <ChangelogHeader version="2.2.9" date="16 December 2021" githubSlug="2.2.9+86" />
 
-- Build with [**Flutter 2.8**](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181), which claims to have performance improvements in reduction in **startup latency** of 50% when running on a low-end Android device, and a 10% improvement on high-end devices.
-- Remove location migration code.
+- Built with [**Flutter 2.8**](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181), which claims to have performance improvements in reduction in **startup latency** of 50% when running on a low-end Android device, and a 10% improvement on high-end devices.
+- Removed location migration code.
 - Added **updates available** page. https://imgur.com/a/2FXDNYL
-- Upgrade dependencies including few major. Commit ref [`215d46a`](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/215d46ab34ce63bb5b4f4fb4f2460ccfc09e6949)
+- Upgraded dependencies including few major. Commit ref [`215d46a`](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/215d46ab34ce63bb5b4f4fb4f2460ccfc09e6949)
 - Code related changes
-  - Change `describeEnum` to `byName` method in Theme Setting. (New in Dart 2.15). Commit ref [`7db2ffd`](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/7db2ffdec6b5532d1a7c2a355f8961c157a7f24a)
-  - Organize imports. Commit ref [`693830e`](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/693830e41443153af901ef1c57944e9936997691)
+  - Changed `describeEnum` to `byName` method in Theme Setting. (New in Dart 2.15). Commit ref [`7db2ffd`](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/7db2ffdec6b5532d1a7c2a355f8961c157a7f24a)
+  - Organized imports. Commit ref [`693830e`](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/693830e41443153af901ef1c57944e9936997691)
 
 <ChangelogHeader version="2.2.8-hotfix.1" date="23 November 2021" githubSlug="2.2.8-hotfix.1+85" />
 
-- Upgrade [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) to version **9.1.4**. Mainly to address a fix to `java.util.concurrent.RejectedExecutionException` crashes which impacted previous release. More info of this issue can be found [here](https://github.com/MaikuB/flutter_local_notifications/issues/1397).
-- Remove [auto_size_text](https://pub.dev/packages/auto_size_text).
-- Upgrade other dependencies.
+- Upgraded [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) to version **9.1.4**. Mainly to address a fix to `java.util.concurrent.RejectedExecutionException` crashes which impacted previous release. More info of this issue can be found [here](https://github.com/MaikuB/flutter_local_notifications/issues/1397).
+- Removed [auto_size_text](https://pub.dev/packages/auto_size_text).
+- Upgraded other dependencies.
 
 <ChangelogHeader version="2.2.8" date="21 November 2021" githubSlug="2.2.8+84" />
 
 - Migrated [share](https://pub.dev/packages/share) to [share_plus](https://pub.dev/packages/share_plus).
 - Fixed **empty text** in Zone Chooser - When `locality` is empty, use `name` instead. [#67](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/67)
 - Removed `kStoredLocationLocality` key (no longer needed).
-- Re-enable **Salam Jumaat** wish in notification. [#81](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/81)
-- Remove the word `NEW` on notification type options.
+- Re-enabled **Salam Jumaat** wish in notification. [#81](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/81)
+- Removed the word `NEW` on notification type options.
 - Added **warning/disclaimer/consent page** before using qibla compass. _Inspired by JAKIM app._
 - Changed calibrate compass image asset.
-- **Beautify** qibla calibrate dialog.
+- **Beautified** qibla calibrate dialog.
 - Upgraded 4 major dependencies & 47 other dependencies.
-- Drop support for [**Android 4.4**](https://developer.android.com/studio/releases/platforms#4.4) and below. Changed `compileSdkVersion` to 31 & `minSdkVersion` to 20 in **build.gradle** file.
-- Implements Flutter **best practice** including fix relative imports, Widget class, unused parameters and more.
+- Dropped support for [**Android 4.4**](https://developer.android.com/studio/releases/platforms#4.4) and below. Changed `compileSdkVersion` to 31 & `minSdkVersion` to 20 in **build.gradle** file.
+- Implemented Flutter **best practice** including fix relative imports, Widget class, unused parameters and more.
 - Added name and value to debug notification.
 
 <ChangelogHeader version="2.2.5" date="11 October 2021" githubSlug="2.2.5+81" />
@@ -524,62 +523,62 @@ Other chores:
   - Android ≤ 23 will no longer supported in the upcoming version.
 - Prayer table **time format** is now respecting setting. [#88](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/88)
 - Removed azan notification introduction dialog. _(That one introduced in ver [`2.0.0`](#ver-200---31-august-2021) back then)_
-- Simplify devlog instagram URL
+- Simplified devlog instagram URL
 - Minor UI changes divider in About Page.
 
 <ChangelogHeader version="2.2.4-hotfix" date="1 October 2021" githubSlug="2.2.4-hotfix+80" />
 
-- Fix Trying to read MMM from 01 Okt-2021 05:43:00 at position 3`. Date format from JAKIM is **not standard** so the app can't parse it. Issue [#86](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/86).
-- Update changelog link in About Page.
+- Fixed Trying to read MMM from 01 Okt-2021 05:43:00 at position 3`. Date format from JAKIM is **not standard** so the app can't parse it. Issue [#86](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/86).
+- Updated changelog link in About Page.
 
 <ChangelogHeader version="2.2.3" date="28 September 2021" githubSlug="2.2.3+79" />
 
 - Fixed time from API is being **wrongly parsed** as 12-Hour system (supposedly 24-Hour system), causing wrong time shown for some zones (especially Zohor time in Sabah). Issue [#85](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/85). Thank you, anonymous user for alerting me about this issue. (Yes, this is repeated issue similar to [this](#1.13.91-hotfix2) update back then 🤦‍♂️)
 - Minor UI change manual location chooser - cleaner header textstyle.
-- Temporary disable `Salam Jumaat` wish (`summary`) in notification. Issue [#81](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/81).
+- Temporarily disabled `Salam Jumaat` wish (`summary`) in notification. Issue [#81](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/81).
 
 <ChangelogHeader version="2.2.2" date="22 September 2021" githubSlug="2.2.2+78" />
 
 - Some improvement in **prayer time timetable**:
   - Fixed a typo <s>Imsak</s> Syuruk. [#80](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/80).
   - Added **other prayer times** (Imsak & Dhuha)
-  - Smaller gaps in between Column, so user wont have to scroll to far.
+  - Smaller gaps in between Column, so user won't have to scroll too far.
   - Added tooltip to some column headers.
 - **API Migration** from mpti906 to JAKIM e-solat API. Fixed [#83](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/81). A part of [#82](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/82). [Why?](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/82#issuecomment-927835374)
 - Added [backup API](https://mpt-backup-api.herokuapp.com/) if Jakim's server is down.
 - Using [grouped_list](https://pub.dev/packages/grouped_list) in manual location chooser. List is now grouped by their negeri, with a minor UI change for better indication that the zone is currently selected.
 - Changed the way how app is saving zone to device. Previously saving location using their index (`int`), but it will face problem if later JAKIM want to change their zone (add/remove). So now it will save the Jakim Code (`String`) itself. Your saved data will be migrated automatically.
-- Fix overflow Inkwell in About dialog buttons.
-- Make **azan notification** as **default**.
+- Fixed overflow Inkwell in About dialog buttons.
+- Made **azan notification** as **default**.
 - Removed reference to [mpti906](https://mpt.i906.my/) in About Dialog.
-- Upgrade some dependencies
+- Upgraded some dependencies
 - Other code cleanups, incl. purging unused reference, code & constants.
 
 <ChangelogHeader version="2.1.0" date="2 September 2021" githubSlug="2.1.0+72" />
 
-- Fix wrong zone for some **Sarawak** district - Fix wrong mapping from JAKIM code to mpti906 location code that resulting in fetching the wrong prayer time. Affected user may need to change to other location and change back to your actual location to clear up the cache. (Thanks to some users for reporting this issue)
+- Fixed wrong zone for some **Sarawak** district - Fixed wrong mapping from JAKIM code to mpti906 location code that resulting in fetching the wrong prayer time. Affected user may need to change to other location and change back to your actual location to clear up the cache. (Thanks to some users for reporting this issue)
 - Fixed **jankiness issue** when scroll with inline banner ads. Replaces the official `google_mobile_ads` package with [@atrope](https://github.com/atrope)'s [fork](https://github.com/SuaMusica/googleads-mobile-flutter).
-- Adjust link text colour contrast to **improve readability** in About page.
-- Upgrade 19+ dependencies.
+- Adjusted link text colour contrast to **improve readability** in About page.
+- Upgraded 19+ dependencies.
 
 <ChangelogHeader version="2.0.0" date="31 August 2021" githubSlug="2.0.0+71" />
 
-- 🚛 Migrate Flutter project to [**null safety**](https://dart.dev/null-safety).
+- 🚛 Migrated Flutter project to [**null safety**](https://dart.dev/null-safety).
 - Added **azan notification**. Now there are two types of notification, default sound and azan. Existing user will be asked if they want to try. Source: [Athan Alafasy - SoundCloud](https://soundcloud.com/alafasy/sets/athan). Closed [#39](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/39):
   - Both types will use **different notification channel**. This is required to [satisfy](https://developer.android.com/training/notify-user/channels) requirement of Android 8.0+ and to maintain backward compatibility. (Syuruk will use same default notification channel regardless of the notification type)
   - Added option to **select preferred notification** in onboarding page.
   - Added option to change preferred notification type in **Notification Settings** page. (Required app restart to apply changes)
-  - Prompt existing user to change to azan notification.
-- Remove **skip** button to skip page in Onboarding screen. (User can still swipe right)
+  - Prompted existing user to change to azan notification.
+- Removed **skip** button to skip page in Onboarding screen. (User can still swipe right)
 - Added summary text in notification for **Syuruk** and **Zohor** (for Jumaat).
-- Timestamp in notification is now showing the actual prayer time. (Not the time when the notification fired, because sometimes it get delayed). Closes [#71](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/71)
+- Timestamp in notification is now showing the actual prayer time. (Not the time when the notification fired, because sometimes it gets delayed). Closes [#71](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/71)
 - Added [flutter_restart](https://pub.dev/packages/flutter_restart) - To easily restart the app natively.
-- Update [**Privacy Policy**](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/wiki/Privacy-Policy).
-- Resizes image assets (smaller).
-- Reduce **snackbar** time and simplify text (for Location Chooser).
-- Remove old **hijri offset** setting.
+- Updated [**Privacy Policy**](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/wiki/Privacy-Policy).
+- Resized image assets (smaller).
+- Reduced **snackbar** time and simplified text (for Location Chooser).
+- Removed old **hijri offset** setting.
 - Added some Padding to loading & error animation (in GetPrayerTime).
-- Remove unused [isolate_handler](https://pub.dev/packages/isolate_handler). Realized that I never use the implementation before.
+- Removed unused [isolate_handler](https://pub.dev/packages/isolate_handler). Realized that I never use the implementation before.
 - Major version dependencies upgrade: [provider](https://pub.dev/packages/provider): `^5.0.0 -> ^6.0.0` and [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications): `^6.0.0 -> ^8.1.1+1`
 - Code cleanup (a lot...)
 - and (probably) more not documented.
@@ -594,7 +593,7 @@ Other chores:
 - Added **offline cache support**. By default, if criteria are met (same location, same month & same year), prayer data will load data from storage (if available) instead fetching from the API.
 - MPTI906 new dart **model**. ([https://jsontodart.zariman.dev](https://jsontodart.zariman.dev) is quite nice tool)
 - Better error messages for `ZoneChooser` and `GetPrayerTime`.
-- Throw error when detected location is **not in Malaysia**. Commit ref [b500e4c](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/b500e4c9ef15db4c69f2fef6a0e25f4a0ede5e49). Also fixed `invalid argument(s)` error.
+- Threw error when detected location is **not in Malaysia**. Commit ref [b500e4c](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/b500e4c9ef15db4c69f2fef6a0e25f4a0ede5e49). Also fixed `invalid argument(s)` error.
 - Added some icons in `ZoneChooser` error dialog.
 - Added button to open system location setting when failed to get location. Commit ref [8a80e5f](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/8a80e5f75be32ade13b2763ed5e99dd1327f9d86).
 - Solat Card UI improvement:
@@ -607,15 +606,15 @@ Other chores:
 - Added **notification troubleshooter** page. (Issue [#77](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/77))
 - Added **fix notification prompt** on main page. (Will be shown based on some condition)
 - Changed **datatype** `String` to `GeoPoint` in Feedback page for `Position` field value.
-- Limit URL string text by one line in FAQs page.
-- **Prompt user to provide email** (so that I could reply) in **Feedback page** if the message sounded like a question. _(Nah not an AI, just checking if the text contains question mark `?`)_
+- Limited URL string text by one line in FAQs page.
+- **Prompted user to provide email** (so that I could reply) in **Feedback page** if the message sounded like a question. _(Nah not an AI, just checking if the text contains question mark `?`)_
 - Main header part (that one houses date and location button, below the appbar) now **adapts** to its children. Means no longer overflow date/location widget.
-- Fix wrong coloured button in no compass error.
-- Upgrade dependencies.
-- Upgrade **Gradle** version to 4.1.0.
+- Fixed wrong coloured button in no compass error.
+- Upgraded dependencies.
+- Upgraded **Gradle** version to 4.1.0.
   Changed `minSdkVersion` to `19`. Drop supports Android lower than version 4.4 (KitKat).
 - 🆕 [CODE] improvements.
-  - Make `LocationDatabase` static.
+  - Made `LocationDatabase` static.
   - New `DebugToast` class.
   - Removed unused notification UI code. Commit [bcafcb3](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/bcafcb31d6351666c2b860ef1974b9779052042b)
   - `FlutterLocalNotificationsPlugin()` instance no longer referenced from the `main.dart`. Commit [555593c](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/555593c6caee32db693a11d30f4d3fc985cc2039).
@@ -628,54 +627,54 @@ Other chores:
 - Updated **Share the app** message in **Contribution page** which now includes both [Play Store link](http://bit.ly/MPTdl) and [web app link](http://waktusolat.web.app/).
 - Rounded corner **app icon** in About page.
 - **New theme changing animation** (Sun/Moon animation). Original code from [here](https://github.com/shubhamhackz/light_dark_toggle).
-- Fix **cannot open URL** in Android 11 (API 30). Removed `canLaunch` checker and `forcewebview` parameter.
-- Increase **timeout** to get GPS to `12`s.
-- Rename title to **MY Prayer time**. Affect recent screen on Android.
+- Fixed **cannot open URL** in Android 11 (API 30). Removed `canLaunch` checker and `forcewebview` parameter.
+- Increased **timeout** to get GPS to `12`s.
+- Renamed title to **MY Prayer time**. Affect recent screen on Android.
 - Minor `Provider` and GetStorage `optimization`. Commit ref [af1e8f3](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/af1e8f343a4aa2655a3396f1322ac1d00510bbc0)
 - Showing a proper error screen when no compass sensor exists on device. No more blank grey screen. Fixes [#70](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/70).
 - Set default **Hijri offset** to -1. This should affect new installs only. Commit ref [6503b6e](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/6503b6ed0e569f3f7b4233923db4691f0f00adbe)
 - Smaller loading indicator in About Page (10px less than the icon). Commit ref [d77e4ae](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/d77e4ae48725ca3babb823ce84e0201105770d0c)
-- Upgrade dependencies.
+- Upgraded dependencies.
 
 <ChangelogHeader version="1.20.120" date="30 May 2021" githubSlug="1.20.120+50" />
 
 - Introducing **Onboarding screen**. This screen is shown when user open the app for the first time to setup few settings in app. User can 1) Set **location** and 2) Set **preferred theme**. Assets are from [BAM Free 3D Illustration Kit](https://www.uistore.design/items/bam-free-3d-illustration-kit/). Package used: [introduction_screen](https://pub.dev/packages/introduction_screen). Closes [#62](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/62).
 - Removed **Retry** button when get location throw an error. Side effect of `FutureBuilder` implementation.
 - The manual location chooser will **refresh** regardless of if the previous value is same.
-- Add `10`s timeout to get location method.
-- Changes `RichText` with `Text.rich` in `ZoneChooser` for Error Widget.
+- Added `10`s timeout to get location method.
+- Changed `RichText` with `Text.rich` in `ZoneChooser` for Error Widget.
 - Changed my [Twitter](https://twitter.com/iqfareez) username in About page.
-- Upgrade and update dependencies (incl major).
-- Refactor `ZoneChooser` class to be more modular so that it can be reusable by in Onboarding Screen.
-- [DEBUG] Add Erase all data to clear all setting. Basically, a `GetStorage().erase`. You can find it after enabling app's developer mode.
-- [CODE] Migrate from `GetX` to `Provider` for `ThemeController`.
+- Upgraded and updated dependencies (incl major).
+- Refactored `ZoneChooser` class to be more modular so that it can be reusable by in Onboarding Screen.
+- [DEBUG] Added Erase all data to clear all setting. Basically, a `GetStorage().erase`. You can find it after enabling app's developer mode.
+- [CODE] Migrated from `GetX` to `Provider` for `ThemeController`.
 - [CODE] Some methods are now marked as `static` so no need to create a new instance of them.
 - [CODE] Changed `StreamBuilder` to `FutureBuilder` method for fetching prayer time. As a result, I be able to get rid that old **BLoC** method implemented in app. This result in creating `LocationProvider` to assist the operation.
-  Change [bitly](http://bit.ly/MPTdl) link to [FDL](https://solat.page.link/get) link in copy and share message.
-- Update **MPT theme** image. [031fd12](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/031fd1246da42970c04d614880e0464b60b5d49a)
-- Remove extra space in ZoneChooser error dialog. [9bc1fb1](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/9bc1fb16a32fdb87c6bdf483457b5baab61f850f)
+  Changed [bitly](http://bit.ly/MPTdl) link to [FDL](https://solat.page.link/get) link in copy and share message.
+- Updated **MPT theme** image. [031fd12](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/031fd1246da42970c04d614880e0464b60b5d49a)
+- Removed extra space in ZoneChooser error dialog. [9bc1fb1](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/9bc1fb16a32fdb87c6bdf483457b5baab61f850f)
 - Snackbar after location has been selected is reduced to `1500`ms. [29147d2](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/29147d24f92af69a922c33626734c45904234bee)
-- Reorder About Page list items. Also, added some `padding` to copyright information. [de6adad](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/de6adad77874447507f7762cc16ed421917370ac)
-- Adding back location **position** in debug dialog. Also included in Send Feedback metadata.
-- Add more **debug toast** where it is necessary.
-- Remove [get](https://pub.dev/packages/get) and [rxdart](https://pub.dev/packages/rxdart) from `pubspec.yaml` (but these packages are still used by some other dependencies)
+- Reordered About Page list items. Also, added some `padding` to copyright information. [de6adad](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/de6adad77874447507f7762cc16ed421917370ac)
+- Added back location **position** in debug dialog. Also included in Send Feedback metadata.
+- Added more **debug toast** where it is necessary.
+- Removed [get](https://pub.dev/packages/get) and [rxdart](https://pub.dev/packages/rxdart) from `pubspec.yaml` (but these packages are still used by some other dependencies)
 - Changed content padding values in setting some `AlertDialog`.
 - [email_validator](https://pub.dev/packages/email_validator). The feedback form will not send if incorrect email format is entered. However, user still can leave the email field empty.
 - Added **Frequently Asked Questions (FAQs)** page. Items are fetched from cloud database (Firestore). The page can be accessed from About Page or Send Feedback page.
-- Add `SizedBox` widget at the bottom of setting page to give it breathable space.
-- Bring back the **copyright** information in About Page.
+- Added `SizedBox` widget at the bottom of setting page to give it breathable space.
+- Brought back the **copyright** information in About Page.
 - Set `addDefaultShareMenuItem` to `true` and set colour `navigationBarColor` for Chrome Custom Tabs
-- Tell user (toast message) that they will receive a copy of their response if email address is provided.
-- Increase **divider thickness** to 2 in AboutPage.dart.
+- Told user (toast message) that they will receive a copy of their response if email address is provided.
+- Increased **divider thickness** to 2 in AboutPage.dart.
 - Added `more apps by me` link in AboutPage.dart.
 - Restructured text in AboutPage.dart; Added link to e-solat [Jakim page](https://www.e-solat.gov.my/) and [MPTi906 API](https://mpt.i906.my/api.html) website.
 
 <ChangelogHeader version="1.18.98" date="13 April 2021" githubSlug="1.18.98+51" />
 
-- Temporary fix the offsetted **hijri date** [#54](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/54), I just change the assignation for `GetStorage()` when app started. This will affect only for new installs, where `GetStorage()` object not existed yet, existing user will need to adjust the hijri date manually. Guide to change offset date can be find [here](http://bit.ly/mpthijrioffset).
-  Change colour for some elements.
+- Temporarily fixed the offsetted **hijri date** [#54](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/54), I just change the assignation for `GetStorage()` when app started. This will affect only for new installs, where `GetStorage()` object not existed yet, existing user will need to adjust the hijri date manually. Guide to change offset date can be find [here](http://bit.ly/mpthijrioffset).
+  Changed colour for some elements.
 - Hide keyboard after press send in **Send feedback** option.
-- Change response text after submit feedback.
+- Changed response text after submit feedback.
 - **Share/Copy** timetable now respect the offset-ed hijri day.
 
 <ChangelogHeader version="1.18.97" date="28 March 2021" githubSlug="1.18.97+51" />
@@ -684,9 +683,8 @@ Other chores:
 - Added `Scrollbar` to the location lists.
 - [cloud_firestore](https://pub.dev/packages/cloud_firestore), [firebase_core](https://pub.dev/packages/firebase_core), [device_info](https://pub.dev/packages/device_info)
 - **Feedback page redesign**, user no longer use email as medium of sending the report. Now the data is sent via Firebase Firestore. The pro of this method is that user can remain **anonymous**, but it is recommended to **provide an email** address so that I can contact you for following up the issue.
-- Redesign a little bit in AboutPage.dart including changing font in version text, bring down the copyright legalese.
-- Upgrade most dependencies to **null safety** versions.
-- Fix attempt for the [#56](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/56). Not sure about the issue tbh.
+- Redesigned a little bit in AboutPage.dart including changing font in version text, bring down the copyright legalese.
+- Upgraded most dependencies to **null safety** versions.
 - Fixed **offset Hijri date** on both web and Android (Issue [#59](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/59)) - Ability to adjust the offset by +-2 days.
 - Enabled `multidex` (Android)
 - Code cleanup & minor UI fix.
@@ -695,14 +693,14 @@ Other chores:
 
 - Introduced **Share to WhatsApp** option. The texts will be formatted beautifully (**bold**, _italic_ etc.) Default setting can be changed in Setting page. So, there are three options of sharing now. **1- Ask, 2- Plain Text, 3-WhatsApp**.
 - **Adjustable prayer time text** sizes. Defaulted to size **14**. Minimum is **12** and can go up to **22**. Issue [#8](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/8).
-- Add `http://` to links so other apps _(e.g.: WhatsApp/Telegram)_ can generate a link preview.
+- Added `http://` to links so other apps _(e.g.: WhatsApp/Telegram)_ can generate a link preview.
 - Upgraded 8 dependencies! Including [flutter_svg](https://pub.dev/packages/flutter_svg) that caused the release to be delayed [(dnfield/flutter_svg#479)](https://github.com/dnfield/flutter_svg/issues/479)
-- Fix `CircularProgressIndicator` weird size in About page.
-- Add share **subject** parameter, useful for example, email app.
+- Fixed `CircularProgressIndicator` weird size in About page.
+- Added share **subject** parameter, useful for example, email app.
 - :globe_with_meridians: Added open on [**web**](https://waktusolat.web.app/).
-- Fix some Flutter **button deprecation** including `OutlineButton`, `RaisedButton` & `FlatButton`. [Flutter notice](https://docs.google.com/document/d/1yohSuYrvyya5V1hB6j9pJskavCdVq9sVeTqSoEPsWH0/edit?usp=sharing).
-- Change some random information. Yea random typo, grammar itu ini.
-- Change `Accept this location` to `Set this location` in locationChooser dialog.
+- Fixed some Flutter **button deprecation** including `OutlineButton`, `RaisedButton` & `FlatButton`. [Flutter notice](https://docs.google.com/document/d/1yohSuYrvyya5V1hB6j9pJskavCdVq9sVeTqSoEPsWH0/edit?usp=sharing).
+- Changed some random information. Yea random typo, grammar itu ini.
+- Changed `Accept this location` to `Set this location` in locationChooser dialog.
 - [CODE] Upgraded [flutter_local_notification](https://pub.dev/packages/flutter_local_notifications) to `4.0.1`. Looking at the [changelog](https://pub.dev/packages/flutter_local_notifications/changelog#400), I hoping there is some increase in **notification scheduler performance.**
 - Others (may) not documented.
 
@@ -715,7 +713,7 @@ Other chores:
 <ChangelogHeader version="1.13.89-hotfix" date="19 February 2021" githubSlug="1.13.89-hotfix+42" />
 
 - Fixed **time conversion** conflict when converting 12:00 to epoch, and later affected UI view. It supposed to be converted to 12pm but it was converted to 12am (😆). Closes [#49](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/49). Thanks to [butitik](https://github.com/butitik).
-- Change notification **naming convention** to Malay to make it consistent with the UI, however channel name not (yet) effected. Related to [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). Thanks to Aqil Mohd.
+- Changed notification **naming convention** to Malay to make it consistent with the UI, however channel name not (yet) effected. Related to [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). Thanks to Aqil Mohd.
 
 <ChangelogHeader version="1.13.87" date="17 February 2021" githubSlug="1.13.87+41" />
 
@@ -726,12 +724,12 @@ Other chores:
   - Honorable mention to Mr. Aizal Manan who contribute ideas in fixing this issue.
 - Prayer time data now fetched directly from [e-solat JAKIM](https://www.e-solat.gov.my/) API. No more [mpti906](https://mpt.i906.my/) API.
 - Added **Qibla compass** feature. Thanks to [flutter_qiblah](https://pub.dev/packages/flutter_qiblah) and its example (I take most of the code from there hehe 👀)
-- Bump `compileSdkVerison` and `targetSdkVersion` to **`30`** (Android 11 support)
-- Change naming convention to Malay nomenclature [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). However, notification name not effected (or the notification channel will be messed up).
-- [Code] Remove prayer name dart class.
+- Bumped `compileSdkVerison` and `targetSdkVersion` to **`30`** (Android 11 support)
+- Changed naming convention to Malay nomenclature [#45](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/45). However, notification name not effected (or the notification channel will be messed up).
+- [Code] Removed prayer name dart class.
 - Added [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter) to replace most of material icons in app.
 - Changes in prayer email feedback template
-- Use `BouncingScrollPhysics` (like in iOS) in About page. _Saja nak kasi kepelbagaian design haha._
+- Used `BouncingScrollPhysics` (like in iOS) in About page. _Saja nak kasi kepelbagaian design haha._
 
 <ChangelogHeader version="1.12.76-stable" date="27 January 2021" githubSlug="2.2.8+36" />
 
@@ -752,13 +750,13 @@ Other chores:
 - Fixed all imports. ~20 imports changed to relative path. Thanks to this [dart-import](https://marketplace.visualstudio.com/items?itemName=luanpotter.dart-import) extension. Commit reference [af1fd4e](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/af1fd4e1ecf11b6618b773890ef45c69cef41f71)
 - `ScaffoldMessenger.of(context)` to fix Scaffold showSnackBar deprecated.
 - Changed theme app **mockup images**. Firebase link changed. Using Pixel 3a device emulator is kinda cool.
-- Bump [device_info](https://pub.dev/packages/device_info): ^1.0.0 package.
+- Bumped [device_info](https://pub.dev/packages/device_info): ^1.0.0 package.
 - Added Firebase analytics to Android dependencies. Use for analytics purposes. We do not collect any personal data from the users. Commit reference [c8f8072](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/c8f80721115160bf375b8d1b285ca2b8a9c2c0e3)
-- Update **copyright** year. [#40](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/40)
+- Updated **copyright** year. [#40](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/40)
 - Added [JAKIM e-solat](https://www.e-solat.gov.my/) link, accessible at Setting/About, the green banner. Clickable.
 - App title in `About` page changed to `MPT 2021` (yeaa happy new year to you too). Copyright text format also fixed.
 - Improved keyword grammatical mistakes in few, random `Setting` locations.
-- Correctly implements `Share the app`. Share functionality is now working. Accessible at - `Setting/About/Contribution and Support`. Commit reference [18a6a19#r46369728](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/18a6a19acbd2415954af5f51e8915d45acd042d9#r46369728)
+- Correctly implemented `Share the app`. Share functionality is now working. Accessible at - `Setting/About/Contribution and Support`. Commit reference [18a6a19#r46369728](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/commit/18a6a19acbd2415954af5f51e8915d45acd042d9#r46369728)
 - Added [flutter_web_browser](https://pub.dev/packages/flutter_web_browser). Some of the link now open in **custom tabs**, speedy and better experiences.
 
 <ChangelogHeader version="1.11.55" date="2 December 2020" githubSlug="1.11.55+30" />
@@ -769,16 +767,16 @@ Other chores:
 
 <ChangelogHeader version="1.11.53-hotfix.2" date="30 November 2020" githubSlug="1.11.53-hotfix.2+28" />
 
-- Fix notification behavior where it will create new channel for every time the app show notification. [See screenshot](https://user-images.githubusercontent.com/60868965/100547159-2c0ae600-32a0-11eb-8a53-f1685e0ef6f6.jpg).
+- Fixed notification behavior where it will create new channel for every time the app show notification. [See screenshot](https://user-images.githubusercontent.com/60868965/100547159-2c0ae600-32a0-11eb-8a53-f1685e0ef6f6.jpg).
   - If your notification setting is quite mess, it is suggested to uninstall MPT and then reinstall back.
-- Fix **grammatical error** in notification. _(Yes, small things does matter)_
+- Fixed **grammatical error** in notification. _(Yes, small things does matter)_
 
 <ChangelogHeader version="1.11.53" date="29 November 2020" githubSlug="1.11.53+26" />
 
 - Notification reminder is now available for Fajr, Syuruk, Zuhr, Asr, Maghrib, Isya', feature request [#25](https://github.com/iqfareez/App-Waktu-Solat-Malaysia/issues/25). See also: [caveats](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/releases/tag/1.11.53%2B26#:~:text=page%20email%20template.-,Caveats,-%3A).
 - Changed GitHub username link (@fareezMaple -> @iqfareez) [#27](https://github.com/iqfareez/App-Waktu-Solat-Malaysia/issues/27)
 - Added [rxdart](https://pub.dev/packages/rxdart), [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications).
-- Modify donation option the `Donation and Support`.
+- Modified donation option the `Donation and Support`.
 - Added more entries to secret debug dialog.
 - Also added two new entries to `feedback` page email template.
 
@@ -796,7 +794,7 @@ Other chores:
 - Added [provider](https://pub.dev/packages/provider) - Users no longer need to restart the app to apply settings.
 - Added [auto_size_text](https://pub.dev/packages/auto_size_text) - Using smaller date widget, it caused overflowed on devices in small screen.
 - **Release notes page** now open in browser.
-- Update some dependencies.
+- Updated some dependencies.
 - Code clean-up _(Delete unused file from the older API implementation etc.)_
 
 <ChangelogHeader version="1.1.40" date="20 October 2020" githubSlug="1.1.40+19" />
@@ -823,17 +821,17 @@ Other chores:
 - Refix the issue where user can't copy / share on the first run after installation. [#17](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/17)
 - Depend on [get](https://pub.dev/packages/get) package.
 - In manual location list, currently selected location is now **highlighted**. This will help user to quickly know which location is currently selected.
-- Simplify feedback page (Removed emoji reaction etc)
-- Increase space between solatCard. Previously 500 was changed to 320 factors.
-- Change splash screen icon to match with app icon.
+- Simplified feedback page (Removed emoji reaction etc)
+- Increased space between solatCard. Previously 500 was changed to 320 factors.
+- Changed splash screen icon to match with app icon.
 - Added **Contribution** page
 - No longer use restart widget, used streambuilder to refresh prayer time _(Safer approach but make the code spaghettier :spaghetti:)_
 - Most of FlatButton is changed to TextButton widget. _(Flutter 1.22 new widget)_
 - Added hint that MPT will become open sourced.
 - Added **secret debug dialog**. Tap and hold the app icon in about page will.....
 - Toast appears when user select `Accept this location` in ZoneChooser.
-- Change string `Location updated` to `Location updated and saved` to better tell user that their selected location will be preserved.
-- Fix some string grammar / capitalization mistake.
+- Changed string `Location updated` to `Location updated and saved` to better tell user that their selected location will be preserved.
+- Fixed some string grammar / capitalization mistake.
 - Changed `Subuh` to `Fajr` and `Zohor` to `Zuhr` for more consistent language. (Prayer Time page | Share and Copy)
 - Consistent in capitalization in bottomAppBar options.
 - Code clean-up
@@ -853,8 +851,8 @@ Other chores:
 - Added two new permissions in manifest: `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION` (to be used later)
 - Removed unused permission: `VIBRATE`
 - Changed toast response when copy timetable from Copied to Timetable copied.
-- Change material app title to `My Prayer Time` (more short), this should reflect on Recent Action (Android)
-- Swap `Kuala Lumpur, Putrajaya` string in location chooser.
+- Changed material app title to `My Prayer Time` (more short), this should reflect on Recent Action (Android)
+- Swapped `Kuala Lumpur, Putrajaya` string in location chooser.
 
 <ChangelogHeader version="1.2.7" date="16 September 2020" githubSlug="1.2.7+8" />
 
