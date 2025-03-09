@@ -4,6 +4,15 @@ export default function MdxLayout({ children, meta }) {
   return (
     <main className="relative isolate overflow-hidden bg-slate-100 dark:bg-zinc-900">
       <ThemeSwitcher className="absolute top-2 right-5" />
+      <a
+        href="/"
+        className="absolute top-5 left-8 sm:top-6 sm:left-10 flex items-center px-3 py-2 text-sm font-medium rounded-md text-zinc-600 dark:text-zinc-300 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm hover:bg-white dark:hover:bg-zinc-800 transition-colors duration-200"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+        Home
+      </a>
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 dark:stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
