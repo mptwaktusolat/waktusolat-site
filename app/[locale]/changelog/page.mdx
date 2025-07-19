@@ -1,6 +1,18 @@
 import MdxLayout from '@/components/mdx-layout'
 import ChangelogHeader from '@/components/changelog-header'
 
+<ChangelogHeader version="2.13.1" date="19 July 2025" githubSlug="2.13.1+156" hijriDate="23 Muharram 1447"/>
+
+This release focuses on internal improvements, stability, and keeping up with platform requirements. No major UI changes were introduced, but these changes help us build a better foundation for future features.
+
+- Fixed an issue on **Monthly Timetable page** where the screen scrolls incorrectly when the date is 1. This should improve the overall usability of the timetable view. Related to [#233](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/233)
+- Introduced internal **WaktuSolat Client Package** to better handle data fetching from the API. This paves the way for easier maintenance and future improvements.
+- Upgraded to **targetSdkVersion 35**, as required by Google Play for app compatibility and future support.
+- Upgraded core dependencies to latest versions for better performance and stability.
+- [DEV]
+  - Refactored several files and folders to improve code organization and structure.
+  - Removed debug logging, `HttpOverrides`, and other unused development-related code.
+
 <ChangelogHeader version="2.13.0" date="30 March 2025" githubSlug="2.13.0+155" hijriDate="29 Ramadhan 1446"/>
 
 - Added ability to **share prayer time as image**. Now you can easily share the prayer times with your friends and family through a beautifully formatted image. Related to [#248](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/248). *This is the first iteration and will improve in further releases. Feedbacks are welcomed.*
