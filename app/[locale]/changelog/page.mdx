@@ -1,6 +1,16 @@
 import MdxLayout from '@/components/mdx-layout'
 import ChangelogHeader from '@/components/changelog-header'
 
+<ChangelogHeader version="2.13.3" date="20 July 2025" githubSlug="2.13.3+158" hijriDate="24 Muharram 1447"/>
+
+- Fix homescreen widget issues that displays *2.56 PM* for all 5 prayer times. This is due to the change in time format passed to the native side, causing the date time parser
+fails to format the time correctly. Closes issue [#255](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/255)
+
+<ChangelogHeader version="2.13.2" date="20 July 2025" githubSlug="2.13.2+156" hijriDate="24 Muharram 1447"/>
+
+- Fixed an issue where the monthly timetable page would not load when opened for the first time. Closes issue [#254](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/254)
+- Fix critical bug that would prevent the cache from being invalidated despite changing months & year.
+
 <ChangelogHeader version="2.13.1" date="19 July 2025" githubSlug="2.13.1+156" hijriDate="23 Muharram 1447"/>
 
 This release focuses on internal improvements, stability, and keeping up with platform requirements. No major UI changes were introduced, but these changes help us build a better foundation for future features.
