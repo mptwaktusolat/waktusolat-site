@@ -128,12 +128,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:^0.5.2":
-  version: 0.5.10
-  resolution: "@formatjs/intl-localematcher@npm:0.5.10"
+"@formatjs/intl-localematcher@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "@formatjs/intl-localematcher@npm:0.6.2"
   dependencies:
-    tslib: "npm:2"
-  checksum: 10c0/362ec83aca9382165be575f1cefa477478339e6fead8ca8866185ce6e58427ea1487a811b12c73d1bcfa99fd4db0c24543b35c823451839f585576bfccb8c9cc
+    tslib: "npm:^2.8.0"
+  checksum: 10c0/22a17a4c67160b6c9f52667914acfb7b79cd6d80630d4ac6d4599ce447cb89d2a64f7d58fa35c3145ddb37fef893f0a45b9a55e663a4eb1f2ae8b10a89fac235
   languageName: node
   linkType: hard
 
@@ -3961,13 +3961,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"negotiator@npm:^0.6.3":
-  version: 0.6.4
-  resolution: "negotiator@npm:0.6.4"
-  checksum: 10c0/3e677139c7fb7628a6f36335bf11a885a62c21d5390204590a1a214a5631fcbe5ea74ef6a610b60afe84b4d975cbe0566a23f20ee17c77c73e74b80032108dea
-  languageName: node
-  linkType: hard
-
 "negotiator@npm:^1.0.0":
   version: 1.0.0
   resolution: "negotiator@npm:1.0.0"
@@ -3975,18 +3968,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-i18n-router@npm:^5.5.4":
-  version: 5.5.4
-  resolution: "next-i18n-router@npm:5.5.4"
+"next-i18n-router@npm:^5.5.5":
+  version: 5.5.5
+  resolution: "next-i18n-router@npm:5.5.5"
   dependencies:
-    "@formatjs/intl-localematcher": "npm:^0.5.2"
-    negotiator: "npm:^0.6.3"
+    "@formatjs/intl-localematcher": "npm:^0.6.2"
+    negotiator: "npm:^1.0.0"
   peerDependencies:
-    next: ^13 || ^14 || ^15
+    next: ^13 || ^14 || ^15 || ^16
   peerDependenciesMeta:
     next:
       optional: false
-  checksum: 10c0/bdad371c374f955d9553c0581b370fbf4ae0f59ac1d0ea2111ea10cadfe929645cd371a2207b7af87c488e9850f568dd7e56f25d258e5ab27b93f48cd5829da6
+  checksum: 10c0/25687019be1bb6fb898646a11c33786522f0cd584c390b6c20ddeffc3a4153594ee407c389227f7b14395f831d291f34d08dc8bf0acfcc66d64296b7885c8a5d
   languageName: node
   linkType: hard
 
@@ -5459,7 +5452,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2, tslib@npm:^2.4.0":
+"tslib@npm:^2.4.0, tslib@npm:^2.8.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
@@ -5763,7 +5756,7 @@ __metadata:
     i18next: "npm:^23.16.8"
     i18next-resources-to-backend: "npm:^1.2.1"
     next: "npm:14.2.33"
-    next-i18n-router: "npm:^5.5.4"
+    next-i18n-router: "npm:^5.5.5"
     next-themes: "npm:^0.4.6"
     postcss: "npm:^8.5.6"
     react: "npm:^18.3.1"
