@@ -12,8 +12,8 @@ jobs:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
         with:
           node-version: 20
       - run: npx vercel --prod --token ${{ env.VERCEL_TOKEN }} >> $GITHUB_STEP_SUMMARY
