@@ -55,7 +55,7 @@ const Footer = () => {
           Privacy Policy &middot; Map &middot; API &middot; Help
         </p> */}
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2025{" "}
+          &copy; 2026{" "}
           <a
             data-tooltip-id="footer-tooltip"
             data-tooltip-content="👀"
