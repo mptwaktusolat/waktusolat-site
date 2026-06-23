@@ -5,13 +5,12 @@ import {
   BookOpenIcon,
   HeartIcon,
 } from "@heroicons/react/20/solid";
-import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useT } from "next-i18next/client";
 
 const featureIcons = [SparklesIcon, HeartIcon, BookOpenIcon, ArrowPathIcon];
 
 const Feature = () => {
-  const { t } = useTranslation("features");
+  const { t } = useT("features");
 
   const i18nFeatures = t("features", { returnObjects: true });
 

@@ -1,9 +1,12 @@
 import { Poppins } from 'next/font/google'
+import { initServerI18next, getT, getResources } from 'next-i18next/server'
+import { I18nProvider } from 'next-i18next/client'
 import '@/app/globals.css'
 import { ThemeProvider } from "@/context/ThemeProvider";
-import i18nConfig from '@/i18nConfig';
-import { dir } from 'i18next';
+import i18nConfig from '../../i18n.config'
 import Script from 'next/script'
+
+initServerI18next(i18nConfig)
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 
@@ -22,23 +25,35 @@ export const metadata = {
   },
 }
 
-export function generateStaticParams() {
-  return i18nConfig.locales.map(locale => ({ locale }));
+export async function generateStaticParams() {
+  return i18nConfig.supportedLngs.map((locale) => ({ locale }))
 }
 
-export default function RootLayout({ children, params: { locale } }) {
+export default async function RootLayout({ children, params }) {
+  const { locale } = await params
+  const { i18n } = await getT(undefined, { lng: locale })
+  const resources = getResources(i18n)
+
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang={locale}>
       <body className={poppins.className}>
-        <ThemeProvider attribute="class" enableSystem>
-          {children}
-          {/* Umami Analytics Script */}
-          <Script
-            src="https://umami.iqfareez.com/script.js"
-            data-website-id="4834a0c6-b55f-4c72-9f5e-68d7b299ceea"
-            strategy="afterInteractive"
-          />
-        </ThemeProvider>
+        <I18nProvider
+          language={locale}
+          resources={resources}
+          supportedLngs={i18nConfig.supportedLngs}
+          fallbackLng={i18nConfig.fallbackLng}
+          defaultNS={i18nConfig.defaultNS}
+        >
+          <ThemeProvider attribute="class" enableSystem>
+            {children}
+            {/* Umami Analytics Script */}
+            <Script
+              src="https://umami.iqfareez.com/script.js"
+              data-website-id="4834a0c6-b55f-4c72-9f5e-68d7b299ceea"
+              strategy="afterInteractive"
+            />
+          </ThemeProvider>
+        </I18nProvider>
       </body>
     </html>
   )

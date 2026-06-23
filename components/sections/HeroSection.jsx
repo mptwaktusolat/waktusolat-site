@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AppScreenshotCard } from "../app-screenshot-card";
 import { AppScreenshotCardScroll } from "../app-screenshot-card-scroll";
-import { useTranslation } from "react-i18next";
+import { useT } from "next-i18next/client";
 import LanguageChanger from "@/components/LanguageChanger";
 import { Tooltip } from "react-tooltip";
 import { useEffect, useState } from "react";
@@ -16,12 +16,12 @@ const Hero = () => {
   const [latestVersion, setLatestVersion] = useState("");
 
   useEffect(() => {
-    fetch("api/check_version")
+    fetch("/api/check_version")
       .then((response) => response.json())
       .then((data) => setLatestVersion(`v${data.version}`));
   }, []);
 
-  const { t } = useTranslation();
+  const { t } = useT("hero");
   return (
     <section className="relative">
       <Tooltip id="my-tooltip" place="bottom-end" />

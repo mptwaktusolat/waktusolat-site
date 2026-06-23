@@ -45,10 +45,6 @@ export function AppScreenshotCardScroll({ lang = "en", className = "" }) {
     };
   }, [onScroll]);
 
-  useEffect(() => {
-    // onMouseMove({ clientX: 0, clientY: 0 }); // Initial position
-  }, []);
-
   return (
     <div
       className={`z-10 mb-8 scale-100 transition-all duration-200 ease-out hover:z-50 xl:mb-0 xl:hover:scale-[1.15] ${className}`}

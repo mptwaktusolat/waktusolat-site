@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import DARKDEMOPIC from "@/public/images/phone-dark-portrait.png";
 import LIGHTDEMOPIC from "@/public/images/phone-light-portrait.png";
 import DARKDEMOPICMS from "@/public/images/phone-dark-ms-portrait.png";

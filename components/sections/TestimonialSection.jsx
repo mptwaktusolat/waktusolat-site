@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { IoIosStar } from "react-icons/io";
-import { useTranslation } from "react-i18next";
+import { useT } from "next-i18next/client";
 
 const featuredTestimonial = {
   body: "the internal design is pretty sejuk mata memandang this app can definetely upgrade where user can read quran and zikir daily so they dont have to install so many apps well done!!!  ",
@@ -75,7 +75,7 @@ function classNames(...classes) {
 }
 
 const Testimonial = () => {
-  const { t } = useTranslation("reviews");
+  const { t } = useT("reviews");
 
   return (
     <div className="relative isolate bg-slate-100 dark:bg-zinc-900 pb-32 pt-24 sm:pt-32">

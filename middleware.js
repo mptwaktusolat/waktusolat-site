@@ -1,11 +1,9 @@
-import { i18nRouter } from 'next-i18n-router';
-import i18nConfig from './i18nConfig';
+import i18nConfig from './i18n.config'
+import { createMiddleware } from 'next-i18next/middleware';
 
-export function middleware(request) {
-    return i18nRouter(request, i18nConfig);
-}
+export const middleware = createMiddleware(i18nConfig)
 
 // applies this middleware only to files in the app directory
 export const config = {
-    matcher: '/((?!api|static|.*\\..*|_next|_vercel).*)'
-};
+    matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js|site.webmanifest).*)'],
+}

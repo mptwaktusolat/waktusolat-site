@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { JSX, SVGProps } from "react";
 import { Tooltip } from "react-tooltip";
 
 const navigation = {
