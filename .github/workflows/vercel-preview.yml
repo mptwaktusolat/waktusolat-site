@@ -5,6 +5,8 @@ on:
   push:
     branches-ignore:
       - master
+permissions:
+  contents: read
 jobs:
   deploy:
     runs-on: ubuntu-latest
