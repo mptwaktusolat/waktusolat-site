@@ -17,7 +17,7 @@ const Feature = () => {
   return (
     <section
       id="feature"
-      className="bg-slate-100 dark:bg-zinc-900 py-16 sm:py-24"
+      className="bg-slate-100 dark:bg-zinc-900 py-12"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
