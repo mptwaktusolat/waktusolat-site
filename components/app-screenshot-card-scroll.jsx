@@ -18,16 +18,12 @@ export function AppScreenshotCardScroll({ lang = "en", className = "" }) {
     // As long as it works on mobile screen though
     const scrollY = -window.scrollY;
     const windowHeight = window.innerHeight;
-    // console.log("scrollY, WindowHeight", scrollY, windowHeight);
     const elementBottom = ref.current.getBoundingClientRect().bottom;
     const triggerPoint = windowHeight - windowHeight * 0.9; // 20% of the window height from the bottom
 
-    // console.log(elementBottom, triggerPoint, elementBottom > triggerPoint);
     if (elementBottom > triggerPoint) {
       const value = Math.abs(scrollY / windowHeight) * 90 - 30;
       const rotate = Math.abs(Math.min(Math.max(value, -40), 0)); // Adjust the rotation value as needed
-
-      //   console.log("rotate", rotate);
 
       setStyle({
         transform: `rotateX(${rotate}deg) `,
@@ -55,14 +51,16 @@ export function AppScreenshotCardScroll({ lang = "en", className = "" }) {
         <Image
           src={lang != "en" ? LIGHTDEMOPICMS : LIGHTDEMOPIC}
           alt="App screenshot"
-          width={330}
-          className="drop-shadow-2xl dark:hidden block"
+          width={440}
+          sizes="(min-width: 1536px) 380px, (min-width: 1280px) 360px, 330px"
+          className="block w-[330px] xl:w-[360px] 2xl:w-[380px] drop-shadow-2xl dark:hidden"
         />
         <Image
           src={lang != "en" ? DARKDEMOPICMS : DARKDEMOPIC}
           alt="App screenshot"
-          width={330}
-          className="drop-shadow-2xl hidden dark:block"
+          width={440}
+          sizes="(min-width: 1536px) 380px, (min-width: 1280px) 360px, 330px"
+          className="hidden w-[330px] xl:w-[360px] 2xl:w-[380px] drop-shadow-2xl dark:block"
         />
       </div>
     </div>

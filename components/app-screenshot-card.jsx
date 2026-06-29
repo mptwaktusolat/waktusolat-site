@@ -58,14 +58,16 @@ export function AppScreenshotCard({ lang = "en", className = "" }) {
         <Image
           src={lang != "en" ? LIGHTDEMOPICMS : LIGHTDEMOPIC}
           alt="App screenshot"
-          width={330}
-          className="drop-shadow-2xl dark:hidden block"
+          width={440}
+          sizes="(min-width: 1536px) 380px, (min-width: 1280px) 360px, 330px"
+          className="block w-[330px] xl:w-[360px] 2xl:w-[380px] drop-shadow-2xl dark:hidden"
         />
         <Image
           src={lang != "en" ? DARKDEMOPICMS : DARKDEMOPIC}
           alt="App screenshot"
-          width={330}
-          className="drop-shadow-2xl hidden dark:block"
+          width={440}
+          sizes="(min-width: 1536px) 380px, (min-width: 1280px) 360px, 330px"
+          className="hidden w-[330px] xl:w-[360px] 2xl:w-[380px] drop-shadow-2xl dark:block"
         />
       </div>
     </div>
