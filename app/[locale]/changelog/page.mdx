@@ -1,6 +1,12 @@
 import MdxLayout from '@/components/mdx-layout'
 import ChangelogHeader from '@/components/changelog-header'
 
+<ChangelogHeader version="2.14.3" date="9 September 2026" githubSlug="2.14.3+176" hijriDate="27 Rabiulawal 1448"/>
+
+- Waktu **Dhuha** now is shown based on JAKIM API, not calculated on device. JAKIM recently introduced this change. [#281](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/281)
+- Make **homescreen widget more compact** to prevent text or elements cutting off. Applied for both horizontal and vertical widget. For example, see screenshot below, notice that previously, the Isyak time is clipped when the available height is not enough. Now, it is visible. Note that the widget size is same on both images. [#275](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/275) [#276](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/276) [#282](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/pull/282)
+  ![Homescreen Widget compact](https://bucket.waktusolat.app/site-images/changelog-widget-size-small.png)
+
 <ChangelogHeader version="2.14.2" date="4 July 2026" githubSlug="2.14.2+175" hijriDate="18 Muharram 1448"/>
 
 - Fix bug from previous release that causes the text on coachmarks doesn't show when in Dark Mode. See issue [#279](https://github.com/mptwaktusolat/app_waktu_solat_malaysia/issues/279).
